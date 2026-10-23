@@ -64,8 +64,8 @@ kilitlenir** — herkese açık yayın için YouTube API Services Audit başvuru
   (reviewbot kiti; kaynak `review/`: `hazirla.py` → `review.json`, `refs.json` numaraları tutar). Kullanıcı "bitti"
   deyince: ArtifactData `list` (collection `answers`, `out_dir`) + reviewbot `answers.py`; onaylananlar →
   `ayetler.json` (ayetlere tema uyan klip `arkaplan` olarak atanır) ve `arkaplanlar.json`.
-  - 2026-10-23: kullanıcı sohbette **66 ayetin hepsini** onayladı → `ayetler.json`. **63 klibin hiçbiri** henüz
-    onaylanmadı; şimdilik tek onaylı klip (328740) temasına uyan ayetlerde, diğerleri renkli zeminle üretilir.
+  - 2026-10-23: kullanıcı sohbette **66 ayetin ve 63 klibin hepsini** onayladı → `ayetler.json`, `arkaplanlar.json`.
+    Klipler temaya göre, en az kullanılan önce olacak şekilde dağıtıldı (yayınlanmış ayetin klibi değişmez). MB-R1 tamam.
 - [x] GitHub Actions çalışıyor (secret'lar: `YOUTUBE_REFRESH_TOKEN/CLIENT_ID/CLIENT_SECRET`, Web istemcisi + OAuth
   Playground). İlk otomatik yükleme 2026-10-23 (İnşirah 5-8). API kotası 10.000/gün, yükleme 1.600 → en çok 6 video/gün. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
