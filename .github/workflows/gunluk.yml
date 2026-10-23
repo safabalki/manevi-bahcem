@@ -2,7 +2,10 @@ name: Günün Ayeti
 
 on:
   schedule:
-    - cron: "17 3 * * *"   # her gün 03:17 UTC = 06:17 Türkiye
+    # Günde 3 video (Türkiye saatiyle 07:17, 13:17, 19:17)
+    - cron: "17 4 * * *"
+    - cron: "17 10 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch:
     inputs:
       adet:
@@ -70,7 +73,7 @@ jobs:
           git add yayinlananlar.json 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0
           git commit -m "Yayınlandı: $(date -u +%F)"
-          git push
+          git pull --rebase -q origin main && git push
 
       - uses: actions/upload-artifact@v4
         if: always()

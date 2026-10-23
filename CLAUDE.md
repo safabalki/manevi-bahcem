@@ -31,7 +31,7 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 |---|---|
 | `shorts.py` | `python shorts.py [ayet-id]` → `out/<id>.mp4` + `out/<id>.json` (başlık/açıklama/etiket) |
 | `gunluk.py` | Sıradaki (yüklenmemiş) ayeti üretir + yükler, `yayinlananlar.json`'a yazar; `--adet`, `--id`, `--sadece-uret` |
-| `.github/workflows/gunluk.yml` | Her gün 03:17 UTC `gunluk.py`; Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
+| `.github/workflows/gunluk.yml` | Günde 3 kez (TR 07:17, 13:17, 19:17) `gunluk.py`; Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
 | `yayinlananlar.json` | Yüklenenler: `id, video, baslik, gizlilik, tarih` (Actions depoya geri yazar) |
 | `yukle.py` | `python yukle.py --giris` izin alır/kanalı gösterir; `python yukle.py out/x.mp4 [--gizlilik private]` yükler |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
@@ -47,7 +47,7 @@ değişkeniyle verilebilir; yoksa Edge → Chrome → google-chrome aranır. Yaz
 
 ## Gizli bilgiler (depoda YOK, .gitignore'da)
 
-- `.env` → `PIXABAY_KEY=...`
+- `.env` → `PIXABAY_KEY=...` (yalnızca yeni klip adayı aramak için; video üretimi klibi CDN adresinden anahtarsız indirir)
 - `client_secret.json` → Google Cloud projesi `manevi-bahcem`, OAuth "Desktop app" istemcisi
 - `token.json` → yükleme izni (refresh token). GitHub Actions'ta `YOUTUBE_TOKEN` secret'ı olarak verilir; ya da
   (telefondan OAuth Playground ile alınmışsa) `YOUTUBE_REFRESH_TOKEN` + `YOUTUBE_CLIENT_ID` + `YOUTUBE_CLIENT_SECRET`.
@@ -64,9 +64,9 @@ kilitlenir** — herkese açık yayın için YouTube API Services Audit başvuru
   (reviewbot kiti; kaynak `review/`: `hazirla.py` → `review.json`, `refs.json` numaraları tutar). Kullanıcı "bitti"
   deyince: ArtifactData `list` (collection `answers`, `out_dir`) + reviewbot `answers.py`; onaylananlar →
   `ayetler.json` (ayetlere tema uyan klip `arkaplan` olarak atanır) ve `arkaplanlar.json`.
-  - 2026-10-23: ayet kartları 1–22 onaylandı → `ayetler.json`'a eklendi. Kart 23–66 ve **63 klibin hiçbiri** henüz
-    cevaplanmadı; şimdilik tek onaylı klip (328740) temasına uyan 9 ayette, diğerleri renkli zeminle üretilir.
-- [~] GitHub Actions kuruldu (`gunluk.yml`); çalışması için depo secret'ı `YOUTUBE_TOKEN` (= `token.json` içeriği)
-  eklenmeli. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
+  - 2026-10-23: kullanıcı sohbette **66 ayetin hepsini** onayladı → `ayetler.json`. **63 klibin hiçbiri** henüz
+    onaylanmadı; şimdilik tek onaylı klip (328740) temasına uyan ayetlerde, diğerleri renkli zeminle üretilir.
+- [x] GitHub Actions çalışıyor (secret'lar: `YOUTUBE_REFRESH_TOKEN/CLIENT_ID/CLIENT_SECRET`, Web istemcisi + OAuth
+  Playground). İlk otomatik yükleme 2026-10-23 (İnşirah 5-8). API kotası 10.000/gün, yükleme 1.600 → en çok 6 video/gün. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
 - [ ] Sonra: Günün Hadisi serisi, Instagram/TikTok'a da paylaşım
