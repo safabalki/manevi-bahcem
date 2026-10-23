@@ -56,8 +56,10 @@ kilitlenir** — herkese açık yayın için YouTube API Services Audit başvuru
 
 - [x] Örnek video (İnşirah 5-8), karaoke + Pixabay arka plan
 - [x] Kanal logosu/kapak, YouTube API bağlantısı, ilk gizli yükleme (2026-10-23)
-- [ ] Arka plan onay sayfası: temalara göre ~100 Pixabay adayı, kullanıcı telefondan onaylar → `arkaplanlar.json`
-- [ ] ~60 seçme ayet listesi (başlık + kanca), kullanıcı onaylar → `ayetler.json`
+- [~] Onay sayfası **MB-R1** yayında: https://claude.ai/artifact/Pa6GN6Bwb2dbrFn9r2C8or — 66 ayet + 63 klip
+  (reviewbot kiti; kaynak `review/`: `hazirla.py` → `review.json`, `refs.json` numaraları tutar). Kullanıcı "bitti"
+  deyince: ArtifactData `list` (collection `answers`, `out_dir`) + reviewbot `answers.py`; onaylananlar →
+  `ayetler.json` (ayetlere tema uyan klip `arkaplan` olarak atanır) ve `arkaplanlar.json`.
 - [ ] GitHub Actions: her gece sıradaki ayeti üret + yükle, yayınlananları depoda takip et
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
 - [ ] Sonra: Günün Hadisi serisi, Instagram/TikTok'a da paylaşım

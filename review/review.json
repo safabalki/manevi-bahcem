@@ -1,0 +1,1839 @@
+{
+ "code": "MB-R1",
+ "eyebrow": "Manevi Bahçem · 1. tur",
+ "title": "Ayet listesi ve arka plan videoları",
+ "lede": "Her kartta üç düğme var: Approve = Onayla, Change = Değiştir (altına ne değişsin yazın), Hold = Şimdilik beklet. Cevaplar dokundukça kaydedilir; yarıda bırakıp başka cihazdan devam edebilirsiniz. Bitince en üstteki \"I'm done, go\" düğmesine basın ve bana sohbette \"bitti\" yazın.",
+ "status": [
+  [
+   "Ayet: 66",
+   "wait"
+  ],
+  [
+   "Klip: 63",
+   "wait"
+  ],
+  [
+   "60 sn'den uzun ayet: 2",
+   "wait"
+  ]
+ ],
+ "sections": [
+  {
+   "id": "ayetler",
+   "eyebrow": "Günün Ayeti serisi",
+   "title": "Seçme ayetler",
+   "intro": "Her gece bu listeden sıradaki ayet yayınlanacak. Başlık videonun YouTube başlığı, kanca ilk 3 saniyede ekranda çıkan cümle. Meal kaynaktan aynen geliyor; başlık ve kancanın meale uygun olup olmadığına bakın.",
+   "cards": [
+    {
+     "id": "a-insirah-5-8",
+     "title": "İnşirah 5-8",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Zorlukla beraber kolaylık vardır 🤲</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Zor bir dönemden geçiyorsan bu ayet senin için</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 18.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>5.</b> Demek ki, zorlukla beraber bir kolaylık vardır.</p><p style='margin:.35em 0'><b>6.</b> Evet, zorlukla beraber bir kolaylık vardır.</p><p style='margin:.35em 0'><b>7.</b> O halde boş kaldın mı, yine kalk (başka bir iş ve ibadetle) yorul.</p><p style='margin:.35em 0'><b>8.</b> Ancak Rabbine yönel.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-zumer-53",
+     "title": "Zümer 53",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah&#x27;ın rahmetinden ümidinizi kesmeyin</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> &quot;Çok günah işledim&quot; diyorsan dinle</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tövbe · Süre: 30.2 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>53.</b> De ki: &quot;Ey haddi aşarak nefislerine karşı israf etmiş olan kullarım! Allah&#x27;ın rahmetinden ümid kesmeyin. Çünkü Allah, bütün günahları bağışlar. Şüphesiz ki O, çok bağışlayıcıdır, çok merhamet edicidir.&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-yusuf-87",
+     "title": "Yusuf 87",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ümidini asla kesme</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Her şey bitti sandığında</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 24.5 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>87.</b> &quot;Ey oğullarım, gidin, Yusuf&#x27;u ve kardeşini araştırın. Allah&#x27;ın rahmetinden ümit kesmeyin; zira kâfir kavimden başkası Allah&#x27;ın rahmetinden ümit kesmez.&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-talak-3",
+     "title": "Talak 3",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kim Allah&#x27;a tevekkül ederse O ona yeter</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Rızık kaygısı yaşıyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tevekkül · Süre: 20.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>3.</b> Ve onu ummadığı yerden rızıklandırır. Kim Allah&#x27;a güvenirse O, ona yeter. Allah, emrini yerine getirendir. Allah her şey için bir ölçü koymuştur.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-aliimran-139",
+     "title": "Al-i İmran 139",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Gevşemeyin, üzülmeyin</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Moralin bozuksa bu ayeti dinle</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 14.2 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>139.</b> Gevşemeyin, üzülmeyin, eğer hakikaten inanıyorsanız, muhakkak üstün olan sizsinizdir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-duha-3-5",
+     "title": "Duha 3-5",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbin seni bırakmadı</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Kendini yalnız hissediyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 15.9 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>3.</b> Rabbin seni bırakmadı ve darılmadı.</p><p style='margin:.35em 0'><b>4.</b> Ahiret senin için dünyadan iyi olacaktır.</p><p style='margin:.35em 0'><b>5.</b> Rabbın sana verecek ve sen hoşnut olacaksın.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-186",
+     "title": "Bakara 186",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ben çok yakınım, duaya cevap veririm</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Duan duyuluyor mu diye merak ediyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 24.7 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>186.</b> Şayet kullarım, sana benden sordularsa, gerçekten ben çok yakınımdır. Bana dua edince, duacının duasını kabul ederim. O halde onlar da benim davetime koşsunlar ve bana hakkıyla iman etsinler ki, doğru yola gidebilsinler.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-mumin-60",
+     "title": "Mü'min 60",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Bana dua edin, size cevap vereyim</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Dua etmeyi bırakma</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 20.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>60.</b> Halbuki Rabbiniz: &quot;Bana yalvarın, dua edin ki size karşılık vereyim. Çünkü bana ibadet etmekten kibirlenip yüz çevirenler yarın horlanmış olarak cehenneme gireceklerdir.&quot; buyurdu.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-rad-28",
+     "title": "Ra'd 28",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kalpler ancak Allah&#x27;ı anmakla huzur bulur</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Huzur arıyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: huzur · Süre: 19.9 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>28.</b> Onlar, iman etmiş ve kalbleri Allah zikriyle yatışmış olanlardır. Evet, iyi bilin ki, kalbler Allah&#x27;ın zikri ile yatışır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-152",
+     "title": "Bakara 152",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Beni anın ki ben de sizi anayım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Allah&#x27;ı andığında O da seni anar</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: zikir · Süre: 11.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>152.</b> O halde beni anın, ben de sizi anayım. Bana şükredin de nankörlük etmeyin.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-153",
+     "title": "Bakara 153",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah sabredenlerle beraberdir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Sabretmekte zorlanıyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 15.9 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>153.</b> Ey iman edenler! Sabır ve namazla yardım isteyin. Şüphe yok ki Allah, sabredenlerle beraberdir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-155-157",
+     "title": "Bakara 155-157",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Sabredenleri müjdele</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Bir kayıp yaşadıysan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 55.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>155.</b> Çaresiz biz sizi biraz korku, biraz açlık, biraz da mallardan, canlardan ve ürünlerden eksiltme ile imtihan edeceğiz. Müjdele o sabredenleri!</p><p style='margin:.35em 0'><b>156.</b> Onlar başlarına bir musibet geldiği zaman: &quot;Biz Allah&#x27;a aidiz ve sonunda O&#x27;na döneceğiz.&quot; derler.</p><p style='margin:.35em 0'><b>157.</b> İşte onlar var ya, Rablerinden, mağfiretler ve rahmet onlaradır. İşte hidayete erenler de onlardır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-asr",
+     "title": "Asr 1-3",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Asr Suresi: Zamanın değeri</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Zamanını nasıl geçiriyorsun?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: 21.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Asra yemin olsun ki,</p><p style='margin:.35em 0'><b>2.</b> İnsan mutlaka ziyandadır.</p><p style='margin:.35em 0'><b>3.</b> Ancak iman edenler, salih amel (iyi işler) işleyenler, birbirlerine hakkı tavsiye eden ve sabrı tavsiye edenler bunun dışındadır</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ihlas",
+     "title": "İhlas 1-4",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> İhlas Suresi: Allah birdir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Tevhidin özü dört ayette</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: iman · Süre: 14.6 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> De ki; O Allah bir tektir.</p><p style='margin:.35em 0'><b>2.</b> Allah eksiksiz, sameddir (Bütün varlıklar O&#x27;na muhtaç, fakat O, hiç bir şeye muhtaç değildir</p><p style='margin:.35em 0'><b>3.</b> Doğurmadı ve doğurulmadı</p><p style='margin:.35em 0'><b>4.</b> O &#x27;na bir denk de olmadı.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-felak",
+     "title": "Felak 1-5",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Felak Suresi: Sabahın Rabbine sığınırım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Korkularından Allah&#x27;a sığın</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: koruma · Süre: 25.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> De ki: &quot;Ben, ağaran sabahın Rabbine sığınırım,</p><p style='margin:.35em 0'><b>2.</b> Yarattığı şeylerin şerrinden,</p><p style='margin:.35em 0'><b>3.</b> Karanlığı çöktüğü zaman gecenin şerrinden,</p><p style='margin:.35em 0'><b>4.</b> Ve düğümlere üfleyen büyücülerin şerrinden,</p><p style='margin:.35em 0'><b>5.</b> Ve hased ettiği zaman hasetçinin şerrinden.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nas",
+     "title": "Nas 1-6",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Nas Suresi: İnsanların Rabbine sığınırım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Vesveselerden Allah&#x27;a sığın</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: koruma · Süre: 42.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> De ki: Sığınırım ben insanların Rabbine,</p><p style='margin:.35em 0'><b>2.</b> İnsanların hükümdârına,</p><p style='margin:.35em 0'><b>3.</b> İnsanların ilâhına,</p><p style='margin:.35em 0'><b>4.</b> O sinsi vesvesecinin şerrinden.</p><p style='margin:.35em 0'><b>5.</b> O ki, insanların göğüslerine vesveseler fısıldar.</p><p style='margin:.35em 0'><b>6.</b> Gerek cinlerden, gerek insanlardan.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-fatiha",
+     "title": "Fatiha 1-7",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Fatiha Suresi</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Her namazda okuduğumuz sure</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ibadet · Süre: 47.5 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Rahmân ve Rahîm olan Allah&#x27;ın ismiyle.</p><p style='margin:.35em 0'><b>2.</b> Hamd o âlemlerin Rabbi,</p><p style='margin:.35em 0'><b>3.</b> O Rahmân ve Rahim,</p><p style='margin:.35em 0'><b>4.</b> O, din gününün maliki Allah&#x27;ın.</p><p style='margin:.35em 0'><b>5.</b> Ancak sana ederiz kulluğu, ibadeti ve ancak senden dileriz yardımı, inayeti. (Ya Rab!).</p><p style='margin:.35em 0'><b>6.</b> Hidayet eyle bizi doğru yola,</p><p style='margin:.35em 0'><b>7.</b> O kendilerine nimet verdiğin mutlu kimselerin yoluna; o gazaba uğramışların ve o sapmışların yoluna değil.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ayetel-kursi",
+     "title": "Bakara 255",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Âyetel Kürsî 🤲</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Ezberlemeye değer bir ayet</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: iman · Süre: 53.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>255.</b> Allah&#x27;tan başka hiçbir ilâh yoktur. O daima diridir (hayydır), bütün varlığın idaresini yürüten (kayyum)dir. O&#x27;nu ne gaflet basar, ne de uyku. Göklerde ve yerde ne varsa hepsi O&#x27;nundur. İzni olmadan huzurunda şefaat edecek olan kimdir? O, kullarının önlerinde ve arkalarında ne varsa hepsini bilir. Onlar ise, O&#x27;nun dilediği kadarından başka ilminden hiç bir şey kavrayamazlar. O&#x27;nun kürsisi, bütün gökleri ve yeri kucaklamıştır. Onların her ikisini de görüp gözetmek O&#x27;na bir ağırlık vermez. O çok yücedir, çok büyüktür.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-286",
+     "title": "Bakara 286",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah kimseye gücünün üstünde yük yüklemez</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Taşıyamayacağın yük sana verilmez</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 54.5 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>286.</b> Allah hiç kimseye gücünün yeteceğinden başka yük yüklemez. Herkesin kazandığı hayır kendisine, yaptığı kötülüğün zararı yine kendisinedir. Ey Rabbimiz, eğer unuttuk ya da yanıldıysak bizi tutup sorguya çekme! Ey Rabbimiz, bize bizden öncekilere yüklediğin gibi ağır yük yükleme! Ey Rabbimiz, bize gücümüzün yetmeyeceği yükü de yükleme! Bağışla bizi, mağfiret et bizi, rahmet et bize! Sensin bizim Mevlamız, kâfir kavimlere karşı yardım et bize.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-hasr-22-24",
+     "title": "Haşr 22-24",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Haşr Suresi&#x27;nin son ayetleri: Allah&#x27;ın güzel isimleri</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> O&#x27;nu isimleriyle tanı</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: iman · Süre: <b style=color:#b45309>62.4 sn (Shorts için uzun)</b></p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>22.</b> O, öyle Allah&#x27;tır ki O&#x27;ndan başka tanrı yoktur. Görülmeyeni ve görüleni bilendir. O, esirgeyen bağışlayandır.</p><p style='margin:.35em 0'><b>23.</b> O, öyle bir Allah&#x27;tır ki, kendisinden başka hiçbir tanrı yoktur. O, mâlik ve sahiptir, münezzehtir, selâmet verendir, emniyete kavuşturandır, gözetip koruyandır, üstündür, istediğini zorla yaptıran, büyüklükte eşi olmayandır. Allah puta tapanların ortak koştukları şeylerden münezzehtir.</p><p style='margin:.35em 0'><b>24.</b> O, yaratan, var eden, varlıklara şekil veren Allah&#x27;tır. En güzel isimler O&#x27;nundur. Göklerde ve yerde olanlar O&#x27;nun şânını yüceltmektedirler. O, gâlib olan, her şeyi hikmeti uyarınca yapandır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nur-35",
+     "title": "Nur 35",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah göklerin ve yerin nurudur</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Nur Ayeti</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: <b style=color:#b45309>82.0 sn (Shorts için uzun)</b></p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>35.</b> Allah, göklerin ve yerin nurudur (aydınlatıcısıdır). O&#x27;nun nurunun temsili, içinde lamba bulunan bir kandil gibidir. O lamba bir billur içindedir; o billur da sanki inciye benzer bir yıldız gibidir ki, doğuya da batıya da nisbet edilemeyen mübarek bir ağaçtan çıkan yağdan tutuşturulur. (Bu öyle bir ağaç ki) yağı, nerdeyse, kendisine ateş değmese bile ışık verir. (Bu ışık) nur üstüne nurdur. Allah dilediği kimseyi nuruyla hidayete iletir. Allah insanlara (işte böyle) misal verir; Allah her şeyi bilir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-kaf-16",
+     "title": "Kaf 16",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Biz ona şah damarından daha yakınız</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Allah sana ne kadar yakın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: iman · Süre: 17.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>16.</b> Andolsun insanı biz yarattık ve nefsinin kendisine fısıldadıklarını biliriz. Ve biz ona şah damarından daha yakınız.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-isra-23-24",
+     "title": "İsra 23-24",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Anne babaya &quot;öf&quot; bile deme</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Anne baban hâlâ hayattaysa</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: aile · Süre: 51.9 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>23.</b> Rabbin kesin olarak şunları emretti: Ancak kendisine ibadet edin, anne ve babaya iyilik edin. Onlardan biri veya her ikisi senin yanında yaşlanırsa, sakın onlara &quot;öf&quot; bile deme ve onları azarlama. İkisine de tatlı ve güzel söz söyle.</p><p style='margin:.35em 0'><b>24.</b> İkisine de acıyarak tevazu kanatlarını indir. Ve şöyle de: &quot;Ey Rabbim! Onların beni küçükten terbiye edip yetiştirdikleri gibi, sen de kendilerine merhamet et.&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-lokman-14",
+     "title": "Lokman 14",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Bana ve anne babana şükret</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Annen seni zahmet üstüne zahmetle taşıdı</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: aile · Süre: 30.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>14.</b> Gerçi biz insana, anasına ve babasına itaati de tavsiye ettik. Anası onu zayıflık üstüne zayıflıkla taşıdı. Onun sütten ayrılması da iki yıl içindedir. (Biz insana): &quot;Bana, anana ve babana şükret&quot; diye de tavsiye ettik. Dönüş, ancak banadır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ibrahim-7",
+     "title": "İbrahim 7",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Şükrederseniz artırırım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Nimetin artsın istiyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: şükür · Süre: 17.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>7.</b> Ve hatırlayın ki Rabbiniz size şöyle bildirmişti: Yüceliğim hakkı için şükrederseniz elbette size (nimetimi) artırırım ve eğer nankörlük ederseniz hiç şüphesiz azabım çok şiddetlidir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-rahman-26-27",
+     "title": "Rahman 26-27",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Her şey yok olacak, yalnız Rabbin kalacak</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Geriye ne kalacak?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 15.2 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>26.</b> Yer üzerinde bulunan her şey fânidir.</p><p style='margin:.35em 0'><b>27.</b> Yalnız celâl ve ikram sahibi Rabbinin yüzü (zâtı) baki kalacaktır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ankebut-57",
+     "title": "Ankebut 57",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Her nefis ölümü tadacaktır</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Bu dünyaya ne kadar bağlısın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 14.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>57.</b> Her can ölümü tadacaktır. Sonunda bize döndürüleceksiniz.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-mulk-1-2",
+     "title": "Mülk 1-2",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Hanginiz daha güzel iş yapacak?</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hayatın amacı ne?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: 26.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Mutlak hükümranlık elinde bulunan Allah, yüceler yücesidir ve O&#x27;nun her şeye gücü yeter.</p><p style='margin:.35em 0'><b>2.</b> O, hanginizin daha güzel iş yapacağınızı denemek için ölümü ve hayatı yarattı. O, üstündür, bağışlayandır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-furkan-63",
+     "title": "Furkan 63",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rahman&#x27;ın kulları yeryüzünde tevazuyla yürür</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Allah&#x27;ın sevdiği kulların vasfı</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahlak · Süre: 15.6 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>63.</b> O çok merhametli Allah&#x27;ın (has) kulları onlardır ki, yeryüzünde tevazu ile yürürler ve cahil kimseler kendilerine laf attığı zaman (incitmeksizin) &quot;selam&quot; derler (geçerler).</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-furkan-74",
+     "title": "Furkan 74",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Eşlerimizi ve çocuklarımızı göz aydınlığı kıl</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Ailen için bu duayı et</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: aile · Süre: 18.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>74.</b> Ve onlar ki: &quot;Ey Rabbimiz! Bize gözümüzü aydınlatacak eşler ve zürriyetler bağışla ve bizi takva sahiplerine önder kıl&quot; derler.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-201",
+     "title": "Bakara 201",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbimiz, bize dünyada da ahirette de iyilik ver</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Dünya ve ahiret için bir dua</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 17.5 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>201.</b> Yine onlardan: &quot;Ey Rabbimiz! Bize dünyada bir güzellik ve ahirette de bir güzellik ver ve bizi ateş azabından koru!&quot; diyenler vardır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-aliimran-8",
+     "title": "Al-i İmran 8",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbimiz, kalplerimizi kaydırma</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> İmanını korumak için dua</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 18.7 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>8.</b> Ey Rabbimiz! Bize ihsan ettiğin hidayetten sonra kalblerimizi haktan saptırma, bize kendi katından rahmet ihsan eyle! Şüphesiz ki, Sen bol ihsan sahibisin.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-taha-25-28",
+     "title": "Taha 25-28",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbim, göğsümü genişlet</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Zor bir konuşmadan önce</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 16.7 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>25.</b> Musa dedi ki: &quot;Ey Rabbim! Benim göğsüme genişlik ver,</p><p style='margin:.35em 0'><b>26.</b> İşimi kolaylaştır,</p><p style='margin:.35em 0'><b>27.</b> Dilimden düğümü çöz</p><p style='margin:.35em 0'><b>28.</b> Ki, sözümü iyi anlasınlar.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-enbiya-87",
+     "title": "Enbiya 87",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Hz. Yunus&#x27;un duası</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Darda kaldığında</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 27.9 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>87.</b> Zünnun&#x27;u (balık sahibi Yunus&#x27;u) da hatırla. Hani o, öfkelenerek gitmişti de, bizim kendisini hiçbir zaman sıkıştırmayacağımızı sanmıştı. Fakat sonunda karanlıklar içinde: &quot;Senden başka ilâh yoktur, sen münezzehsin, Şüphesiz ben haksızlık edenlerden oldum&quot; diye seslenmişti.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-enbiya-83-84",
+     "title": "Enbiya 83-84",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Hz. Eyyub&#x27;un duası</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hastalık ve sıkıntı anında</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 41.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>83.</b> Eyyûb da: &quot;Başıma bir bela geldi, (sana sığındım), sen merhametlilerin en merhametlisisin&quot; diye Rabbine nida etti.</p><p style='margin:.35em 0'><b>84.</b> Biz de onun duasını kabul ettik de başına gelenleri kaldırdık. Katımızdan bir rahmet ve kulluk edenlere bir hatıra olmak üzere, ona tekrar ailesini ve kaybettikleriyle bir mislini daha verdik.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-araf-23",
+     "title": "A'raf 23",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Hz. Adem&#x27;in duası: Rabbimiz, kendimize zulmettik</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hata yaptığında</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tövbe · Süre: 19.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>23.</b> Dediler ki: &quot;Ey Rabbimiz! Biz kendimize zulmettik, eğer bizi bağışlamaz ve bize rahmetinle muamele etmezsen muhakkak ziyana uğrayacaklardan oluruz!&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ibrahim-40-41",
+     "title": "İbrahim 40-41",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbim, beni namazı dosdoğru kılanlardan eyle</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hz. İbrahim&#x27;in duası</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 26.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>40.</b> &quot;Ey Rabbim! Beni ve soyumdan gelecekleri namazını dosdoğru kılanlardan eyle! Ey Rabbimiz! duamı kabul et!</p><p style='margin:.35em 0'><b>41.</b> &quot;Ey Rabbimiz! Herkesin hesaba çekileceği günde beni, anababamı ve müminleri bağışla!&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-kasas-24",
+     "title": "Kasas 24",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbim, bana indireceğin her hayra muhtacım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> İş ve rızık beklerken</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 20.6 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>24.</b> Bunun üzerine Musa, onların davarlarını suladı. Sonra gölgeye çekildi ve &quot;Rabbim! Doğrusu bana indireceğin her hayra muhtacım&quot; dedi.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-aliimran-173",
+     "title": "Al-i İmran 173",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah bize yeter, O ne güzel vekildir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Korktuğunda bunu söyle</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tevekkül · Süre: 25.6 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>173.</b> İnsanlar onlara: &quot;Düşmanlarınız size karşı ordu topladı, onlardan korkun.&quot; dediklerinde, bu, onların imanını artırdı ve şöyle dediler: &quot;Allah bize yeter. O ne güzel vekildir&quot;.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-tevbe-129",
+     "title": "Tevbe 129",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Bana Allah yeter</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Herkes yüz çevirse bile</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tevekkül · Süre: 22.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>129.</b> Eğer aldırmazlarsa onlara de ki: Bana Allah yeter. O&#x27;ndan başka ilâh yoktur. Ben O&#x27;na dayanmaktayım ve O, o büyük Arş&#x27;ın Rabbidir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-zumer-10",
+     "title": "Zümer 10",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Sabredenlere mükâfatları hesapsız verilir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Sabrın karşılığı</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 25.7 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>10.</b> Ey Muhammed! Tarafımdan söyle: &quot;Ey iman eden kullarım! Rabbinizden korkun. Bu dünyada güzellik yapanlara bir güzellik vardır. Allah&#x27;ın yeryüzü geniştir. Ancak sabredenlere mükafatları hesapsız ödenecektir.&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-bakara-45-46",
+     "title": "Bakara 45-46",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Sabır ve namazla yardım dileyin</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Namaz ağır geliyorsa</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ibadet · Süre: 26.5 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>45.</b> Bir de sabırla, namazla yardım isteyin. Şüphesiz bu, (Allah&#x27;a) saygılı olanlardan başkasına ağır gelir.</p><p style='margin:.35em 0'><b>46.</b> Onlar ki, Rablerine kavuşacaklarını ve gerçekten O&#x27;na döneceklerini bilirler.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ahzab-41-43",
+     "title": "Ahzab 41-43",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah&#x27;ı çokça anın</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Günün nasıl geçiyor?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: zikir · Süre: 31.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>41.</b> Ey iman edenler! Allah&#x27;ı çokça anın.</p><p style='margin:.35em 0'><b>42.</b> Ve O&#x27;nu sabah akşam tesbih edin.</p><p style='margin:.35em 0'><b>43.</b> Sizleri karanlıklardan aydınlığa çıkarmak için melekleri ile birlikte üzerinize rahmet ve bereket indiren O&#x27;dur ve O, müminlere çok merhametlidir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ahzab-56",
+     "title": "Ahzab 56",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Peygamber&#x27;e salavat getirin</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Salavat Ayeti</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ibadet · Süre: 19.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>56.</b> Gerçekten Allah ve melekleri Peygambere salât ederler. Ey iman edenler! siz de ona teslimiyetle salât ve selâm edin.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-hucurat-13",
+     "title": "Hucurat 13",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> En değerliniz, takvaca en ileri olanınızdır</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Üstünlük neyle ölçülür?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahlak · Süre: 37.2 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>13.</b> Ey insanlar! Doğrusu biz sizi bir erkekle bir dişiden yarattık. Ve birbirinizle tanışmanız için sizi milletlere ve kabilelere ayırdık. Muhakkak ki Allah yanında en değerli ve en üstününüz O&#x27;ndan en çok korkanınızdır. Şüphesiz Allah bilendir, herşeyden haberdar olandır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nahl-97",
+     "title": "Nahl 97",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ona güzel bir hayat yaşatırız</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Güzel bir hayat istiyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 26.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>97.</b> Erkekten ve dişiden, mümin olarak kim iyi amel işlerse muhakkak onu güzel bir hayat ile yaşatacağız ve yapmakta oldukları amellerin daha güzeliyle mükafatlarını elbette vereceğiz.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-zilzal-7-8",
+     "title": "Zilzal 7-8",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Zerre kadar iyilik yapan onu görür</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hiçbir iyilik kaybolmaz</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 18.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>7.</b> Her kim zerre kadar hayır işlemişse onu görecektir.</p><p style='margin:.35em 0'><b>8.</b> Her kim, zerre kadar şer işlemişse onu görecektir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-fussilet-34",
+     "title": "Fussilet 34",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kötülüğü en güzel şekilde sav</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Sana kötülük edene nasıl davranmalı?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahlak · Süre: 21.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>34.</b> Hem iyilik de bir değildir, kötülük de. Kötülüğü en güzel bir şekilde sav. O zaman seninle kendi arasında bir düşmanlık olan kişinin, sanki samimi bir dost gibi olduğunu görürsün.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-enam-162-163",
+     "title": "En'am 162-163",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Namazım, ibadetim, hayatım ve ölümüm Allah içindir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Hayatını kime adadın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: iman · Süre: 23.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>162.</b> De ki: Benim namazım, ibadetim, hayatım ve ölümüm hep âlemlerin Rabbi Allah içindir.</p><p style='margin:.35em 0'><b>163.</b> Onun ortağı yoktur. Bana böyle emrolundu ve ben müslümanların ilkiyim.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-zariyat-56",
+     "title": "Zariyat 56",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ancak bana kulluk etsinler diye yarattım</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Neden yaratıldık?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: 11.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>56.</b> Ben cinleri ve insanları ancak bana ibadet etsinler diye yarattım.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-fecr-27-30",
+     "title": "Fecr 27-30",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ey huzura ermiş nefis!</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Herkesin duymak istediği davet</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 24.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>27.</b> Ey, Rabbine, itaat edip huzura eren nefis!</p><p style='margin:.35em 0'><b>28.</b> Hem hoşnut edici, hem de hoşnut edilmiş olarak Rabbine dön.</p><p style='margin:.35em 0'><b>29.</b> Kullarımın arasına gir.</p><p style='margin:.35em 0'><b>30.</b> Cennetime gir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-kevser",
+     "title": "Kevser 1-3",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kevser Suresi</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Kur&#x27;an&#x27;ın en kısa suresi</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ibadet · Süre: 16.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Muhakkak biz sana Kevser&#x27;i verdik.</p><p style='margin:.35em 0'><b>2.</b> Öyleyse Rabb&#x27;in için namaz kıl ve kurban kes.</p><p style='margin:.35em 0'><b>3.</b> Muhakkak ki sonu kesik olan, sana buğzedendir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-kadir",
+     "title": "Kadir 1-5",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kadir Suresi</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Bin aydan hayırlı gece</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ibadet · Süre: 37.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Biz o (Kur&#x27;ân)nu Kadir gecesinde indirdik.</p><p style='margin:.35em 0'><b>2.</b> Kadir gecesinin ne olduğunu sen nereden bileceksin?</p><p style='margin:.35em 0'><b>3.</b> Kadir gecesi bin aydan daha hayırlıdır.</p><p style='margin:.35em 0'><b>4.</b> Melekler ve Ruh (Cebrail veya Ruh adındaki melek) o gece Rablerinin izniyle, her iş için inerler.</p><p style='margin:.35em 0'><b>5.</b> O gece, tanyeri ağarıncaya kadar süren bir selâmettir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nasr",
+     "title": "Nasr 1-3",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Nasr Suresi</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Zafer geldiğinde ne yapmalı?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: şükür · Süre: 26.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>1.</b> Allah&#x27;ın yardımı ve fetih geldiğinde,</p><p style='margin:.35em 0'><b>2.</b> Ve insanların dalga dalga Allah&#x27;ın dinine girdiklerini gördüğünde,</p><p style='margin:.35em 0'><b>3.</b> Rabbini öğerek tesbih et, O&#x27;ndan bağışlanmanı dile, çünkü O, tevbeleri çok kabul edendir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-tin-4-6",
+     "title": "Tin 4-6",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Biz insanı en güzel biçimde yarattık</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Kendine değer ver</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: 27.6 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>4.</b> Biz insanı en güzel biçimde yarattık.</p><p style='margin:.35em 0'><b>5.</b> Sonra da çevirdik aşağıların aşağısına attık.</p><p style='margin:.35em 0'><b>6.</b> Ancak iman edip iyi işler yapanlar başka; onlar için kesintisiz bir ecir vardır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-kehf-46",
+     "title": "Kehf 46",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Kalıcı olan salih amellerdir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Mal, evlat ve geriye kalan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 17.8 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>46.</b> Mal ve oğullar, dünya hayatının süsüdür. Bakî kalacak olan iyi ameller ise, Rabbinin katında, sevabca da hayırlıdır, ümid yönünden de daha hayırlıdır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-taha-114",
+     "title": "Taha 114",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbim, ilmimi artır</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Öğrenciler için dua</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: dua · Süre: 19.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>114.</b> Hükmü her yerde geçerli gerçek hükümdar olan Allah yücedir. (Ey Muhammed!) Kur&#x27;ân sana vahyedilirken, vahiy bitmeden önce (unutma korkusu ile) Kur&#x27;ân&#x27;ı okumada acele etme; &quot;Rabbim! benim ilmimi artır&quot; de.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-araf-56",
+     "title": "A'raf 56",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah&#x27;ın rahmeti iyilik yapanlara yakındır</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Rahmete yakın olmak için</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 18.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>56.</b> Düzeltildikten sonra yeryüzünde bozgunculuk yapmayın. O&#x27;na, korkarak ve rahmetini umarak dua edin. Muhakkak ki Allah&#x27;ın rahmeti, iyilik edenlere yakındır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-hud-114",
+     "title": "Hud 114",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> İyilikler kötülükleri giderir</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Bir hata mı yaptın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tövbe · Süre: 23.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>114.</b> Gündüzün her iki tarafında ve gecenin saçaklarında (gündüze yakın olan saatlerinde) namaz kıl! Muhakkak ki, iyilik kötülükleri giderir. Bu ise, düşünebilenlere bir öğüttür.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nisa-110",
+     "title": "Nisa 110",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Bağışlanma dileyen, Allah&#x27;ı bağışlayıcı bulur</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Tövbe için geç değil</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tövbe · Süre: 15.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>110.</b> Kim bir kötülük işler, yahut nefsine zulmeder, sonra da Allah&#x27;tan bağışlanmasını dilerse, Allah&#x27;ı bağışlayıcı ve esirgeyici bulur.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-ala-14-17",
+     "title": "A'la 14-17",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Ahiret daha hayırlı ve daha kalıcıdır</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Dünyaya çok mu daldın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: ahiret · Süre: 19.1 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>14.</b> Doğrusu felah buldu (günahtan) temizlenen.  </p><p style='margin:.35em 0'><b>15.</b> Rabbinin adını anıp namaz kılan.</p><p style='margin:.35em 0'><b>16.</b> Fakat siz dünya hayatını tercih ediyorsunuz.</p><p style='margin:.35em 0'><b>17.</b> Oysa ahiret daha hayırlı ve daha kalıcıdır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-aliimran-190-191",
+     "title": "Al-i İmran 190-191",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Göklerin ve yerin yaratılışında ibretler var</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Gökyüzüne en son ne zaman baktın?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tefekkür · Süre: 50.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>190.</b> Göklerin ve yerin yaratılışında, gece ile gündüzün birbiri ardınca gelip gidişinde selim akıl sahipleri için gerçekten açık, ibretli deliller vardır.</p><p style='margin:.35em 0'><b>191.</b> Onlar ayaktayken, otururken ve yanları üzerine yatarken Allah&#x27;ı anarlar; göklerin ve yerin yaratılışı üzerinde düşünürler. Ve &quot;Rabbimiz! Sen bunu boş yere yaratmadın, Sen yücesin, bizi ateşin azabından koru.&quot; derler.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-tegabun-11",
+     "title": "Teğabün 11",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah&#x27;ın izni olmadan hiçbir musibet gelmez</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Başına gelen her şeyde</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: tevekkül · Süre: 21.3 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>11.</b> Allah&#x27;ın izni olmayınca hiç bir musibet isabet etmez. Kim Allah&#x27;a inanırsa, Allah onun kalbini doğruya götürür. Allah her şeyi bilendir.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-nisa-28",
+     "title": "Nisa 28",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Allah yükünüzü hafifletmek ister</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Kendini çok mu zorluyorsun?</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 12.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>28.</b> Allah, din hususundaki ağır teklifleri sizden hafifletmek istiyor. Çünkü insan sabır ve tahammül bakımından zayıf yaratılmıştır.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-hicr-97-99",
+     "title": "Hicr 97-99",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Rabbini hamd ile tesbih et</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Söylenenler canını sıkıyorsa</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: sabır · Süre: 26.4 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>97.</b> Gerçekten biliriz ki, onların söylediklerine göğsün daralıyor.</p><p style='margin:.35em 0'><b>98.</b> O halde Rabbini hamd ile tesbih et. Ve secde edenlerden ol.</p><p style='margin:.35em 0'><b>99.</b> Ve sana ölüm gelinceye kadar Rabbine ibadet et.</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    },
+    {
+     "id": "a-taha-46",
+     "title": "Taha 46",
+     "html": "<p style='margin:.2em 0'><b>Başlık:</b> Korkmayın, ben sizinle beraberim</p><p style='margin:.2em 0'><b>Kanca (ilk 3 sn):</b> Korkuyorsan</p><p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Tema: umut · Süre: 11.0 sn</p><div style='margin-top:.6em;padding:.6em .8em;border-left:3px solid #c99a45;background:rgba(201,154,69,.08)'><p style='margin:0 0 .2em;font-size:13px;color:var(--ink2)'>Meal (Elmalılı), kaynaktan aynen:</p><p style='margin:.35em 0'><b>46.</b> Allah buyurdu ki: &quot;Korkmayın, zira ben sizinle beraberim, işitir ve görürüm.&quot;</p></div>",
+     "ask": "Bu ayet, başlığı ve kancasıyla listeye girsin mi?"
+    }
+   ]
+  },
+  {
+   "id": "klipler",
+   "eyebrow": "Arka plan kütüphanesi",
+   "title": "Arka plan videoları",
+   "intro": "Sadece onayladığınız klipler kullanılacak. Soldaki resim videoda görünecek dikey kısım, sağdaki orijinal görüntü. Videonun tamamında insan ya da uygunsuz bir şey var mı diye emin olmak için Pixabay bağlantısından izleyebilirsiniz.",
+   "cards": [
+    {
+     "id": "k-59291",
+     "title": "Klip 1: sunrise clouds",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, tevekkül · 19 sn · 3840x2160<br>Etiketler: mountains, fog, clouds, sunset, sunrise, forest, vietnam</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-59291/"
+      ]
+     ],
+     "shots": [
+      [
+       "k59291-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k59291-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-328740",
+     "title": "Klip 2: sunrise clouds",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, tevekkül · 46 sn · 3840x2160<br>Etiketler: alps, sunrise, fog, sea of fog, clouds, landscape, switzerland, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-328740/"
+      ]
+     ],
+     "shots": [
+      [
+       "k328740-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k328740-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-1917",
+     "title": "Klip 3: sunrise clouds",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, tevekkül · 22 sn · 2560x1440<br>Etiketler: lighthouse, sunset, sunrise, sky, sea, ocean, coast, island, aerial, clouds, sun beams, sun rays</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-1917/"
+      ]
+     ],
+     "shots": [
+      [
+       "k1917-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k1917-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-317873",
+     "title": "Klip 4: sunrise clouds",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, tevekkül · 43 sn · 3840x2160<br>Etiketler: sunrise, trees, deadwood, landscape, nature, clouds</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-317873/"
+      ]
+     ],
+     "shots": [
+      [
+       "k317873-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k317873-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-153821",
+     "title": "Klip 5: sunrise mountains",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, ahlak · 25 sn · 1080x1920<br>Etiketler: mountain, sunrise, nepal, mardi, dhaulagiri</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-153821/"
+      ]
+     ],
+     "shots": [
+      [
+       "k153821-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k153821-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-22555",
+     "title": "Klip 6: sunrise mountains",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, ahlak · 17 sn · 2560x1440<br>Etiketler: day, night, dark, time lapse, timelapse, dusk, star, mountain</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-22555/"
+      ]
+     ],
+     "shots": [
+      [
+       "k22555-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k22555-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-205422",
+     "title": "Klip 7: sunrise mountains",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, ahlak · 21 sn · 3840x2160<br>Etiketler: sunrise, mountain village, mountains, snow, fog, snow landscape, timelapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-205422/"
+      ]
+     ],
+     "shots": [
+      [
+       "k205422-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k205422-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-7127",
+     "title": "Klip 8: sunrise mountains",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, ahlak · 23 sn · 3840x2160<br>Etiketler: sunrise, tödi, alps, mountains, mountain range, fog, foggy landscape, sea of fog, gemsfairenstock, bifertenstock, clariden, large sharp horn, chintan, great windgällen, upper mountain stock, gitschen, uri rotstock, sea of clouds, clouds, heaven, mood, idyll, landscape, panoramic shot, panoramic image, panoramic photo, panoramic photography, nature, sun, fireball, sunshine, belchen, belchenflue, switzerland, aaretal</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-7127/"
+      ]
+     ],
+     "shots": [
+      [
+       "k7127-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k7127-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-88560",
+     "title": "Klip 9: sunrise mountains",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, ahlak · 19 sn · 3840x2160<br>Etiketler: sunrise, mountains, landscape, golden, beautiful, sunrise in mountains, mountain sunrise, timeelapsed, motion, clouds, light, rays, forest, nature, stunning, rocky mountains, early, morning</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-88560/"
+      ]
+     ],
+     "shots": [
+      [
+       "k88560-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k88560-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-202864",
+     "title": "Klip 10: calm lake reflection",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, zikir · 21 sn · 3840x2160<br>Etiketler: lake, sunset, reflection, golden, calm, peaceful, sky, ripples, waves, orange, calming, sun, light, dusk, evening, golden hour, landscape</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-202864/"
+      ]
+     ],
+     "shots": [
+      [
+       "k202864-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k202864-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-203872",
+     "title": "Klip 11: calm lake reflection",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, zikir · 22 sn · 3840x2160<br>Etiketler: lake, mountain lake, reflection, mountain, peaks, moraine, banff, canada, alberta, serene, calm, peaceful, morning, sunrise, water, glass, reflecting, view, panorama, forest, 4k</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-203872/"
+      ]
+     ],
+     "shots": [
+      [
+       "k203872-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k203872-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-28417",
+     "title": "Klip 12: calm lake reflection",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, zikir · 41 sn · 3840x2160<br>Etiketler: water, lake, water surface, lake surface, autumn, colors, nature, natural, calm, chill, relax, wave, waves, distortion, trees, reflection, reflecting, view, meditation, leaves, texture, green, yellow</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-28417/"
+      ]
+     ],
+     "shots": [
+      [
+       "k28417-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k28417-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-138588",
+     "title": "Klip 13: ocean waves sunset",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, şükür · 29 sn · 3840x2160<br>Etiketler: sea, ocean, beach, waves, sun, dusk, sunset, nature, rest, meditation</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-138588/"
+      ]
+     ],
+     "shots": [
+      [
+       "k138588-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k138588-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-21175",
+     "title": "Klip 14: ocean waves sunset",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, şükür · 13 sn · 3840x2160<br>Etiketler: ocean, horizon, yellow clouds, waves, sunset, sea, calm</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-21175/"
+      ]
+     ],
+     "shots": [
+      [
+       "k21175-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k21175-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-218714",
+     "title": "Klip 15: ocean waves sunset",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, şükür · 59 sn · 3840x2160<br>Etiketler: beach, ocean, sea, summer, holiday, wave, nature, beautiful, calm, peaceful, island, tourism, sunset, sunrise, palm, beautiful wallpaper, tree, leaves, canoe, boat, background</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-218714/"
+      ]
+     ],
+     "shots": [
+      [
+       "k218714-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k218714-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-348904",
+     "title": "Klip 16: ocean waves sunset",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, şükür · 42 sn · 3840x2160<br>Etiketler: wave, rock, horizon, ocean, sun, beach, sea, shore, coast, coastline, stone, seascape, sunset, peaceful, foam, coastal, cliff, shoreline, island, splash, rock texture, crash, remote, textured</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-348904/"
+      ]
+     ],
+     "shots": [
+      [
+       "k348904-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k348904-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-74888",
+     "title": "Klip 17: ocean waves sunset",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: huzur, şükür · 36 sn · 3840x2160<br>Etiketler: ocean, birds, waves, beach, sunset, sea, wildlife, horizon, seagulls, nature, sky, coast, relax, sunrise, reflection, australia, landscape, live wallpaper</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-74888/"
+      ]
+     ],
+     "shots": [
+      [
+       "k74888-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k74888-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-227318",
+     "title": "Klip 18: foggy forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tefekkür · 26 sn · 3840x2160<br>Etiketler: trees, forest, fog, haze, foggy, sunbeams, mystical, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-227318/"
+      ]
+     ],
+     "shots": [
+      [
+       "k227318-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k227318-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-321986",
+     "title": "Klip 19: foggy forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tefekkür · 15 sn · 3840x2160<br>Etiketler: fog, fog roller, foggy, wisps of mist, forest</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-321986/"
+      ]
+     ],
+     "shots": [
+      [
+       "k321986-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k321986-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-61837",
+     "title": "Klip 20: foggy forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tefekkür · 13 sn · 3840x2160<br>Etiketler: trees, forest, fog, mist, nature, landscape, mystical, light, tree, mysterious, morning, foggy</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-61837/"
+      ]
+     ],
+     "shots": [
+      [
+       "k61837-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k61837-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-136185",
+     "title": "Klip 21: foggy forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tefekkür · 18 sn · 3840x2160<br>Etiketler: mist, trees, forest, morning, woods, countryside, dawn, rural, foggy, haze, nature, landscape</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-136185/"
+      ]
+     ],
+     "shots": [
+      [
+       "k136185-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k136185-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-148495",
+     "title": "Klip 22: foggy forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tefekkür · 13 sn · 3840x2160<br>Etiketler: trees, fog day, ripe, hoarfrost, foggy, branches, winter forest, winter</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-148495/"
+      ]
+     ],
+     "shots": [
+      [
+       "k148495-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k148495-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-284568",
+     "title": "Klip 23: desert dunes",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tevekkül · 17 sn · 2160x3840<br>Etiketler: namibia, nature, africa, drone, desert, sand, dunes</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-284568/"
+      ]
+     ],
+     "shots": [
+      [
+       "k284568-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k284568-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-26085",
+     "title": "Klip 24: desert dunes",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tevekkül · 73 sn · 3840x2160<br>Etiketler: namibia, sundowner, sunset, africa, landscape, sahara, sand, national park, desert, safari, sandy, drought, nature, dunes, sand dunes</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-26085/"
+      ]
+     ],
+     "shots": [
+      [
+       "k26085-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k26085-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-284577",
+     "title": "Klip 25: desert dunes",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tevekkül · 27 sn · 3840x2160<br>Etiketler: namibia, nature, africa, drone, desert, sand, dunes</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-284577/"
+      ]
+     ],
+     "shots": [
+      [
+       "k284577-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k284577-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-284557",
+     "title": "Klip 26: desert dunes",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: sabır, tevekkül · 21 sn · 3840x2160<br>Etiketler: desert, dunes, sand, namibia, nature, africa, drone, shore</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-284557/"
+      ]
+     ],
+     "shots": [
+      [
+       "k284557-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k284557-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-148593",
+     "title": "Klip 27: night sky stars",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: dua, tefekkür, koruma · 30 sn · 3840x2160<br>Etiketler: galaxy, stars, sky, night, clouds, universe</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-148593/"
+      ]
+     ],
+     "shots": [
+      [
+       "k148593-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k148593-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-190332",
+     "title": "Klip 28: clouds timelapse",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: iman, tefekkür · 14 sn · 3840x2160<br>Etiketler: atmospheric, sky, clouds, cloudscape, sunset, mountains, scenery, nature, landscape, drone, aerial, timelapse, time-lapse, time lapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-190332/"
+      ]
+     ],
+     "shots": [
+      [
+       "k190332-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k190332-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-95188",
+     "title": "Klip 29: clouds timelapse",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: iman, tefekkür · 20 sn · 3840x2160<br>Etiketler: clouds, heaven, cloudscape, nature, passing clouds, cloud mood, timelapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-95188/"
+      ]
+     ],
+     "shots": [
+      [
+       "k95188-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k95188-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-25780",
+     "title": "Klip 30: clouds timelapse",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: iman, tefekkür · 21 sn · 3840x2160<br>Etiketler: clouds, sun, heaven, cloud formation, mood, sunlight, the atmosphere, sunbeams, time lapse, timelapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-25780/"
+      ]
+     ],
+     "shots": [
+      [
+       "k25780-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k25780-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-116167",
+     "title": "Klip 31: clouds timelapse",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: iman, tefekkür · 30 sn · 3840x2160<br>Etiketler: clouds, heaven, blue, beautiful wallpaper, nature, move, cloud formation, background, timelapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-116167/"
+      ]
+     ],
+     "shots": [
+      [
+       "k116167-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k116167-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-52170",
+     "title": "Klip 32: clouds timelapse",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: iman, tefekkür · 47 sn · 3840x2160<br>Etiketler: heaven, view, cloud formation, weather changes, changeable, rain, rain clouds, switzerland, gelterkinden, sleet, time lapse, timelapse</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-52170/"
+      ]
+     ],
+     "shots": [
+      [
+       "k52170-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k52170-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-92994",
+     "title": "Klip 33: rain drops leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: tövbe, dua · 30 sn · 3840x2160<br>Etiketler: plant, leaves, foliage, rain, drops, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-92994/"
+      ]
+     ],
+     "shots": [
+      [
+       "k92994-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k92994-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-204307",
+     "title": "Klip 34: rain drops leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: tövbe, dua · 12 sn · 3840x2160<br>Etiketler: trees, leaves, foliage, rain, drops, water, green, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-204307/"
+      ]
+     ],
+     "shots": [
+      [
+       "k204307-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k204307-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-73976",
+     "title": "Klip 35: rain drops leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: tövbe, dua · 20 sn · 3840x2160<br>Etiketler: leaves, banana, tree, plants, foliage, rain, drops, wind, weather</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-73976/"
+      ]
+     ],
+     "shots": [
+      [
+       "k73976-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k73976-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-228847",
+     "title": "Klip 36: waterfall",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, tövbe · 20 sn · 2160x3840<br>Etiketler: waterfall, mountain stream, flow, stone, moss, forest, nature, japan</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-228847/"
+      ]
+     ],
+     "shots": [
+      [
+       "k228847-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k228847-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-246856",
+     "title": "Klip 37: waterfall",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, tövbe · 30 sn · 3840x2160<br>Etiketler: waterfall, rainbow, river, nature, outdoors, landscape, scenic</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-246856/"
+      ]
+     ],
+     "shots": [
+      [
+       "k246856-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k246856-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-358693",
+     "title": "Klip 38: waterfall",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, tövbe · 35 sn · 3840x2160<br>Etiketler: water, falls, waterfall, rivers, river, nature, landscape, forest, green</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-358693/"
+      ]
+     ],
+     "shots": [
+      [
+       "k358693-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k358693-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-169249",
+     "title": "Klip 39: waterfall",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, tövbe · 30 sn · 4096x2160<br>Etiketler: waterfall, stream, river, mountains, nature, park, water, tourism, trees, mossy, landscape</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-169249/"
+      ]
+     ],
+     "shots": [
+      [
+       "k169249-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k169249-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-158229",
+     "title": "Klip 40: waterfall",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, tövbe · 20 sn · 3840x2160<br>Etiketler: waterfall, river, water, drone, nature, ulba, ecuador, earth day</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-158229/"
+      ]
+     ],
+     "shots": [
+      [
+       "k158229-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k158229-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-23881",
+     "title": "Klip 41: autumn leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ahiret · 13 sn · 3840x2160<br>Etiketler: fall, autumn, season, nature, leaves, tree, colorful, live wallpaper</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-23881/"
+      ]
+     ],
+     "shots": [
+      [
+       "k23881-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k23881-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-240320",
+     "title": "Klip 42: autumn leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ahiret · 30 sn · 3840x2160<br>Etiketler: leaves, water, river, stream, autumn, fall, season, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-240320/"
+      ]
+     ],
+     "shots": [
+      [
+       "k240320-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k240320-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-311442",
+     "title": "Klip 43: autumn leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ahiret · 50 sn · 3840x2160<br>Etiketler: fall, larches, autumn leaves, wind, autumn storm, autumn wind, windy, coniferous forest, nature, landscape, mountains, autumn colors</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-311442/"
+      ]
+     ],
+     "shots": [
+      [
+       "k311442-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k311442-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-242945",
+     "title": "Klip 44: autumn leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ahiret · 32 sn · 3840x2160<br>Etiketler: autumn, fall, leaves, foliage, trees, season, bright, scenic</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-242945/"
+      ]
+     ],
+     "shots": [
+      [
+       "k242945-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k242945-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-137879",
+     "title": "Klip 45: autumn leaves",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ahiret · 52 sn · 3840x2160<br>Etiketler: autumn, autumn leaves, autumn scenery, wind, republic of korea, kim-po, leaves</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-137879/"
+      ]
+     ],
+     "shots": [
+      [
+       "k137879-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k137879-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-348656",
+     "title": "Klip 46: flowers blooming",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, aile · 20 sn · 3840x2160<br>Etiketler: dandelion, flower, blossom, bloom, flora, plant, wildflowers, to flourish, bloom, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-348656/"
+      ]
+     ],
+     "shots": [
+      [
+       "k348656-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k348656-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-343177",
+     "title": "Klip 47: flowers blooming",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, aile · 49 sn · 3840x2160<br>Etiketler: ranunculus, flower, plant, blossom, bloom, to flourish, nature, bud, spring, bloom</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-343177/"
+      ]
+     ],
+     "shots": [
+      [
+       "k343177-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k343177-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-43875",
+     "title": "Klip 48: flowers blooming",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, aile · 29 sn · 3840x2160<br>Etiketler: flower, bloom, rose, red, flora, pink, blooming, rose flower, petals, blossom</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-43875/"
+      ]
+     ],
+     "shots": [
+      [
+       "k43875-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k43875-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-22634",
+     "title": "Klip 49: flowers blooming",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, aile · 26 sn · 3840x2120<br>Etiketler: buttercups, buttercup, blossom, bloom, time lapse, yellow, petals, flower, flora, spring flower</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-22634/"
+      ]
+     ],
+     "shots": [
+      [
+       "k22634-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k22634-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-41710",
+     "title": "Klip 50: flowers blooming",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: şükür, aile · 22 sn · 3840x2160<br>Etiketler: flower, blooming, blossom, plant, floral, pink, petals, bloom, spring, pond, white, red, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-41710/"
+      ]
+     ],
+     "shots": [
+      [
+       "k41710-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k41710-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-382582",
+     "title": "Klip 51: sun rays forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, iman, koruma · 12 sn · 3840x2160<br>Etiketler: netherlands, sun rays, misty forest, sunlight, fog, woodland, nature, sunbeams, trees, morning light, atmospheric, forest</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-382582/"
+      ]
+     ],
+     "shots": [
+      [
+       "k382582-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k382582-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-203449",
+     "title": "Klip 52: sun rays forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, iman, koruma · 15 sn · 3840x2160<br>Etiketler: forest, trees, sunlight, old forest, dark, woods, moss, pacific northwest, light, shine, rays, old, dark forest, green, beautiful, 4k video, sun, morning, nature</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-203449/"
+      ]
+     ],
+     "shots": [
+      [
+       "k203449-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k203449-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-111177",
+     "title": "Klip 53: sun rays forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, iman, koruma · 12 sn · 3840x2160<br>Etiketler: forest, trees, nature, steps, landscape, morning, dawn, sun, rays</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-111177/"
+      ]
+     ],
+     "shots": [
+      [
+       "k111177-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k111177-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-382583",
+     "title": "Klip 54: sun rays forest",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: umut, iman, koruma · 18 sn · 3840x2160<br>Etiketler: netherlands, sun rays, misty forest, sunlight, fog, woodland, nature, sunbeams, trees, morning light, atmospheric, forest</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-382583/"
+      ]
+     ],
+     "shots": [
+      [
+       "k382583-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k382583-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-47052",
+     "title": "Klip 55: mosque",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ibadet, dua, zikir · 20 sn · 3840x2160<br>Etiketler: grand mosque abu dhabi, sheikh zayed grand mosque, mosque architectural, islam mosque, united arab emirates travel, emirates culture, uae mosque, mosque landmark, islamic</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-47052/"
+      ]
+     ],
+     "shots": [
+      [
+       "k47052-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k47052-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-34260",
+     "title": "Klip 56: mosque",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ibadet, dua, zikir · 16 sn · 1440x2049<br>Etiketler: islam, muslim, islamic, mosque, religion, prayer, faith, arab, holy, allah, culture</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-34260/"
+      ]
+     ],
+     "shots": [
+      [
+       "k34260-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k34260-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-40704",
+     "title": "Klip 57: mosque",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ibadet, dua, zikir · 15 sn · 2560x1440<br>Etiketler: mosque, astana, religion, nur-sultan, showplace, architecture, muslim, building, islam, islamic</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-40704/"
+      ]
+     ],
+     "shots": [
+      [
+       "k40704-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k40704-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-273961",
+     "title": "Klip 58: mosque",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: ibadet, dua, zikir · 23 sn · 1080x1920<br>Etiketler: blue mosque, mosque, islam, islamic, istanbul, turkey, muslim, architecture, religion, building, success, quran, blue</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-273961/"
+      ]
+     ],
+     "shots": [
+      [
+       "k273961-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k273961-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-57647",
+     "title": "Klip 59: green meadow",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: aile, ahlak, huzur · 20 sn · 3840x2160<br>Etiketler: sheep, morning, sunray, nature, landscape, sunrise, green, fog, grass, livestock, meadow, animals, summer, wool, dawn, peace</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-57647/"
+      ]
+     ],
+     "shots": [
+      [
+       "k57647-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k57647-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-146586",
+     "title": "Klip 60: green meadow",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: aile, ahlak, huzur · 42 sn · 3840x2160<br>Etiketler: green meadow, tall grass, meadow, grass, spring</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-146586/"
+      ]
+     ],
+     "shots": [
+      [
+       "k146586-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k146586-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-350458",
+     "title": "Klip 61: green meadow",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: aile, ahlak, huzur · 39 sn · 3840x2160<br>Etiketler: spring colors, forest, meadow, nature, spring green, green, fresh green, spring, plant, to flourish</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-350458/"
+      ]
+     ],
+     "shots": [
+      [
+       "k350458-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k350458-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-38344",
+     "title": "Klip 62: green meadow",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: aile, ahlak, huzur · 15 sn · 3840x2160<br>Etiketler: spring, rain, meadow, forest, green, nature, wetlands, tree</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-38344/"
+      ]
+     ],
+     "shots": [
+      [
+       "k38344-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k38344-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    },
+    {
+     "id": "k-164285",
+     "title": "Klip 63: green meadow",
+     "html": "<p style='margin:.2em 0;color:var(--ink2);font-size:14px'>Uyduğu temalar: aile, ahlak, huzur · 30 sn · 3840x2160<br>Etiketler: flower meadow, flower, wildflowers, buttercup, grass, meadow, green, landscape, nature, wind</p>",
+     "links": [
+      [
+       "Pixabay'de videoyu izle",
+       "https://pixabay.com/videos/id-164285/"
+      ]
+     ],
+     "shots": [
+      [
+       "k164285-dikey.jpg",
+       "Videoda görünecek kısım (dikey)"
+      ],
+      [
+       "k164285-tam.jpg",
+       "Orijinal görüntü"
+      ]
+     ],
+     "ask": "Bu görüntü kanalda kullanılabilir mi? (insan, uygunsuz detay yok)"
+    }
+   ]
+  }
+ ],
+ "answered": [
+  {
+   "text": "Kanal adı ve adresi",
+   "answer": "Manevi Bahçem, @manevibahcem"
+  },
+  {
+   "text": "Türkçe seslendirme olsun mu?",
+   "answer": "Hayır, sadece Arapça tilavet"
+  },
+  {
+   "text": "Kanca yazısı",
+   "answer": "Sadece ilk 3 saniye görünsün"
+  },
+  {
+   "text": "Meal",
+   "answer": "Elmalılı Hamdi Yazır (telif serbest)"
+  }
+ ],
+ "general_prompt": "Listeye eklemek istediğiniz ayetler, genel görüşler, yeni fikirler"
+}
