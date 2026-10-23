@@ -8,5 +8,202 @@
     "kanca": "Zor bir dönemden geçiyorsan bu ayet senin için",
     "tema": "umut",
     "arkaplan": 328740
+  },
+  {
+    "id": "zumer-53",
+    "sure": 39,
+    "bas": 53,
+    "son": 53,
+    "baslik": "Allah'ın rahmetinden ümidinizi kesmeyin",
+    "kanca": "\"Çok günah işledim\" diyorsan dinle",
+    "tema": "tövbe"
+  },
+  {
+    "id": "yusuf-87",
+    "sure": 12,
+    "bas": 87,
+    "son": 87,
+    "baslik": "Ümidini asla kesme",
+    "kanca": "Her şey bitti sandığında",
+    "tema": "umut",
+    "arkaplan": 328740
+  },
+  {
+    "id": "talak-3",
+    "sure": 65,
+    "bas": 3,
+    "son": 3,
+    "baslik": "Kim Allah'a tevekkül ederse O ona yeter",
+    "kanca": "Rızık kaygısı yaşıyorsan",
+    "tema": "tevekkül"
+  },
+  {
+    "id": "aliimran-139",
+    "sure": 3,
+    "bas": 139,
+    "son": 139,
+    "baslik": "Gevşemeyin, üzülmeyin",
+    "kanca": "Moralin bozuksa bu ayeti dinle",
+    "tema": "umut",
+    "arkaplan": 328740
+  },
+  {
+    "id": "duha-3-5",
+    "sure": 93,
+    "bas": 3,
+    "son": 5,
+    "baslik": "Rabbin seni bırakmadı",
+    "kanca": "Kendini yalnız hissediyorsan",
+    "tema": "umut",
+    "arkaplan": 328740
+  },
+  {
+    "id": "bakara-186",
+    "sure": 2,
+    "bas": 186,
+    "son": 186,
+    "baslik": "Ben çok yakınım, duaya cevap veririm",
+    "kanca": "Duan duyuluyor mu diye merak ediyorsan",
+    "tema": "dua",
+    "arkaplan": 328740
+  },
+  {
+    "id": "mumin-60",
+    "sure": 40,
+    "bas": 60,
+    "son": 60,
+    "baslik": "Bana dua edin, size cevap vereyim",
+    "kanca": "Dua etmeyi bırakma",
+    "tema": "dua",
+    "arkaplan": 328740
+  },
+  {
+    "id": "rad-28",
+    "sure": 13,
+    "bas": 28,
+    "son": 28,
+    "baslik": "Kalpler ancak Allah'ı anmakla huzur bulur",
+    "kanca": "Huzur arıyorsan",
+    "tema": "huzur"
+  },
+  {
+    "id": "bakara-152",
+    "sure": 2,
+    "bas": 152,
+    "son": 152,
+    "baslik": "Beni anın ki ben de sizi anayım",
+    "kanca": "Allah'ı andığında O da seni anar",
+    "tema": "zikir"
+  },
+  {
+    "id": "bakara-153",
+    "sure": 2,
+    "bas": 153,
+    "son": 153,
+    "baslik": "Allah sabredenlerle beraberdir",
+    "kanca": "Sabretmekte zorlanıyorsan",
+    "tema": "sabır",
+    "arkaplan": 328740
+  },
+  {
+    "id": "bakara-155-157",
+    "sure": 2,
+    "bas": 155,
+    "son": 157,
+    "baslik": "Sabredenleri müjdele",
+    "kanca": "Bir kayıp yaşadıysan",
+    "tema": "sabır",
+    "arkaplan": 328740
+  },
+  {
+    "id": "asr",
+    "sure": 103,
+    "bas": 1,
+    "son": 3,
+    "baslik": "Asr Suresi: Zamanın değeri",
+    "kanca": "Zamanını nasıl geçiriyorsun?",
+    "tema": "tefekkür"
+  },
+  {
+    "id": "ihlas",
+    "sure": 112,
+    "bas": 1,
+    "son": 4,
+    "baslik": "İhlas Suresi: Allah birdir",
+    "kanca": "Tevhidin özü dört ayette",
+    "tema": "iman"
+  },
+  {
+    "id": "felak",
+    "sure": 113,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Felak Suresi: Sabahın Rabbine sığınırım",
+    "kanca": "Korkularından Allah'a sığın",
+    "tema": "koruma"
+  },
+  {
+    "id": "nas",
+    "sure": 114,
+    "bas": 1,
+    "son": 6,
+    "baslik": "Nas Suresi: İnsanların Rabbine sığınırım",
+    "kanca": "Vesveselerden Allah'a sığın",
+    "tema": "koruma"
+  },
+  {
+    "id": "fatiha",
+    "sure": 1,
+    "bas": 1,
+    "son": 7,
+    "baslik": "Fatiha Suresi",
+    "kanca": "Her namazda okuduğumuz sure",
+    "tema": "ibadet"
+  },
+  {
+    "id": "ayetel-kursi",
+    "sure": 2,
+    "bas": 255,
+    "son": 255,
+    "baslik": "Âyetel Kürsî 🤲",
+    "kanca": "Ezberlemeye değer bir ayet",
+    "tema": "iman"
+  },
+  {
+    "id": "bakara-286",
+    "sure": 2,
+    "bas": 286,
+    "son": 286,
+    "baslik": "Allah kimseye gücünün üstünde yük yüklemez",
+    "kanca": "Taşıyamayacağın yük sana verilmez",
+    "tema": "sabır",
+    "arkaplan": 328740
+  },
+  {
+    "id": "hasr-22-24",
+    "sure": 59,
+    "bas": 22,
+    "son": 24,
+    "baslik": "Haşr Suresi'nin son ayetleri: Allah'ın güzel isimleri",
+    "kanca": "O'nu isimleriyle tanı",
+    "tema": "iman"
+  },
+  {
+    "id": "nur-35",
+    "sure": 24,
+    "bas": 35,
+    "son": 35,
+    "baslik": "Allah göklerin ve yerin nurudur",
+    "kanca": "Nur Ayeti",
+    "tema": "tefekkür"
+  },
+  {
+    "id": "kaf-16",
+    "sure": 50,
+    "bas": 16,
+    "son": 16,
+    "baslik": "Biz ona şah damarından daha yakınız",
+    "kanca": "Allah sana ne kadar yakın?",
+    "tema": "iman"
   }
 ]

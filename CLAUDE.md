@@ -30,6 +30,9 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | Dosya | Görev |
 |---|---|
 | `shorts.py` | `python shorts.py [ayet-id]` → `out/<id>.mp4` + `out/<id>.json` (başlık/açıklama/etiket) |
+| `gunluk.py` | Sıradaki (yüklenmemiş) ayeti üretir + yükler, `yayinlananlar.json`'a yazar; `--adet`, `--id`, `--sadece-uret` |
+| `.github/workflows/gunluk.yml` | Her gün 03:17 UTC `gunluk.py`; Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
+| `yayinlananlar.json` | Yüklenenler: `id, video, baslik, gizlilik, tarih` (Actions depoya geri yazar) |
 | `yukle.py` | `python yukle.py --giris` izin alır/kanalı gösterir; `python yukle.py out/x.mp4 [--gizlilik private]` yükler |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
@@ -60,6 +63,9 @@ kilitlenir** — herkese açık yayın için YouTube API Services Audit başvuru
   (reviewbot kiti; kaynak `review/`: `hazirla.py` → `review.json`, `refs.json` numaraları tutar). Kullanıcı "bitti"
   deyince: ArtifactData `list` (collection `answers`, `out_dir`) + reviewbot `answers.py`; onaylananlar →
   `ayetler.json` (ayetlere tema uyan klip `arkaplan` olarak atanır) ve `arkaplanlar.json`.
-- [ ] GitHub Actions: her gece sıradaki ayeti üret + yükle, yayınlananları depoda takip et
+  - 2026-10-23: ayet kartları 1–22 onaylandı → `ayetler.json`'a eklendi. Kart 23–66 ve **63 klibin hiçbiri** henüz
+    cevaplanmadı; şimdilik tek onaylı klip (328740) temasına uyan 9 ayette, diğerleri renkli zeminle üretilir.
+- [~] GitHub Actions kuruldu (`gunluk.yml`); çalışması için depo secret'ı `YOUTUBE_TOKEN` (= `token.json` içeriği)
+  eklenmeli. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
 - [ ] Sonra: Günün Hadisi serisi, Instagram/TikTok'a da paylaşım

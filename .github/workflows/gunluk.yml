@@ -1,0 +1,77 @@
+name: Günün Ayeti
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # her gün 03:17 UTC = 06:17 Türkiye
+  workflow_dispatch:
+    inputs:
+      adet:
+        description: "Kaç video (sıradaki ayetlerden)"
+        default: "1"
+      id:
+        description: "Belirli ayet id (boş = sıradaki)"
+        default: ""
+      gizlilik:
+        description: "Gizlilik"
+        type: choice
+        options: [private, unlisted, public]
+        default: private
+
+permissions:
+  contents: write   # yayinlananlar.json'u depoya geri yazmak için
+
+concurrency:
+  group: gunluk
+  cancel-in-progress: false
+
+jobs:
+  uret-yukle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Tilavet, API cevapları ve Pixabay klipleri her gece yeniden indirilmesin.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            cache/api
+            cache/ses
+            cache/pixabay
+          key: indirilenler-${{ github.run_id }}
+          restore-keys: indirilenler-
+
+      - name: Üret ve yükle
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          TARAYICI: /usr/bin/google-chrome
+          ADET: ${{ inputs.adet || '1' }}
+          GIZLILIK: ${{ inputs.gizlilik || 'private' }}
+          AYET: ${{ inputs.id }}
+        run: |
+          if [ -n "$AYET" ]; then python gunluk.py --id "$AYET" --gizlilik "$GIZLILIK"
+          else python gunluk.py --adet "$ADET" --gizlilik "$GIZLILIK"; fi
+
+      - name: Yayınlananları kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add yayinlananlar.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "Yayınlandı: $(date -u +%F)"
+          git push
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: videolar
+          path: out/
+          retention-days: 7

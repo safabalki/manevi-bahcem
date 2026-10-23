@@ -127,8 +127,10 @@ def html_resim(sablon, veri, png, genislik, yukseklik):
     html = html.replace("/*FONTS*/", (KOK / "fonts").as_uri() + "/")
     gecici = png.with_suffix(".html")
     gecici.write_text(html, encoding="utf-8")
+    # Linux'ta root olarak (konteyner) Chrome sandbox'sız açılmazsa çalışmaz.
+    korumasiz = ["--no-sandbox"] if hasattr(os, "geteuid") and os.geteuid() == 0 else []
     subprocess.run([
-        tarayici(), "--headless=new", "--disable-gpu", "--hide-scrollbars",
+        tarayici(), "--headless=new", "--disable-gpu", "--hide-scrollbars", *korumasiz,
         f"--user-data-dir={CACHE / 'tarayici-profili'}",
         "--default-background-color=00000000", "--virtual-time-budget=5000",
         f"--window-size={genislik},{yukseklik}", f"--screenshot={png}", gecici.as_uri(),
