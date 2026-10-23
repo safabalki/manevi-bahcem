@@ -51,6 +51,9 @@ jobs:
       - name: Üret ve yükle
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           TARAYICI: /usr/bin/google-chrome
           ADET: ${{ inputs.adet || '1' }}
           GIZLILIK: ${{ inputs.gizlilik || 'private' }}

@@ -49,7 +49,8 @@ değişkeniyle verilebilir; yoksa Edge → Chrome → google-chrome aranır. Yaz
 
 - `.env` → `PIXABAY_KEY=...`
 - `client_secret.json` → Google Cloud projesi `manevi-bahcem`, OAuth "Desktop app" istemcisi
-- `token.json` → yükleme izni (refresh token). GitHub Actions'ta `YOUTUBE_TOKEN` secret'ı olarak verilir.
+- `token.json` → yükleme izni (refresh token). GitHub Actions'ta `YOUTUBE_TOKEN` secret'ı olarak verilir; ya da
+  (telefondan OAuth Playground ile alınmışsa) `YOUTUBE_REFRESH_TOKEN` + `YOUTUBE_CLIENT_ID` + `YOUTUBE_CLIENT_SECRET`.
 
 Google OAuth uygulaması "In production" ama doğrulanmamış; izin ekranında logo yok (logo eklemek marka doğrulaması
 gerektirir, ekleme). Doğrulanmamış API projesinden yüklenen videolar Google audit'i geçene kadar **gizli olarak

@@ -31,6 +31,12 @@ def youtube():
     # GitHub Actions'ta token dosya yerine Secrets'tan ortam değişkeni olarak gelir.
     if os.environ.get("YOUTUBE_TOKEN"):
         kimlik = Credentials.from_authorized_user_info(json.loads(os.environ["YOUTUBE_TOKEN"]), IZINLER)
+    elif os.environ.get("YOUTUBE_REFRESH_TOKEN"):
+        # Telefondan (OAuth Playground) alınan token: JSON yazmadan üç ayrı secret yeter.
+        kimlik = Credentials(None, refresh_token=os.environ["YOUTUBE_REFRESH_TOKEN"],
+                             token_uri="https://oauth2.googleapis.com/token",
+                             client_id=os.environ["YOUTUBE_CLIENT_ID"],
+                             client_secret=os.environ["YOUTUBE_CLIENT_SECRET"], scopes=IZINLER)
     elif token.exists():
         kimlik = Credentials.from_authorized_user_file(str(token), IZINLER)
     else:
