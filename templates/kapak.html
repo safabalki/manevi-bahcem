@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Playfair"; src: url("/*FONTS*/PlayfairDisplay.ttf"); font-weight: 400 900; }
+  @font-face { font-family: "Montserrat"; src: url("/*FONTS*/Montserrat.ttf"); font-weight: 100 900; }
+  html, body { margin: 0; width: 2560px; height: 1440px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(240,200,120,.18) 0%, transparent 70%),
+      linear-gradient(160deg, #0b3a30 0%, #0f4a3c 45%, #041a15 100%);
+    position: relative;
+  }
+  svg.desen { position: absolute; inset: 0; width: 100%; height: 100%; }
+  /* YouTube'un her cihazda gösterdiği güvenli alan: ortadaki 1546x423 */
+  .guvenli {
+    position: absolute; left: 507px; top: 508px; width: 1546px; height: 423px;
+    display: flex; align-items: center; justify-content: center; gap: 56px;
+  }
+  .guvenli img { width: 300px; height: 300px; border-radius: 50%; box-shadow: 0 10px 50px rgba(0,0,0,.45); }
+  .ad { font: 700 150px/1 "Playfair"; color: #f6e2a6; letter-spacing: .01em; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+  .slogan { margin-top: 26px; font: 500 46px "Montserrat"; color: rgba(255,255,255,.85); letter-spacing: .06em; }
+</style>
+</head>
+<body>
+<svg class="desen" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="y" width="200" height="200" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="rgba(240,210,150,.08)" stroke-width="3">
+        <rect x="45" y="45" width="110" height="110"/>
+        <rect x="45" y="45" width="110" height="110" transform="rotate(45 100 100)"/>
+        <circle cx="100" cy="100" r="26"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#y)"/>
+</svg>
+<div class="guvenli">
+  <img id="logo" alt="">
+  <div>
+    <div class="ad">Manevi Bahçem</div>
+    <div class="slogan">Her gün bir ayet · bir dua · bir nefes huzur</div>
+  </div>
+</div>
+<script>
+  const D = /*DATA*/;
+  document.getElementById('logo').src = D.logo;
+</script>
+</body>
+</html>

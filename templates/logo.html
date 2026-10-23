@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 800px; height: 800px; overflow: hidden; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="zemin" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#14594a"/>
+      <stop offset="100%" stop-color="#05221c"/>
+    </radialGradient>
+    <linearGradient id="altin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8e6ad"/>
+      <stop offset="100%" stop-color="#c99a45"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#zemin)"/>
+  <!-- Sekiz köşeli yıldız -->
+  <g fill="rgba(240,210,140,.07)" stroke="url(#altin)" stroke-width="12" stroke-linejoin="round">
+    <rect x="175" y="175" width="450" height="450"/>
+    <rect x="175" y="175" width="450" height="450" transform="rotate(45 400 400)"/>
+  </g>
+  <circle cx="400" cy="400" r="168" fill="none" stroke="url(#altin)" stroke-width="4" opacity=".55"/>
+  <!-- Lale -->
+  <g fill="url(#altin)">
+    <path d="M400 268 C438 304 452 368 400 436 C348 368 362 304 400 268 Z"/>
+    <path d="M400 440 C340 436 318 384 330 326 C362 350 392 394 400 440 Z"/>
+    <path d="M400 440 C460 436 482 384 470 326 C438 350 408 394 400 440 Z"/>
+    <path d="M396 440 h8 v118 h-8 Z"/>
+    <path d="M398 548 C360 538 334 508 326 474 C364 482 392 510 398 548 Z"/>
+    <path d="M402 548 C440 538 466 508 474 474 C436 482 408 510 402 548 Z"/>
+  </g>
+</svg>
+</body>
+</html>
