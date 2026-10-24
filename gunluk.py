@@ -10,13 +10,16 @@ Kullanım:
 """
 import argparse
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 import shorts
+import tiktok
 
 KOK = Path(__file__).resolve().parent
 YAYINLANANLAR = KOK / "yayinlananlar.json"
+TIKTOK_GIZLILIK = {"public": "PUBLIC_TO_EVERYONE", "unlisted": "MUTUAL_FOLLOW_FRIENDS", "private": "SELF_ONLY"}
 
 
 def oku(yol, varsayilan):
@@ -48,6 +51,7 @@ if __name__ == "__main__":
         import yukle
         yt = yukle.youtube()
         print("Bağlı kanal: {1} {2} ({0})".format(*yukle.kanal_bilgisi(yt)))
+    tiktok_acik = not a.sadece_uret and tiktok.TOKEN_DOSYASI.exists() and os.environ.get("TIKTOK_CLIENT_SECRET")
 
     for kayit in secilenler:
         mp4, bilgi = shorts.video_uret(kayit)
@@ -56,7 +60,17 @@ if __name__ == "__main__":
             continue
         vid = yukle.yukle(yt, mp4, bilgi, a.gizlilik)
         print(f"Yüklendi: https://youtube.com/shorts/{vid}")
+        yeni = {"id": kayit["id"], "video": vid, "baslik": bilgi["baslik"], "gizlilik": a.gizlilik,
+                "tarih": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+        if tiktok_acik:
+            # TikTok hatası YouTube akışını durdurmasın; iz yayinlananlar.json'da kalır.
+            try:
+                pid, giz = tiktok.yukle(mp4, bilgi, TIKTOK_GIZLILIK[a.gizlilik])
+                yeni["tiktok"] = {"publish_id": pid, "gizlilik": giz}
+                print(f"TikTok'a gönderildi ({giz})")
+            except Exception as hata:
+                yeni["tiktok"] = {"hata": str(hata)[:300]}
+                print(f"TikTok hatası: {hata}")
         # Her yüklemeden hemen sonra yaz: sonraki ayette hata çıksa da yüklenen tekrar yüklenmesin.
-        yayinlanan.append({"id": kayit["id"], "video": vid, "baslik": bilgi["baslik"], "gizlilik": a.gizlilik,
-                           "tarih": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+        yayinlanan.append(yeni)
         YAYINLANANLAR.write_text(json.dumps(yayinlanan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

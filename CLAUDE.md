@@ -34,6 +34,8 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `.github/workflows/gunluk.yml` | Günde 3 kez (TR 07:17, 13:17, 19:17) `gunluk.py`; Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
 | `yayinlananlar.json` | Yüklenenler: `id, video, baslik, gizlilik, tarih` (Actions depoya geri yazar) |
 | `yukle.py` | `python yukle.py --giris` izin alır/kanalı gösterir; `python yukle.py out/x.mp4 [--gizlilik private]` yükler |
+| `tiktok.py` | TikTok Content Posting API: `--bagla KOD`, `--bilgi`, `out/x.mp4`; token şifreli `tiktok-token.enc` (anahtar = SHA256(`TIKTOK_CLIENT_SECRET`)), her yenilemede güncellenir |
+| `.github/workflows/tiktok-bagla.yml` | Elle: tiktok.html'in verdiği kodla hesabı bağlar, isterse gizli deneme videosu yükler |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
 | `ayetler.json` | Seçme ayetler: `id, sure, bas, son, baslik, kanca, tema, arkaplan(klip id)` |
@@ -69,4 +71,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
 - [x] GitHub Actions çalışıyor (secret'lar: `YOUTUBE_REFRESH_TOKEN/CLIENT_ID/CLIENT_SECRET`, Web istemcisi + OAuth
   Playground). İlk otomatik yükleme 2026-10-23 (İnşirah 5-8). API kotası 10.000/gün, yükleme 1.600 → en çok 6 video/gün. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
-- [ ] Sonra: Günün Hadisi serisi, Instagram/TikTok'a da paylaşım
+- [~] TikTok (@manevibahcem): geliştirici uygulaması açıldı, secret'lar `TIKTOK_CLIENT_KEY/SECRET` girildi. Site:
+  `kosullar.html`, `tiktok.html` (Client Key girilir → TikTok izni → kod). `gunluk.py` YouTube'dan sonra TikTok'a da
+  yükler (token varsa; hata YouTube'u durdurmaz). Denetimsiz uygulama → yalnızca SELF_ONLY. Sonra: uygulama incelemesi
+  (demo videosu) + Content Posting API audit. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
+- [ ] Sonra: Günün Hadisi serisi, Instagram

@@ -16,7 +16,13 @@
 <body>
 <main>
   <h1>TikTok bağlantısı</h1>
-  <p id="durum">TikTok'tan dönüş bekleniyor…</p>
+  <div id="baslat">
+    <p>1. TikTok geliştirici sayfasındaki <b>Client Key</b>'i yapıştırın ve bağlanın:</p>
+    <p><input id="anahtar" placeholder="Client Key" autocomplete="off"
+       style="font-size:17px;padding:8px;width:100%;box-sizing:border-box">
+    <button id="git" style="margin-top:8px;font-size:17px;padding:8px 16px">TikTok ile bağlan</button></p>
+  </div>
+  <p id="durum"></p>
   <p id="kutu" hidden><code id="kod" style="word-break:break-all;background:#fff;padding:8px;display:block"></code>
   <button id="kopyala" style="margin-top:8px;font-size:17px;padding:8px 16px">Kodu kopyala</button></p>
   <p>Bu kod birkaç dakika geçerlidir; kimseyle paylaşmayın.</p>
@@ -25,6 +31,18 @@
 <script>
   const p = new URLSearchParams(location.search);
   const durum = document.getElementById("durum");
+  document.getElementById("git").onclick = () => {
+    const anahtar = document.getElementById("anahtar").value.trim();
+    if (!anahtar) return;
+    const q = new URLSearchParams({
+      client_key: anahtar, response_type: "code",
+      scope: "user.info.basic,video.publish,video.upload",
+      redirect_uri: "https://safabalki.github.io/tiktok.html",
+      state: Math.random().toString(36).slice(2),
+    });
+    location.href = "https://www.tiktok.com/v2/auth/authorize/?" + q;
+  };
+  if (p.get("code") || p.get("error")) document.getElementById("baslat").hidden = true;
   if (p.get("code")) {
     durum.textContent = "İzin verildi. Bu kodu GitHub'da \"TikTok Bağla\" çalıştırmasına yapıştırın:";
     document.getElementById("kod").textContent = p.get("code");

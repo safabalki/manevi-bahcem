@@ -1,0 +1,69 @@
+name: TikTok Bağla
+
+# https://safabalki.github.io/tiktok.html'de izin verince çıkan kodu buraya yapıştırın.
+on:
+  workflow_dispatch:
+    inputs:
+      kod:
+        description: "tiktok.html'in gösterdiği kod (boş = yalnızca dene)"
+        default: ""
+      deneme:
+        description: "Bir deneme videosu da yükle"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # şifreli token dosyasını depoya yazmak için
+
+concurrency:
+  group: gunluk
+  cancel-in-progress: false
+
+jobs:
+  bagla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+      TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+      TARAYICI: /usr/bin/google-chrome
+      KOD: ${{ inputs.kod }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            cache/api
+            cache/ses
+            cache/pixabay
+          key: indirilenler-${{ github.run_id }}
+          restore-keys: indirilenler-
+
+      - name: Bağla
+        run: |
+          if [ -n "$KOD" ]; then python tiktok.py --bagla "$KOD"; else python tiktok.py --bilgi; fi
+
+      # Hesabın gizli (SELF_ONLY) olarak bir video görmesi: TikTok başvurusundaki demo videosu için.
+      - name: Deneme videosu
+        if: inputs.deneme
+        run: |
+          python gunluk.py --id insirah-5-8 --sadece-uret
+          python tiktok.py out/insirah-5-8.mp4
+
+      - name: Token'ı kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add tiktok-token.enc 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "TikTok token güncellendi"
+          git pull --rebase -q origin main && git push
