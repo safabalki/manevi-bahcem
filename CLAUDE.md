@@ -73,6 +73,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
 - [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
 - [~] TikTok (@manevibahcem): geliştirici uygulaması açıldı, secret'lar `TIKTOK_CLIENT_KEY/SECRET` girildi. Site:
   `kosullar.html`, `tiktok.html` (Client Key girilir → TikTok izni → kod). `gunluk.py` YouTube'dan sonra TikTok'a da
-  yükler (token varsa; hata YouTube'u durdurmaz). Denetimsiz uygulama → yalnızca SELF_ONLY. Sonra: uygulama incelemesi
+  yükler (token varsa; hata YouTube'u durdurmaz). Sandbox bağlandı 2026-10-24; denetimsiz uygulama herkese açık
+  hesaba Direct Post yapamıyor (`unaudited_client_can_only_post_to_private_accounts`) → video **taslak** olarak TikTok
+  gelen kutusuna gider, kullanıcı uygulamadan paylaşır (açıklamayı kendisi yazar). Sonra: uygulama incelemesi
   (demo videosu) + Content Posting API audit. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
 - [ ] Sonra: Günün Hadisi serisi, Instagram
