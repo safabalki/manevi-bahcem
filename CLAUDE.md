@@ -53,8 +53,8 @@ değişkeniyle verilebilir; yoksa Edge → Chrome → google-chrome aranır. Yaz
   (telefondan OAuth Playground ile alınmışsa) `YOUTUBE_REFRESH_TOKEN` + `YOUTUBE_CLIENT_ID` + `YOUTUBE_CLIENT_SECRET`.
 
 Google OAuth uygulaması "In production" ama doğrulanmamış; izin ekranında logo yok (logo eklemek marka doğrulaması
-gerektirir, ekleme). Doğrulanmamış API projesinden yüklenen videolar Google audit'i geçene kadar **gizli olarak
-kilitlenir** — herkese açık yayın için YouTube API Services Audit başvurusu gerekiyor.
+gerektirir, ekleme). Doğrulanmamış projelerde videolar normalde gizli kilitlenir, ama 2026-10-24'te kullanıcı API ile
+yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` yüklüyor. Audit başvurusu yine de yapılacak.
 
 ## Durum
 

@@ -17,8 +17,8 @@ on:
       gizlilik:
         description: "Gizlilik"
         type: choice
-        options: [private, unlisted, public]
-        default: private
+        options: [public, unlisted, private]
+        default: public
 
 permissions:
   contents: write   # yayinlananlar.json'u depoya geri yazmak için
@@ -59,7 +59,7 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           TARAYICI: /usr/bin/google-chrome
           ADET: ${{ inputs.adet || '1' }}
-          GIZLILIK: ${{ inputs.gizlilik || 'private' }}
+          GIZLILIK: ${{ inputs.gizlilik || 'public' }}
           AYET: ${{ inputs.id }}
         run: |
           if [ -n "$AYET" ]; then python gunluk.py --id "$AYET" --gizlilik "$GIZLILIK"
