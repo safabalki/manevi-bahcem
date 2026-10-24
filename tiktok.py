@@ -1,4 +1,4 @@
-"""TikTok'a video yükler (Content Posting API, Direct Post).
+"""TikTok'a video yükler (Content Posting API: Direct Post, olmazsa gelen kutusuna taslak).
 
 Token depoda şifreli durur (tiktok-token.enc); anahtarı TIKTOK_CLIENT_SECRET'tan türetilir. TikTok her yenilemede
 yeni refresh token verebildiği için dosya her kullanımda güncellenir ve Actions depoya geri yazar.
@@ -80,21 +80,14 @@ def aciklama(bilgi):
     return f"{bilgi['baslik']}\n\n{metin} #islam #fyp"[:2200]
 
 
-def yukle(mp4, bilgi, gizlilik=None):
-    """Videoyu gönderir; TikTok işleyene kadar bekler. Dönüş: publish_id."""
-    token = erisim()
-    secenekler = hesap(token)["privacy_level_options"]
-    # Denetlenmemiş uygulamada TikTok yalnızca SELF_ONLY'ye izin verir; istenen yoksa en kısıtlısı.
-    gizlilik = gizlilik if gizlilik in secenekler else ("SELF_ONLY" if "SELF_ONLY" in secenekler else secenekler[0])
+def _gonder(token, yol, govde, mp4):
+    """init isteği + dosyanın parça parça yüklenmesi; publish_id döner."""
     boyut = mp4.stat().st_size
     parca = boyut if boyut <= PARCA else PARCA
     adet = max(1, boyut // parca)
-    veri = _post(token, "/post/publish/video/init/", {
-        "post_info": {"title": aciklama(bilgi), "privacy_level": gizlilik, "disable_duet": False,
-                      "disable_comment": False, "disable_stitch": False, "video_cover_timestamp_ms": 3500},
-        "source_info": {"source": "FILE_UPLOAD", "video_size": boyut, "chunk_size": parca,
-                        "total_chunk_count": adet},
-    })
+    govde["source_info"] = {"source": "FILE_UPLOAD", "video_size": boyut, "chunk_size": parca,
+                            "total_chunk_count": adet}
+    veri = _post(token, yol, govde)
     with open(mp4, "rb") as f:
         for i in range(adet):
             bas = i * parca
@@ -103,14 +96,34 @@ def yukle(mp4, bilgi, gizlilik=None):
             r = requests.put(veri["upload_url"], data=f.read(son - bas + 1), timeout=300, headers={
                 "Content-Type": "video/mp4", "Content-Range": f"bytes {bas}-{son}/{boyut}"})
             r.raise_for_status()
+    return veri["publish_id"]
+
+
+def yukle(mp4, bilgi, gizlilik=None):
+    """Videoyu gönderir; TikTok işleyene kadar bekler. Dönüş: (publish_id, gizlilik ya da "TASLAK").
+
+    Denetlenmemiş uygulama herkese açık hesaba doğrudan paylaşamıyor; o zaman video taslak olarak
+    TikTok gelen kutusuna gider, kullanıcı uygulamada "Paylaş"a basar.
+    """
+    token = erisim()
+    secenekler = hesap(token)["privacy_level_options"]
+    gizlilik = gizlilik if gizlilik in secenekler else ("SELF_ONLY" if "SELF_ONLY" in secenekler else secenekler[0])
+    try:
+        pid = _gonder(token, "/post/publish/video/init/", {"post_info": {
+            "title": aciklama(bilgi), "privacy_level": gizlilik, "disable_duet": False,
+            "disable_comment": False, "disable_stitch": False, "video_cover_timestamp_ms": 3500}}, mp4)
+    except RuntimeError as hata:
+        if "unaudited_client" not in str(hata):
+            raise
+        pid, gizlilik = _gonder(token, "/post/publish/inbox/video/init/", {}, mp4), "TASLAK"
     for _ in range(60):
-        durum = _post(token, "/post/publish/status/fetch/", {"publish_id": veri["publish_id"]})
-        if durum["status"] == "PUBLISH_COMPLETE":
+        durum = _post(token, "/post/publish/status/fetch/", {"publish_id": pid})
+        if durum["status"] in ("PUBLISH_COMPLETE", "SEND_TO_USER_INBOX"):
             break
         if durum["status"] == "FAILED":
             raise RuntimeError(f"TikTok yükleme başarısız: {durum.get('fail_reason')}")
         time.sleep(5)
-    return veri["publish_id"], gizlilik
+    return pid, gizlilik
 
 
 if __name__ == "__main__":
