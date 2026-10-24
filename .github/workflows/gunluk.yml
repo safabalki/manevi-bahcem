@@ -57,6 +57,8 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TARAYICI: /usr/bin/google-chrome
           ADET: ${{ inputs.adet || '1' }}
           GIZLILIK: ${{ inputs.gizlilik || 'public' }}
@@ -70,7 +72,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add yayinlananlar.json 2>/dev/null || exit 0
+          git add yayinlananlar.json tiktok-token.enc 2>/dev/null || git add yayinlananlar.json 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0
           git commit -m "Yayınlandı: $(date -u +%F)"
           git pull --rebase -q origin main && git push
