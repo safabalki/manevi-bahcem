@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Bağlantısı · Manevi Bahçem</title>
+<link rel="icon" href="logo.png">
+<style>
+  body { margin: 0; background: #f7f4ec; color: #1d2a26; font-family: Georgia, "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; line-height: 1.65; font-size: 17px; }
+  h1 { color: #0f4a3c; }
+  h2 { color: #0f4a3c; font-size: 21px; margin-top: 32px; }
+  a { color: #0f4a3c; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TikTok bağlantısı</h1>
+  <p id="durum">TikTok'tan dönüş bekleniyor…</p>
+  <p id="kutu" hidden><code id="kod" style="word-break:break-all;background:#fff;padding:8px;display:block"></code>
+  <button id="kopyala" style="margin-top:8px;font-size:17px;padding:8px 16px">Kodu kopyala</button></p>
+  <p>Bu kod birkaç dakika geçerlidir; kimseyle paylaşmayın.</p>
+  <p><a href="index.html">← Ana sayfa</a></p>
+</main>
+<script>
+  const p = new URLSearchParams(location.search);
+  const durum = document.getElementById("durum");
+  if (p.get("code")) {
+    durum.textContent = "İzin verildi. Bu kodu GitHub'da \"TikTok Bağla\" çalıştırmasına yapıştırın:";
+    document.getElementById("kod").textContent = p.get("code");
+    document.getElementById("kutu").hidden = false;
+    document.getElementById("kopyala").onclick = () => navigator.clipboard.writeText(p.get("code"));
+  } else if (p.get("error")) {
+    durum.textContent = "TikTok izni verilmedi: " + (p.get("error_description") || p.get("error"));
+  }
+</script>
+</body>
+</html>
