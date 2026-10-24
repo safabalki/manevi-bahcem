@@ -75,6 +75,7 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   `kosullar.html`, `tiktok.html` (Client Key girilir → TikTok izni → kod). `gunluk.py` YouTube'dan sonra TikTok'a da
   yükler (token varsa; hata YouTube'u durdurmaz). Sandbox bağlandı 2026-10-24; denetimsiz uygulama herkese açık
   hesaba Direct Post yapamıyor (`unaudited_client_can_only_post_to_private_accounts`) → video **taslak** olarak TikTok
-  gelen kutusuna gider, kullanıcı uygulamadan paylaşır (açıklamayı kendisi yazar). Sonra: uygulama incelemesi
-  (demo videosu) + Content Posting API audit. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
+  gelen kutusuna gider, kullanıcı uygulamadan paylaşır (açıklamayı kendisi yazar). Production başvurusu yalnızca `user.info.basic` + `video.upload`
+  (taslak) ile; Direct Post (`video.publish`) sonra ayrı audit. Onaylanınca secret'lar production key/secret'a çevrilip
+  tiktok.html'den yeniden bağlanılır. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
 - [ ] Sonra: Günün Hadisi serisi, Instagram

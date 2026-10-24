@@ -59,7 +59,7 @@ def erisim():
     t = json.loads(_sifre().decrypt(TOKEN_DOSYASI.read_bytes()))
     if time.time() > t["alindi"] + t["expires_in"] - 600:
         t = _token_istegi(grant_type="refresh_token", refresh_token=t["refresh_token"])
-    return t["access_token"]
+    return t["access_token"], t.get("scope", "").split(",")
 
 
 def _post(token, yol, govde):
@@ -105,10 +105,13 @@ def yukle(mp4, bilgi, gizlilik=None):
     Denetlenmemiş uygulama herkese açık hesaba doğrudan paylaşamıyor; o zaman video taslak olarak
     TikTok gelen kutusuna gider, kullanıcı uygulamada "Paylaş"a basar.
     """
-    token = erisim()
-    secenekler = hesap(token)["privacy_level_options"]
-    gizlilik = gizlilik if gizlilik in secenekler else ("SELF_ONLY" if "SELF_ONLY" in secenekler else secenekler[0])
+    token, izinler = erisim()
     try:
+        # video.publish izni yoksa (yalnızca video.upload onaylıysa) doğrudan taslak.
+        if "video.publish" not in izinler:
+            raise RuntimeError("unaudited_client: video.publish izni yok")
+        secenekler = hesap(token)["privacy_level_options"]
+        gizlilik = gizlilik if gizlilik in secenekler else ("SELF_ONLY" if "SELF_ONLY" in secenekler else secenekler[0])
         pid = _gonder(token, "/post/publish/video/init/", {"post_info": {
             "title": aciklama(bilgi), "privacy_level": gizlilik, "disable_duet": False,
             "disable_comment": False, "disable_stitch": False, "video_cover_timestamp_ms": 3500}}, mp4)
@@ -135,9 +138,10 @@ if __name__ == "__main__":
     if a.bagla:
         bagla(a.bagla.strip())
     if a.bilgi or a.bagla:
-        h = hesap(erisim())
-        print(f"Hesap: @{h['creator_username']} · gizlilik seçenekleri: {h['privacy_level_options']}"
-              f" · en uzun video: {h['max_video_post_duration_sec']} sn")
+        token, izinler = erisim()
+        r = requests.get(f"{API}/user/info/", params={"fields": "open_id,display_name"}, timeout=30,
+                         headers={"Authorization": f"Bearer {token}"}).json()
+        print(f"Hesap: {r.get('data', {}).get('user', {}).get('display_name')} · izinler: {izinler}")
     if a.video:
         mp4 = Path(a.video)
         pid, giz = yukle(mp4, json.loads(mp4.with_suffix(".json").read_text(encoding="utf-8")))
