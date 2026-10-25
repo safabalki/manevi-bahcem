@@ -38,8 +38,11 @@ meal = " ".join(requests.get(f"https://api.alquran.cloud/v1/ayah/{SURE}:{no}/tr.
 
 import edge_tts  # noqa: E402
 
-for ses, ad in [("tr-TR-AhmetNeural", "B1-erkek-ahmet"), ("tr-TR-EmelNeural", "B2-kadin-emel")]:
-    asyncio.run(edge_tts.Communicate(meal, ses, rate="-8%").save(str(CIKTI / f"{ad}.mp3")))
+# Kullanıcı kararı: kadın sesi yok.
+try:
+    asyncio.run(edge_tts.Communicate(meal, "tr-TR-AhmetNeural").save(str(CIKTI / "B1-erkek-ahmet.mp3")))
+except Exception as hata:
+    print("B1 olmadı:", hata)
 
 # B3) Piper: açık kaynak, bilgisayarda çalışan ses (internet servisi yok)
 model = CIKTI / "tr.onnx"
