@@ -8,9 +8,12 @@ on:
         description: "tiktok.html'in gösterdiği kod (boş = yalnızca dene)"
         default: ""
       deneme:
-        description: "Bir deneme videosu da yükle"
+        description: "Bir video da gönder"
         type: boolean
         default: true
+      ayet:
+        description: "Gönderilecek ayet id"
+        default: "insirah-5-8"
 
 permissions:
   contents: write   # şifreli token dosyasını depoya yazmak için
@@ -28,6 +31,7 @@ jobs:
       TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
       TARAYICI: /usr/bin/google-chrome
       KOD: ${{ inputs.kod }}
+      AYET: ${{ inputs.ayet || 'insirah-5-8' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -55,8 +59,8 @@ jobs:
       - name: Deneme videosu
         if: inputs.deneme
         run: |
-          python gunluk.py --id insirah-5-8 --sadece-uret
-          python tiktok.py out/insirah-5-8.mp4
+          python gunluk.py --id "$AYET" --sadece-uret
+          python tiktok.py "out/$AYET.mp4"
 
       - name: Token'ı kaydet
         if: always()
