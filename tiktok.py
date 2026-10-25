@@ -83,8 +83,9 @@ def aciklama(bilgi):
 def _gonder(token, yol, govde, mp4):
     """init isteği + dosyanın parça parça yüklenmesi; publish_id döner."""
     boyut = mp4.stat().st_size
-    parca = boyut if boyut <= PARCA else PARCA
-    adet = max(1, boyut // parca)
+    # Tek parçada chunk_size video boyutuna eşit olmalı (TikTok 64 MB'a kadar kabul ediyor).
+    parca = boyut if boyut < 2 * PARCA else PARCA
+    adet = boyut // parca
     govde["source_info"] = {"source": "FILE_UPLOAD", "video_size": boyut, "chunk_size": parca,
                             "total_chunk_count": adet}
     veri = _post(token, yol, govde)
