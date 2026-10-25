@@ -1,5 +1,4 @@
 """Türkçe seslendirme örnekleri: İnşirah 5-8. Meal metni API'den gelir, elle yazılmaz."""
-import asyncio
 import subprocess
 import sys
 from pathlib import Path
@@ -36,21 +35,22 @@ meal = " ".join(requests.get(f"https://api.alquran.cloud/v1/ayah/{SURE}:{no}/tr.
                 for no in AYETLER)
 (CIKTI / "meal.txt").write_text(meal + "\n", encoding="utf-8")
 
-import edge_tts  # noqa: E402
-
-# Kullanıcı kararı: kadın sesi yok.
-try:
-    asyncio.run(edge_tts.Communicate(meal, "tr-TR-AhmetNeural").save(str(CIKTI / "B1-erkek-ahmet.mp3")))
-except Exception as hata:
-    print("B1 olmadı:", hata)
-
-# B3) Piper: açık kaynak, bilgisayarda çalışan ses (internet servisi yok)
-model = CIKTI / "tr.onnx"
-taban = "https://huggingface.co/rhasspy/piper-voices/resolve/main/tr/tr_TR/fahrettin/medium/tr_TR-fahrettin-medium.onnx"
-model.write_bytes(requests.get(taban, timeout=120).content)
-Path(str(model) + ".json").write_bytes(requests.get(taban + ".json", timeout=60).content)
-wav = CIKTI / "p.wav"
-subprocess.run([sys.executable, "-m", "piper", "-m", str(model), "-f", str(wav)], input=meal.encode(), check=True)
-birlestir([wav], CIKTI / "B3-acik-kaynak-fahrettin.mp3")
-model.unlink()
-Path(str(model) + ".json").unlink()
+# B) Piper: açık kaynak, bilgisayarda çalışan erkek sesleri (kadın sesi yok — kullanıcı kararı)
+REV = "https://huggingface.co/rhasspy/piper-voices/resolve/2083514c726ed4e54d15dbf8d86285d6059642f0/tr/tr_TR"
+for ses in ["fettah", "fahrettin"]:
+    try:
+        model = CIKTI / "tr.onnx"
+        taban = f"{REV}/{ses}/medium/tr_TR-{ses}-medium.onnx"
+        model.write_bytes(requests.get(taban, timeout=180).content)
+        Path(str(model) + ".json").write_bytes(requests.get(taban + ".json", timeout=60).content)
+        if model.stat().st_size < 1_000_000:
+            raise RuntimeError("model inmedi: " + model.read_text()[:80])
+        wav = CIKTI / "p.wav"
+        subprocess.run([sys.executable, "-m", "piper", "-m", str(model), "-f", str(wav)],
+                       input=meal.encode(), check=True)
+        birlestir([wav], CIKTI / f"B-{ses}.mp3")
+    except Exception as hata:
+        print(ses, "olmadı:", hata)
+    finally:
+        for f in (CIKTI / "tr.onnx", CIKTI / "tr.onnx.json"):
+            f.unlink(missing_ok=True)
