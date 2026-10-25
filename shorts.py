@@ -259,6 +259,8 @@ def video_uret(kayit):
     aciklama = "\n".join([
         " ".join(a["meal"] for a in ayetler),
         "",
+        "💬 Bu ayet sana ne hissettirdi? Yorumlara yaz 🤲",
+        "",
         f"📖 {sure_adi} Suresi, {aralik}. ayet",
         f"🎙️ Kıraat: {KARI[1]}",
         f"📝 Meal: {MEAL[1]}",
