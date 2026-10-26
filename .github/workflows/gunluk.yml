@@ -2,10 +2,9 @@ name: Günün Ayeti
 
 on:
   schedule:
-    # Günde 3 video (Türkiye saatiyle 07:17, 13:17, 19:17)
-    - cron: "17 4 * * *"
-    - cron: "17 10 * * *"
-    - cron: "17 16 * * *"
+    # Her saat kontrol; sira.py günde 3 videoyu (TR 07, 13, 19) tamamlar. GitHub cron'u geciktirse ya da
+    # atlasa bile eksik video bir sonraki saatte yüklenir, fazlası yüklenmez.
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       adet:
@@ -34,15 +33,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Sıra kontrolü
+        id: sira
+        env:
+          OLAY: ${{ github.event_name }}
+          ELLE_ADET: ${{ inputs.adet || '1' }}
+        run: |
+          if [ "$OLAY" = "schedule" ]; then echo "adet=$(python3 sira.py)" >> "$GITHUB_OUTPUT"
+          else echo "adet=$ELLE_ADET" >> "$GITHUB_OUTPUT"; fi
+
       - uses: actions/setup-python@v5
+        if: steps.sira.outputs.adet != '0'
         with:
           python-version: "3.12"
           cache: pip
 
       - run: pip install -r requirements.txt
+        if: steps.sira.outputs.adet != '0'
 
       # Tilavet, API cevapları ve Pixabay klipleri her gece yeniden indirilmesin.
       - uses: actions/cache@v4
+        if: steps.sira.outputs.adet != '0'
         with:
           path: |
             cache/api
@@ -52,6 +63,7 @@ jobs:
           restore-keys: indirilenler-
 
       - name: Üret ve yükle
+        if: steps.sira.outputs.adet != '0'
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
@@ -60,7 +72,7 @@ jobs:
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TARAYICI: /usr/bin/google-chrome
-          ADET: ${{ inputs.adet || '1' }}
+          ADET: ${{ steps.sira.outputs.adet }}
           GIZLILIK: ${{ inputs.gizlilik || 'public' }}
           AYET: ${{ inputs.id }}
         run: |
@@ -68,7 +80,7 @@ jobs:
           else python gunluk.py --adet "$ADET" --gizlilik "$GIZLILIK"; fi
 
       - name: Yayınlananları kaydet
-        if: always()
+        if: always() && steps.sira.outputs.adet != '0'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
@@ -78,7 +90,7 @@ jobs:
           git pull --rebase -q origin main && git push
 
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.sira.outputs.adet != '0'
         with:
           name: videolar
           path: out/

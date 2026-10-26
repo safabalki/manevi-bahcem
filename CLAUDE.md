@@ -19,6 +19,7 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 ## Kullanıcının verdiği kararlar
 
 - Tek kanal, birden fazla seri (Günün Ayeti şimdi; hadis, dinin temelleri, dualar sonra).
+- Türkçe seslendirme denenecekse **kadın sesi yok** (2026-10-25). Ses örnekleri dalı: `claude/ses-ornekleri`.
 - Format: dikey Shorts, 15–45 sn, kelime kelime karaoke vurgusu, sinematik doğa arka planı, kanca yazısı yalnızca ilk 3 sn.
 - **Türkçe seslendirme istemedi** (TTS denendi, "soyut kaldı") — yalnızca Arapça tilavet.
 - Tam animasyon/AI video yok.
@@ -31,7 +32,7 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 |---|---|
 | `shorts.py` | `python shorts.py [ayet-id]` → `out/<id>.mp4` + `out/<id>.json` (başlık/açıklama/etiket) |
 | `gunluk.py` | Sıradaki (yüklenmemiş) ayeti üretir + yükler, `yayinlananlar.json`'a yazar; `--adet`, `--id`, `--sadece-uret` |
-| `.github/workflows/gunluk.yml` | Günde 3 kez (TR 07:17, 13:17, 19:17) `gunluk.py`; Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
+| `.github/workflows/gunluk.yml` | Her saat çalışır; `sira.py` bugün TR 07/13/19 yayınlarından eksik varsa 1 video üretir (GitHub cron'u gecikip atlayabiliyor); Actions sekmesinden elle de (adet/id/gizlilik) çalışır |
 | `yayinlananlar.json` | Yüklenenler: `id, video, baslik, gizlilik, tarih` (Actions depoya geri yazar) |
 | `yukle.py` | `python yukle.py --giris` izin alır/kanalı gösterir; `python yukle.py out/x.mp4 [--gizlilik private]` yükler |
 | `tiktok.py` | TikTok Content Posting API: `--bagla KOD`, `--bilgi`, `out/x.mp4`; token şifreli `tiktok-token.enc` (anahtar = SHA256(`TIKTOK_CLIENT_SECRET`)), her yenilemede güncellenir |
