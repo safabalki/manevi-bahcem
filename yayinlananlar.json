@@ -69,5 +69,16 @@
     "tiktok": {
       "hata": "TikTok /post/publish/video/init/: {'code': 'invalid_params', 'message': 'The chunk size is invalid', 'log_id': '202610260306189AA5D9F5DB559C5E891C'}"
     }
+  },
+  {
+    "id": "rad-28",
+    "video": "-pJRs_bucUs",
+    "baslik": "Kalpler ancak Allah'ı anmakla huzur bulur | Ra'd 28",
+    "gizlilik": "public",
+    "tarih": "2026-10-26T06:47:48+00:00",
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7700863561094514689",
+      "gizlilik": "TASLAK"
+    }
   }
 ]
