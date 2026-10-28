@@ -1,0 +1,28 @@
+name: Teşhis
+
+on:
+  push:
+    branches: [claude/teshis]
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        ayet: [fatiha, ayetel-kursi]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: free -m; df -h .; nproc
+      - name: Üret (bellek izlenerek)
+        env:
+          TARAYICI: /usr/bin/google-chrome
+        run: |
+          (while true; do echo "$(date +%T) $(free -m | awk '/Mem/{print "kullanılan="$3"MB boş="$7"MB"}') $(ps -eo rss,comm --sort=-rss | head -3 | tail -2 | tr '\n' ' ')"; sleep 5; done) &
+          /usr/bin/time -v python gunluk.py --id ${{ matrix.ayet }} --sadece-uret 2>&1 | tail -40
