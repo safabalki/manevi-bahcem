@@ -209,8 +209,14 @@ def video_uret(kayit):
                 "kanal": KANAL,
                 "altin": tema["altin"],
             }, png, 1080, 1920)
-            sure_sn = anlar[k + 1] - (0 if k == 0 else anlar[k])
-            liste += [f"file '{png.as_posix()}'", f"duration {max(sure_sn, 1 / FPS):.3f}"]
+            sure_sn = max(anlar[k + 1] - (0 if k == 0 else anlar[k]), 1 / FPS)
+            # Uzun kareyi 1 sn'lik tekrarlara böl: fps filtresi sonraki kareyi görene kadar çıktı vermiyor;
+            # çok ayetli videolarda (Fatiha) son ayetin ilk karesi ~40 sn sürünce ffmpeg diğer akışları
+            # bellekte biriktirip 15 GB'a çıkıyordu.
+            while sure_sn > 1.0:
+                liste += [f"file '{png.as_posix()}'", "duration 1.000"]
+                sure_sn -= 1.0
+            liste += [f"file '{png.as_posix()}'", f"duration {sure_sn:.3f}"]
         liste.append(liste[-2])  # concat demuxer son dosyanın süresini ancak tekrar edilince uygular
         a["liste"] = is_klasoru / f"ayet-{a['no']}.txt"
         a["liste"].write_text("ffconcat version 1.0\n" + "\n".join(liste) + "\n", encoding="utf-8")
