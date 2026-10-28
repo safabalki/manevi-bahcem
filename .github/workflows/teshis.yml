@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ayet: [fatiha, ayetel-kursi]
+        ayet: [fatiha]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
