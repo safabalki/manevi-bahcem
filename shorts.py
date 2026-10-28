@@ -193,10 +193,11 @@ def video_uret(kayit):
     kare = round(toplam * FPS)
 
     # Her ayet için kelime başına bir kare: okunan kelime parlar, okunanlar altın, kalanlar soluk.
-    # Kareler concat listesiyle tek bir akışa dizilir; akış zamanı video zamanıyla aynıdır.
+    # Kareler concat listesiyle tek bir akışa dizilir. Akış yalnızca ayetin kendi aralığını [bas, son] kapsar ve
+    # -itsoffset ile o ana kaydırılır: her ayet tüm video boyunca akınca 7 ayetli Fatiha'da ffmpeg 15 GB'a çıkıyordu.
     for a in ayetler:
         anlar = [a["bas"]] + [a["ses_bas"] + b for b in a["kelime_baslari"][1:]]
-        anlar = [max(anlar[:i + 1]) for i in range(len(anlar))] + [toplam]
+        anlar = [max(anlar[:i + 1]) for i in range(len(anlar))] + [a["son"]]
         liste = []
         for k in range(len(a["kelimeler"])):
             png = is_klasoru / f"ayet-{a['no']}-{k}.png"
@@ -209,14 +210,8 @@ def video_uret(kayit):
                 "kanal": KANAL,
                 "altin": tema["altin"],
             }, png, 1080, 1920)
-            sure_sn = max(anlar[k + 1] - (0 if k == 0 else anlar[k]), 1 / FPS)
-            # Uzun kareyi 1 sn'lik tekrarlara böl: fps filtresi sonraki kareyi görene kadar çıktı vermiyor;
-            # çok ayetli videolarda (Fatiha) son ayetin ilk karesi ~40 sn sürünce ffmpeg diğer akışları
-            # bellekte biriktirip 15 GB'a çıkıyordu.
-            while sure_sn > 1.0:
-                liste += [f"file '{png.as_posix()}'", "duration 1.000"]
-                sure_sn -= 1.0
-            liste += [f"file '{png.as_posix()}'", f"duration {sure_sn:.3f}"]
+            sure_sn = anlar[k + 1] - anlar[k]
+            liste += [f"file '{png.as_posix()}'", f"duration {max(sure_sn, 1 / FPS):.3f}"]
         liste.append(liste[-2])  # concat demuxer son dosyanın süresini ancak tekrar edilince uygular
         a["liste"] = is_klasoru / f"ayet-{a['no']}.txt"
         a["liste"].write_text("ffconcat version 1.0\n" + "\n".join(liste) + "\n", encoding="utf-8")
@@ -233,7 +228,7 @@ def video_uret(kayit):
         f.append("[v0][kanca]overlay=eof_action=pass[v0k]")
         z += 1
     for a in ayetler:
-        girdiler += ["-f", "concat", "-safe", "0", "-i", str(a["liste"])]
+        girdiler += ["-itsoffset", f"{a['bas']:.3f}", "-f", "concat", "-safe", "0", "-i", str(a["liste"])]
     for a in ayetler:
         girdiler += ["-i", str(a["ses"])]
 
