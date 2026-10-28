@@ -1,0 +1,1 @@
+  Duration: 00:00:47.57, start: 0.000000, bitrate: 3536 kb/s
