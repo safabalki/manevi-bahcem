@@ -14,7 +14,7 @@ TR = timezone(timedelta(hours=3))
 simdi = datetime.now(TR)
 yol = Path(__file__).resolve().parent / "yayinlananlar.json"
 yayinlanan = json.loads(yol.read_text(encoding="utf-8")) if yol.exists() else []
-bugun = sum(datetime.fromisoformat(y["tarih"]).astimezone(TR).date() == simdi.date() for y in yayinlanan)
+bugun = sum(datetime.fromisoformat(y["tarih"]).astimezone(TR).date() == simdi.date() for y in yayinlanan if "video" in y)
 gereken = sum(simdi.hour >= s for s in SAATLER)
 print(f"{simdi:%Y-%m-%d %H:%M} TR · bugün yüklenen {bugun} · bu saate kadar gereken {gereken}", file=sys.stderr)
 print(1 if bugun < gereken else 0)

@@ -20,6 +20,9 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 
 - Tek kanal, birden fazla seri (Günün Ayeti şimdi; hadis, dinin temelleri, dualar sonra).
 - Türkçe seslendirme denenecekse **kadın sesi yok** (2026-10-25). Ses örnekleri dalı: `claude/ses-ornekleri`.
+- **Telif:** Alafasy tilavetinde Content ID hak talebi var (Alfan Music / I-Media Production). YouTube hak talepli
+  **1 dakikadan uzun** Shorts'u dünya genelinde engelliyor (Haşr 22-24, Nur 35 — kullanıcı sildi). `gunluk.py`
+  58 sn üstünü yüklemez, `yayinlananlar.json`'a `atlandi` yazar. Kullanıcı telif uyarısı gelen videoyu siler, TikTok'a da koymaz.
 - Format: dikey Shorts, 15–45 sn, kelime kelime karaoke vurgusu, sinematik doğa arka planı, kanca yazısı yalnızca ilk 3 sn.
 - **Türkçe seslendirme istemedi** (TTS denendi, "soyut kaldı") — yalnızca Arapça tilavet.
 - Tam animasyon/AI video yok.

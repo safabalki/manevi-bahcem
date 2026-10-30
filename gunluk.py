@@ -19,6 +19,9 @@ import tiktok
 
 KOK = Path(__file__).resolve().parent
 YAYINLANANLAR = KOK / "yayinlananlar.json"
+# Alafasy tilavetinde Content ID hak talebi var (Alfan Music / I-Media); YouTube hak talepli 1 dakikadan uzun
+# Shorts'u dünya genelinde engelliyor (Haşr 22-24, 62 sn). Bu sınırı aşan video yüklenmez, atlanır.
+EN_UZUN_SN = 58
 TIKTOK_GIZLILIK = {"public": "PUBLIC_TO_EVERYONE", "unlisted": "MUTUAL_FOLLOW_FRIENDS", "private": "SELF_ONLY"}
 
 
@@ -42,7 +45,7 @@ if __name__ == "__main__":
             raise SystemExit(f"ayetler.json'da yok: {a.id}")
     else:
         bitenler = {y["id"] for y in yayinlanan}
-        secilenler = [k for k in liste if k["id"] not in bitenler][:a.adet]
+        secilenler = [k for k in liste if k["id"] not in bitenler]
         if not secilenler:
             raise SystemExit("Yayınlanmamış ayet kalmadı; ayetler.json'a onaylı yeni ayet ekleyin.")
 
@@ -53,9 +56,20 @@ if __name__ == "__main__":
         print("Bağlı kanal: {1} {2} ({0})".format(*yukle.kanal_bilgisi(yt)))
     tiktok_acik = not a.sadece_uret and tiktok.TOKEN_DOSYASI.exists() and os.environ.get("TIKTOK_CLIENT_SECRET")
 
+    yuklenen = 0
     for kayit in secilenler:
+        if yuklenen >= a.adet:
+            break
         mp4, bilgi = shorts.video_uret(kayit)
         print(f"Üretildi: {mp4} ({bilgi['sure_sn']} sn)")
+        if bilgi["sure_sn"] > EN_UZUN_SN:
+            print(f"Atlandı: {kayit['id']} {bilgi['sure_sn']} sn > {EN_UZUN_SN} sn (telif engeli riski)")
+            if yt is not None:
+                yayinlanan.append({"id": kayit["id"], "atlandi": f"{bilgi['sure_sn']} sn, 1 dakika sınırı",
+                                   "tarih": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+                YAYINLANANLAR.write_text(json.dumps(yayinlanan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            continue
+        yuklenen += 1
         if yt is None:
             continue
         vid = yukle.yukle(yt, mp4, bilgi, a.gizlilik)
