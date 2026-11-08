@@ -1,4 +1,4 @@
-"""Sıradaki ayetin videosunu üretip YouTube'a yükler ve yayinlananlar.json'a işler.
+"""Sıradaki ayetin videosunu üretip YouTube'a (varsa TikTok ve Instagram'a da) yükler ve yayinlananlar.json'a işler.
 
 GitHub Actions her gece bunu çalıştırır; elle de çalışabilir.
 
@@ -14,6 +14,7 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
+import instagram
 import shorts
 import tiktok
 
@@ -55,6 +56,9 @@ if __name__ == "__main__":
         yt = yukle.youtube()
         print("Bağlı kanal: {1} {2} ({0})".format(*yukle.kanal_bilgisi(yt)))
     tiktok_acik = not a.sadece_uret and tiktok.TOKEN_DOSYASI.exists() and os.environ.get("TIKTOK_CLIENT_SECRET")
+    # Instagram'da gizli/liste dışı paylaşım yok; yalnızca herkese açık YouTube yüklemelerinde paylaşılır.
+    instagram_acik = (not a.sadece_uret and a.gizlilik == "public" and instagram.TOKEN_DOSYASI.exists()
+                      and os.environ.get("INSTAGRAM_APP_SECRET"))
 
     yuklenen = 0
     for kayit in secilenler:
@@ -85,6 +89,14 @@ if __name__ == "__main__":
             except Exception as hata:
                 yeni["tiktok"] = {"hata": str(hata)[:300]}
                 print(f"TikTok hatası: {hata}")
+        if instagram_acik:
+            try:
+                mid, link = instagram.yukle(mp4, bilgi)
+                yeni["instagram"] = {"id": mid, "link": link}
+                print(f"Instagram'da paylaşıldı: {link or mid}")
+            except Exception as hata:
+                yeni["instagram"] = {"hata": str(hata)[:300]}
+                print(f"Instagram hatası: {hata}")
         # Her yüklemeden hemen sonra yaz: sonraki ayette hata çıksa da yüklenen tekrar yüklenmesin.
         yayinlanan.append(yeni)
         YAYINLANANLAR.write_text(json.dumps(yayinlanan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

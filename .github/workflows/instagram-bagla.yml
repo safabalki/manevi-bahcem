@@ -1,0 +1,76 @@
+name: Instagram Bağla
+
+# Graph API Explorer'dan alınan kısa ömürlü kullanıcı token'ını buraya yapıştırın (yaklaşık 1 saat geçerli).
+# Süresiz Sayfa token'ına çevrilip şifreli olarak instagram-token.enc'e yazılır.
+on:
+  workflow_dispatch:
+    inputs:
+      token:
+        description: "Graph API Explorer'daki kullanıcı token'ı (boş = yalnızca bağlantıyı göster)"
+        default: ""
+      deneme:
+        description: "Bir video da paylaş (HERKESE AÇIK Reels olur)"
+        type: boolean
+        default: false
+      ayet:
+        description: "Paylaşılacak ayet id"
+        default: "insirah-5-8"
+
+permissions:
+  contents: write   # şifreli token dosyasını depoya yazmak için
+
+concurrency:
+  group: gunluk
+  cancel-in-progress: false
+
+jobs:
+  bagla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+      INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
+      TARAYICI: /usr/bin/google-chrome
+      AYET: ${{ inputs.ayet || 'insirah-5-8' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Bağla
+        env:
+          KISA_TOKEN: ${{ inputs.token }}
+        run: |
+          if [ -n "$KISA_TOKEN" ]; then echo "::add-mask::$KISA_TOKEN"; python instagram.py --bagla "$KISA_TOKEN"
+          else python instagram.py --bilgi; fi
+
+      - uses: actions/cache@v4
+        if: inputs.deneme
+        with:
+          path: |
+            cache/api
+            cache/ses
+            cache/pixabay
+          key: indirilenler-${{ github.run_id }}
+          restore-keys: indirilenler-
+
+      - name: Deneme videosu
+        if: inputs.deneme
+        run: |
+          python gunluk.py --id "$AYET" --sadece-uret
+          python instagram.py "out/$AYET.mp4"
+
+      - name: Token'ı kaydet
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add instagram-token.enc 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "Instagram bağlandı"
+          git pull --rebase -q origin main && git push
