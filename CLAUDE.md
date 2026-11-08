@@ -104,4 +104,7 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Kâfirûn, Tekâsür, Hümeze, Tebbet, İnşirah (tamamı), Kâria, Âdiyât. Kuyruk sırası: namaz sureleri önde (bekleyen
   Kevser/Kadr/Nasr dahil), her 2 surede bir diğer ayet; zayıf temalar sonda. `gunluk.py` ayetler.json sırasıyla seçer.
   Analiz her pazar Actions'ta çalışır (+ YouTube abone, Instagram takipçi).
+  **Başlangıç (2026-11-08 22:54 TR):** YouTube 114 abone, kanal 14.460 izlenme, 45 video; Instagram @manevibahcem.tr
+  2 takipçi, 1 gönderi. Haftalık değerlendirme: Claude zamanlanmış görevi her pazartesi 11:13 TR (analizi okur,
+  yayınlanmamış kuyruğun sırasını düzenler, CLAUDE.md'ye not düşer, onay gerektirenleri önerir).
 - [ ] Sonra: Günün Hadisi serisi
