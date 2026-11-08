@@ -8,7 +8,8 @@ Token: Graph API Explorer'dan alınan kısa ömürlü kullanıcı token'ı --bag
 türetilen Sayfa token'ı süresizdir. Depoda şifreli durur (instagram-token.enc; anahtar = SHA256(INSTAGRAM_APP_SECRET)).
 
 Kullanım:
-  python instagram.py --bagla KISA_TOKEN   # hesabı bağla (Sayfa + Instagram hesabını bulur)
+  python instagram.py --bagla KISA_TOKEN --kullanici manevibahcem   # yalnızca bu Instagram hesabına bağlanır
+  python instagram.py --sil DffaEapjH0r    # paylaşımı sil (Reels bağlantısındaki kod ya da medya id)
   python instagram.py --bilgi              # bağlı hesap ve 24 saatlik yayın kotası
   python instagram.py out/x.mp4            # yanındaki .json'daki açıklamayla Reels olarak paylaş
 """
@@ -50,17 +51,23 @@ def _get(yol, **params):
     return _cevap(requests.get(f"{GRAPH}{yol}", params=params, timeout=60), yol)
 
 
-def bagla(kisa_token):
+def bagla(kisa_token, kullanici):
     uzun = _get("/oauth/access_token", grant_type="fb_exchange_token", client_id=os.environ["INSTAGRAM_APP_ID"],
                 client_secret=os.environ["INSTAGRAM_APP_SECRET"], fb_exchange_token=kisa_token)["access_token"]
     sayfalar = _get("/me/accounts", access_token=uzun,
                     fields="id,name,access_token,instagram_business_account{id,username}")["data"]
+    # Kullanıcı birden çok Sayfa yönetebiliyor (2026-11-08: ilk Sayfa başka bir işletmenindi ve deneme oraya gitti).
+    # Bu yüzden hesap adı zorunlu ve birebir eşleşmeli; asla "ilk bulunan" seçilmez.
+    kullanici = kullanici.strip().lstrip("@").lower()
     bagli = [s for s in sayfalar if s.get("instagram_business_account")]
-    if not bagli:
-        adlar = ", ".join(s["name"] for s in sayfalar) or "hiç Sayfa yok"
-        raise RuntimeError(f"Instagram hesabı bağlı Facebook Sayfası bulunamadı ({adlar}). Instagram'ı profesyonel "
-                           "hesaba çevirip Sayfaya bağlayın; token alırken Sayfayı seçmeyi unutmayın.")
-    s = bagli[0]
+    uyan = [s for s in bagli if s["instagram_business_account"].get("username", "").lower() == kullanici]
+    if len(uyan) != 1:
+        bulunan = ", ".join(f"{s['name']} → @{s['instagram_business_account'].get('username')}" for s in bagli)
+        diger = ", ".join(s["name"] for s in sayfalar if not s.get("instagram_business_account"))
+        raise RuntimeError(f"@{kullanici} bağlı tek bir Facebook Sayfası bulunamadı. Instagram bağlı Sayfalar: "
+                           f"{bulunan or 'yok'}; Instagram'sız Sayfalar: {diger or 'yok'}. Instagram'ı profesyonel "
+                           "hesaba çevirip doğru Sayfaya bağlayın; token alırken yalnızca o Sayfayı seçin.")
+    s = uyan[0]
     ig = s["instagram_business_account"]
     t = {"sayfa_id": s["id"], "sayfa": s["name"], "ig_id": ig["id"], "kullanici": ig.get("username"),
          "token": s["access_token"], "alindi": int(time.time())}
@@ -113,14 +120,38 @@ def yukle(mp4, bilgi):
     return mid, link
 
 
+def sil(kod):
+    """Paylaşımı siler. kod: Reels bağlantısındaki kısa kod (instagram.com/reel/KOD) ya da medya id."""
+    t = erisim()
+    mid = kod
+    if not kod.isdigit():
+        sonraki = f"{GRAPH}/{t['ig_id']}/media"
+        params = {"access_token": t["token"], "fields": "id,permalink", "limit": 50}
+        mid = None
+        while sonraki and mid is None:
+            veri = _cevap(requests.get(sonraki, params=params, timeout=60), "medya listesi")
+            mid = next((m["id"] for m in veri["data"] if f"/{kod}/" in m.get("permalink", "")), None)
+            sonraki, params = veri.get("paging", {}).get("next"), None
+        if mid is None:
+            raise RuntimeError(f"@{t['kullanici']} hesabında {kod} bulunamadı")
+    _cevap(requests.delete(f"{GRAPH}/{mid}", params={"access_token": t["token"]}, timeout=60), "silme")
+    print(f"Silindi: {kod} (@{t['kullanici']})")
+
+
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("video", nargs="?")
     p.add_argument("--bagla")
+    p.add_argument("--kullanici", help="bağlanacak Instagram hesabı (zorunlu, ör. manevibahcem)")
     p.add_argument("--bilgi", action="store_true")
+    p.add_argument("--sil")
     a = p.parse_args()
     if a.bagla:
-        bagla(a.bagla.strip())
+        if not a.kullanici:
+            p.error("--bagla için --kullanici zorunlu")
+        bagla(a.bagla.strip(), a.kullanici)
+    if a.sil:
+        sil(a.sil.strip())
     if a.bilgi or a.bagla:
         t = erisim()
         kota = _get(f"/{t['ig_id']}/content_publishing_limit", access_token=t["token"],

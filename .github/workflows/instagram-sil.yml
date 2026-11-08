@@ -1,0 +1,39 @@
+name: Instagram Sil
+
+# Bir Instagram paylaşımını API ile siler. Token, verilen commit'teki instagram-token.enc'den okunur
+# (bağlantı kaldırılmış olsa bile o hesaptaki yanlış paylaşımı temizleyebilmek için).
+on:
+  workflow_dispatch:
+    inputs:
+      kod:
+        description: "Reels bağlantısındaki kod (instagram.com/reel/KOD) ya da medya id"
+        required: true
+      token_commit:
+        description: "instagram-token.enc'nin alınacağı commit (boş = şimdiki)"
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  sil:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+      INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
+      KOD: ${{ inputs.kod }}
+      TOKEN_COMMIT: ${{ inputs.token_commit }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Sil
+        run: |
+          if [ -n "$TOKEN_COMMIT" ]; then git show "$TOKEN_COMMIT:instagram-token.enc" > instagram-token.enc; fi
+          python instagram.py --sil "$KOD"
