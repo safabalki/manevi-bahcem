@@ -8,6 +8,9 @@ on:
       token:
         description: "Graph API Explorer'daki kullanıcı token'ı (boş = yalnızca bağlantıyı göster)"
         default: ""
+      kullanici:
+        description: "Bağlanacak Instagram hesabı (birebir)"
+        default: "manevibahcem"
       deneme:
         description: "Bir video da paylaş (HERKESE AÇIK Reels olur)"
         type: boolean
@@ -45,8 +48,9 @@ jobs:
       - name: Bağla
         env:
           KISA_TOKEN: ${{ inputs.token }}
+          KULLANICI: ${{ inputs.kullanici || 'manevibahcem' }}
         run: |
-          if [ -n "$KISA_TOKEN" ]; then echo "::add-mask::$KISA_TOKEN"; python instagram.py --bagla "$KISA_TOKEN"
+          if [ -n "$KISA_TOKEN" ]; then echo "::add-mask::$KISA_TOKEN"; python instagram.py --bagla "$KISA_TOKEN" --kullanici "$KULLANICI"
           else python instagram.py --bilgi; fi
 
       - uses: actions/cache@v4
