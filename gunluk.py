@@ -1,4 +1,4 @@
-"""Sıradaki ayetin videosunu üretip YouTube'a (varsa TikTok ve Instagram'a da) yükler ve yayinlananlar.json'a işler.
+"""Sıradaki ayetin videosunu üretip YouTube'a (varsa TikTok Instagram ve Facebook'a da) yükler ve yayinlananlar.json'a işler.
 
 GitHub Actions her gece bunu çalıştırır; elle de çalışabilir.
 
@@ -14,6 +14,7 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
+import facebook
 import instagram
 import shorts
 import tiktok
@@ -59,6 +60,7 @@ if __name__ == "__main__":
     # Instagram'da gizli/liste dışı paylaşım yok; yalnızca herkese açık YouTube yüklemelerinde paylaşılır.
     instagram_acik = (not a.sadece_uret and a.gizlilik == "public" and instagram.TOKEN_DOSYASI.exists()
                       and os.environ.get("INSTAGRAM_APP_SECRET"))
+    facebook_acik = instagram_acik and facebook.acik()
 
     yuklenen = 0
     for kayit in secilenler:
@@ -97,6 +99,14 @@ if __name__ == "__main__":
             except Exception as hata:
                 yeni["instagram"] = {"hata": str(hata)[:300]}
                 print(f"Instagram hatası: {hata}")
+        if facebook_acik:
+            try:
+                fid, link = facebook.yukle(mp4, bilgi)
+                yeni["facebook"] = {"id": fid, "link": link}
+                print(f"Facebook'ta paylaşıldı: {link}")
+            except Exception as hata:
+                yeni["facebook"] = {"hata": str(hata)[:300]}
+                print(f"Facebook hatası: {hata}")
         # Her yüklemeden hemen sonra yaz: sonraki ayette hata çıksa da yüklenen tekrar yüklenmesin.
         yayinlanan.append(yeni)
         YAYINLANANLAR.write_text(json.dumps(yayinlanan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
