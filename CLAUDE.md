@@ -84,7 +84,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   gelen kutusuna gider, kullanıcı uygulamadan paylaşır (açıklamayı kendisi yazar). Production başvurusu yalnızca `user.info.basic` + `video.upload`
   (taslak) ile; Direct Post (`video.publish`) sonra ayrı audit. Onaylanınca secret'lar production key/secret'a çevrilip
   tiktok.html'den yeniden bağlanılır. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
-- [~] TikTok production onaylandı (2026-11-08, yalnızca `user.info.basic` + `video.upload` → hâlâ açıklamasız taslak).
+- [~] TikTok production onaylandı ve canlı anahtarla bağlandı (2026-11-08; deneme taslağı gitti). Yalnızca
+  `user.info.basic` + `video.upload` → hâlâ açıklamasız taslak.
   Canlı key/secret girilince eski `tiktok-token.enc` çözülemez (anahtar secret'tan türetiliyor) → tiktok.html'den
   canlı Client Key ile yeniden bağlanmalı. Açıklamalı otomatik paylaşım `video.publish` + Direct Post audit ister;
   TikTok kişisel/iç kullanım uygulamalarını genelde onaylamıyor. Kod hazır: token'da `video.publish` varsa Direct Post dener.
