@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Playfair"; src: url("/*FONTS*/PlayfairDisplay.ttf"); font-weight: 400 900; }
+  @font-face { font-family: "Montserrat"; src: url("/*FONTS*/Montserrat.ttf"); font-weight: 100 900; }
+  html, body { margin: 0; width: 1640px; height: 624px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(ellipse 45% 60% at 50% 50%, rgba(240,200,120,.18) 0%, transparent 70%),
+      linear-gradient(160deg, #0b3a30 0%, #0f4a3c 45%, #041a15 100%);
+    position: relative;
+  }
+  svg.desen { position: absolute; inset: 0; width: 100%; height: 100%; }
+  /* Facebook: masaüstü 1640x624'ün tamamını, telefon ortadaki ~1110px'i gösterir; profil resmi sol altı kapatır. */
+  .guvenli {
+    position: absolute; left: 290px; right: 290px; top: 0; bottom: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  }
+  .ad { font: 700 112px/1 "Playfair"; color: #f6e2a6; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+  .cizgi { width: 220px; height: 3px; margin: 30px auto 26px; background: linear-gradient(90deg, transparent, #d9b26a, transparent); }
+  .slogan { font: 500 38px "Montserrat"; color: rgba(255,255,255,.88); letter-spacing: .05em; }
+  .saat { margin-top: 22px; font: 600 26px "Montserrat"; color: #d9b26a; letter-spacing: .18em; }
+</style>
+</head>
+<body>
+<svg class="desen" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="y" width="160" height="160" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="rgba(240,210,150,.08)" stroke-width="2.5">
+        <rect x="36" y="36" width="88" height="88"/>
+        <rect x="36" y="36" width="88" height="88" transform="rotate(45 80 80)"/>
+        <circle cx="80" cy="80" r="21"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#y)"/>
+</svg>
+<div class="guvenli">
+  <div class="ad">Manevi Bahçem</div>
+  <div class="cizgi"></div>
+  <div class="slogan">Her gün bir ayet · bir dua · bir nefes huzur</div>
+  <div class="saat">HER GÜN 07:00 · 13:00 · 19:00</div>
+</div>
+</body>
+</html>
