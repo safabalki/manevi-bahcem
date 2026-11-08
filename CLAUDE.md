@@ -40,6 +40,8 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `yukle.py` | `python yukle.py --giris` izin alır/kanalı gösterir; `python yukle.py out/x.mp4 [--gizlilik private]` yükler |
 | `tiktok.py` | TikTok Content Posting API: `--bagla KOD`, `--bilgi`, `out/x.mp4`; token şifreli `tiktok-token.enc` (anahtar = SHA256(`TIKTOK_CLIENT_SECRET`)), her yenilemede güncellenir |
 | `.github/workflows/tiktok-bagla.yml` | Elle: tiktok.html'in verdiği kodla hesabı bağlar, isterse gizli deneme videosu yükler |
+| `instagram.py` | Instagram Reels (Graph API, Facebook Login yolu → dosya rupload.facebook.com'a yüklenir): `--bagla KISA_TOKEN`, `--bilgi`, `out/x.mp4`; süresiz Sayfa token'ı şifreli `instagram-token.enc` (anahtar = SHA256(`INSTAGRAM_APP_SECRET`)) |
+| `.github/workflows/instagram-bagla.yml` | Elle: Graph API Explorer'daki kısa ömürlü token'la hesabı bağlar, isterse deneme Reels'i paylaşır |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
 | `ayetler.json` | Seçme ayetler: `id, sure, bas, son, baslik, kanca, tema, arkaplan(klip id)` |
@@ -82,4 +84,12 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   gelen kutusuna gider, kullanıcı uygulamadan paylaşır (açıklamayı kendisi yazar). Production başvurusu yalnızca `user.info.basic` + `video.upload`
   (taslak) ile; Direct Post (`video.publish`) sonra ayrı audit. Onaylanınca secret'lar production key/secret'a çevrilip
   tiktok.html'den yeniden bağlanılır. Claude oturumundan open.tiktokapis.com engelli; test Actions'ta.
-- [ ] Sonra: Günün Hadisi serisi, Instagram
+- [~] TikTok production onaylandı (2026-11-08, yalnızca `user.info.basic` + `video.upload` → hâlâ açıklamasız taslak).
+  Canlı key/secret girilince eski `tiktok-token.enc` çözülemez (anahtar secret'tan türetiliyor) → tiktok.html'den
+  canlı Client Key ile yeniden bağlanmalı. Açıklamalı otomatik paylaşım `video.publish` + Direct Post audit ister;
+  TikTok kişisel/iç kullanım uygulamalarını genelde onaylamıyor. Kod hazır: token'da `video.publish` varsa Direct Post dener.
+- [~] Instagram: `instagram.py` yazıldı (2026-11-08), henüz bağlanmadı. Gerekenler: profesyonel IG hesabı + bağlı
+  Facebook Sayfası, Meta geliştirici uygulaması (kendi hesabı için App Review gerekmez), secret'lar
+  `INSTAGRAM_APP_ID/SECRET`, sonra "Instagram Bağla" workflow'u. `gunluk.py` yalnızca `public` yüklemelerde paylaşır;
+  hata YouTube'u durdurmaz.
+- [ ] Sonra: Günün Hadisi serisi

@@ -18,7 +18,7 @@ import time
 from pathlib import Path
 
 import requests
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet, InvalidToken
 
 KOK = Path(__file__).resolve().parent
 TOKEN_DOSYASI = KOK / "tiktok-token.enc"
@@ -43,7 +43,8 @@ def _token_istegi(**alanlar):
     })
     t = r.json()
     if "access_token" not in t:
-        raise SystemExit(f"TikTok token hatası: {t.get('error')} {t.get('error_description')}")
+        # SystemExit değil: gunluk.py TikTok hatasını yakalayıp YouTube kaydını yine yazabilmeli.
+        raise RuntimeError(f"TikTok token hatası: {t.get('error')} {t.get('error_description')}")
     _token_yaz(t)
     return t
 
@@ -55,8 +56,12 @@ def bagla(kod):
 
 def erisim():
     if not TOKEN_DOSYASI.exists():
-        raise SystemExit("TikTok bağlı değil (tiktok-token.enc yok); önce 'TikTok Bağla' çalıştırılmalı.")
-    t = json.loads(_sifre().decrypt(TOKEN_DOSYASI.read_bytes()))
+        raise RuntimeError("TikTok bağlı değil (tiktok-token.enc yok); önce 'TikTok Bağla' çalıştırılmalı.")
+    try:
+        t = json.loads(_sifre().decrypt(TOKEN_DOSYASI.read_bytes()))
+    except InvalidToken:
+        raise RuntimeError("tiktok-token.enc çözülemedi (TIKTOK_CLIENT_SECRET değişmiş, ör. canlı anahtara "
+                           "geçildi); tiktok.html'den yeniden bağlayın.")
     if time.time() > t["alindi"] + t["expires_in"] - 600:
         t = _token_istegi(grant_type="refresh_token", refresh_token=t["refresh_token"])
     return t["access_token"], t.get("scope", "").split(",")
