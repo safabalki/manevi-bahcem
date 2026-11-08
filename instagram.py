@@ -8,7 +8,7 @@ Token: Graph API Explorer'dan alınan kısa ömürlü kullanıcı token'ı --bag
 türetilen Sayfa token'ı süresizdir. Depoda şifreli durur (instagram-token.enc; anahtar = SHA256(INSTAGRAM_APP_SECRET)).
 
 Kullanım:
-  python instagram.py --bagla KISA_TOKEN --kullanici manevibahcem   # yalnızca bu Instagram hesabına bağlanır
+  python instagram.py --bagla KISA_TOKEN --kullanici manevibahcem.tr   # yalnızca bu Instagram hesabına bağlanır
   python instagram.py --sil DffaEapjH0r    # paylaşımı sil (Reels bağlantısındaki kod ya da medya id)
   python instagram.py --bilgi              # bağlı hesap ve 24 saatlik yayın kotası
   python instagram.py out/x.mp4            # yanındaki .json'daki açıklamayla Reels olarak paylaş
@@ -142,7 +142,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("video", nargs="?")
     p.add_argument("--bagla")
-    p.add_argument("--kullanici", help="bağlanacak Instagram hesabı (zorunlu, ör. manevibahcem)")
+    p.add_argument("--kullanici", help="bağlanacak Instagram hesabı (zorunlu, ör. manevibahcem.tr)")
     p.add_argument("--bilgi", action="store_true")
     p.add_argument("--sil")
     a = p.parse_args()

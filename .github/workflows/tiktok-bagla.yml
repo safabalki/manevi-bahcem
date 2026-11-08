@@ -33,6 +33,11 @@ jobs:
       KOD: ${{ inputs.kod }}
       AYET: ${{ inputs.ayet || 'insirah-5-8' }}
     steps:
+      - name: Kodu gizle
+        run: |
+          K=$(jq -r '.inputs.kod // ""' "$GITHUB_EVENT_PATH")
+          [ -n "$K" ] && echo "::add-mask::$K" || true
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
