@@ -69,10 +69,15 @@ def bagla(kisa_token, kullanici):
                            "hesaba çevirip doğru Sayfaya bağlayın; token alırken yalnızca o Sayfayı seçin.")
     s = uyan[0]
     ig = s["instagram_business_account"]
+    izinler = {i["permission"] for i in _get("/me/permissions", access_token=uzun)["data"]
+               if i.get("status") == "granted"}
     t = {"sayfa_id": s["id"], "sayfa": s["name"], "ig_id": ig["id"], "kullanici": ig.get("username"),
-         "token": s["access_token"], "alindi": int(time.time())}
+         "token": s["access_token"], "alindi": int(time.time()),
+         # Facebook Sayfasına Reels (facebook.py) yalnızca bu izin verildiyse açılır.
+         "facebook": "pages_manage_posts" in izinler}
     TOKEN_DOSYASI.write_bytes(_sifre().encrypt(json.dumps(t).encode()))
-    print(f"Bağlandı: @{t['kullanici']} (Sayfa: {t['sayfa']})")
+    fb = "açık" if t["facebook"] else "kapalı (pages_manage_posts izni yok)"
+    print(f"Bağlandı: @{t['kullanici']} (Sayfa: {t['sayfa']}) · Facebook Reels: {fb}")
 
 
 def erisim():
