@@ -10,7 +10,7 @@ on:
         default: ""
       kullanici:
         description: "Bağlanacak Instagram hesabı (birebir)"
-        default: "manevibahcem"
+        default: "manevibahcem.tr"
       deneme:
         description: "Bir video da paylaş (HERKESE AÇIK Reels olur)"
         type: boolean
@@ -36,6 +36,13 @@ jobs:
       TARAYICI: /usr/bin/google-chrome
       AYET: ${{ inputs.ayet || 'insirah-5-8' }}
     steps:
+      # Token'ı ilk adımda maskele: sonraki adımların env dökümünde açık yazılmasın (env'e verilen değer
+      # o adımın kendi add-mask'inden önce loglanıyor).
+      - name: Token'ı gizle
+        run: |
+          T=$(jq -r '.inputs.token // ""' "$GITHUB_EVENT_PATH")
+          [ -n "$T" ] && echo "::add-mask::$T" || true
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
@@ -48,9 +55,9 @@ jobs:
       - name: Bağla
         env:
           KISA_TOKEN: ${{ inputs.token }}
-          KULLANICI: ${{ inputs.kullanici || 'manevibahcem' }}
+          KULLANICI: ${{ inputs.kullanici || 'manevibahcem.tr' }}
         run: |
-          if [ -n "$KISA_TOKEN" ]; then echo "::add-mask::$KISA_TOKEN"; python instagram.py --bagla "$KISA_TOKEN" --kullanici "$KULLANICI"
+          if [ -n "$KISA_TOKEN" ]; then python instagram.py --bagla "$KISA_TOKEN" --kullanici "$KULLANICI"
           else python instagram.py --bilgi; fi
 
       - uses: actions/cache@v4

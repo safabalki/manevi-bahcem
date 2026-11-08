@@ -88,8 +88,11 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Canlı key/secret girilince eski `tiktok-token.enc` çözülemez (anahtar secret'tan türetiliyor) → tiktok.html'den
   canlı Client Key ile yeniden bağlanmalı. Açıklamalı otomatik paylaşım `video.publish` + Direct Post audit ister;
   TikTok kişisel/iç kullanım uygulamalarını genelde onaylamıyor. Kod hazır: token'da `video.publish` varsa Direct Post dener.
-- [~] Instagram: `instagram.py` yazıldı (2026-11-08), henüz bağlanmadı. Gerekenler: profesyonel IG hesabı + bağlı
-  Facebook Sayfası, Meta geliştirici uygulaması (kendi hesabı için App Review gerekmez), secret'lar
-  `INSTAGRAM_APP_ID/SECRET`, sonra "Instagram Bağla" workflow'u. `gunluk.py` yalnızca `public` yüklemelerde paylaşır;
-  hata YouTube'u durdurmaz.
+- [x] Instagram **@manevibahcem.tr** bağlandı 2026-11-08 (Facebook Sayfası "Manevi Bahçem"; Meta uygulaması
+  "Manevi Bahçem", App ID 1387169926593385, "Instagram'da içerik yönetimi" → API setup with Facebook login; secret'lar
+  `INSTAGRAM_APP_ID/SECRET`). `gunluk.py` yalnızca `public` yüklemelerde paylaşır; hata YouTube'u durdurmaz.
+  **Dikkat:** kullanıcı başka işletmelerin Sayfalarını da yönetiyor (RMZ Mobilya, RMZ Door…). İlk bağlantıda kod ilk
+  Sayfayı seçti, deneme Reels'i @rmz.mobilya'ya gitti (kullanıcı sildi; API silmeye izin vermedi). Artık `--kullanici`
+  birebir eşleşmeli. Yeniden bağlama: Graph API Explorer (`instagram_basic, instagram_content_publish,
+  pages_show_list, pages_read_engagement, business_management`) → "Instagram Bağla" (deneme kapalı).
 - [ ] Sonra: Günün Hadisi serisi
