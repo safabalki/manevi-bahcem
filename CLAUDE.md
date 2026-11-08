@@ -44,7 +44,8 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `.github/workflows/instagram-bagla.yml` | Elle: Graph API Explorer'daki kısa ömürlü token'la hesabı bağlar, isterse deneme Reels'i paylaşır |
 | `facebook.py` | Facebook Sayfası "Manevi Bahçem"e Reels (video_reels API); instagram.py'nin Sayfa token'ını kullanır, bağlarken `pages_manage_posts` verildiyse token'da `facebook: true` olur ve `gunluk.py` paylaşır |
 | `analiz.py` | YouTube izlenme raporu (tema/dilim ortalamaları, silinmiş videolar); "Analiz" workflow'u Summary'ye yazar |
-| `instagram_gecmis.py` | Instagram'a gitmemiş eski videoları en çok izlenen önce paylaşır; "Instagram Geçmiş" her akşam 2 video (TR ~20:40, ~22:40) |
+| `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır; "Instagram-Facebook Geçmiş" her akşam 2 video (TR ~20:40, ~22:40) |
+| `marka/` | Facebook kapak (1640x624, `templates/fb-kapak.html`) ve profil resmi |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
 | `ayetler.json` | Seçme ayetler: `id, sure, bas, son, baslik, kanca, tema, arkaplan(klip id)` |
@@ -108,8 +109,7 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   **Başlangıç (2026-11-08 22:54 TR):** YouTube 114 abone, kanal 14.460 izlenme, 45 video; Instagram @manevibahcem.tr
   2 takipçi, 1 gönderi. Haftalık değerlendirme: Claude zamanlanmış görevi her pazartesi 11:13 TR (analizi okur,
   yayınlanmamış kuyruğun sırasını düzenler, CLAUDE.md'ye not düşer, onay gerektirenleri önerir).
-- [~] Facebook Reels: `facebook.py` yazıldı (2026-11-08). Instagram'ın "Profiller arası paylaşım" ayarı yalnızca
-  kişisel profili (Safa Balkı) hedefliyor, Sayfa seçilemiyor → kullanılmaz. Gerekenler: Meta uygulamasına "Manage
-  everything on your Page" kullanım durumu + `pages_manage_posts` izni, yeni token'la "Instagram Bağla"
-  (log'da "Facebook Reels: açık" görünmeli).
+- [x] Facebook Reels bağlandı 2026-11-08 (`pages_manage_posts`; log "Facebook Reels: açık"). Instagram'ın "Profiller
+  arası paylaşım" ayarı yalnızca kişisel profili (Safa Balkı) hedefliyor → kullanılmaz. Eski videolar her akşam
+  Instagram'la birlikte Facebook'a da gider. Sayfa görselleri `marka/`.
 - [ ] Sonra: Günün Hadisi serisi

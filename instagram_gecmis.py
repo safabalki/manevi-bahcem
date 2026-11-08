@@ -1,8 +1,9 @@
-"""Instagram'ı doldurur: YouTube'a daha önce yüklenmiş ama Instagram'a gitmemiş videoları Reels olarak paylaşır.
+"""Instagram ve Facebook'u doldurur: YouTube'a daha önce yüklenmiş ama oralara gitmemiş videoları Reels olarak paylaşır.
 
 En çok izlenenler önce gider. YouTube'da silinmiş (ör. telif uyarısı yüzünden kullanıcının sildiği), herkese açık
 olmayan ya da bölge engelli videolar atlanır. Video yeniden üretilir (out/ Actions'ta kalıcı değil); kaynak, metin
-ve klip aynı olduğu için içerik aynıdır. Sonuç yayinlananlar.json'daki ilgili kayda "instagram" olarak yazılır.
+ve klip aynı olduğu için içerik aynıdır. Sonuç yayinlananlar.json'daki ilgili kayda "instagram"/"facebook" olarak
+yazılır; hata almış platform sonraki çalışmada yeniden denenir.
 
 Kullanım:
   python instagram_gecmis.py --adet 2
@@ -12,17 +13,23 @@ import argparse
 import json
 
 import analiz
+import facebook
 import instagram
 import shorts
 import yukle
 from gunluk import EN_UZUN_SN, YAYINLANANLAR, oku, KOK
 
+PLATFORMLAR = {"instagram": instagram.yukle, "facebook": facebook.yukle}
 
-def sira(yt):
+
+def eksik(kayit, acik):
+    """Bu kayıt hangi platformlara henüz (başarıyla) gitmedi?"""
+    return [p for p in acik if p not in kayit or "hata" in kayit[p]]
+
+
+def sira(yt, acik):
     yayinlanan = oku(YAYINLANANLAR, [])
-    # Hata almış kayıtlar (yeni yüklemede ya da önceki doldurmada) yeniden denenir.
-    bekleyen = [y for y in yayinlanan if "video" in y and y.get("gizlilik") == "public"
-                and ("instagram" not in y or "hata" in y["instagram"])]
+    bekleyen = [y for y in yayinlanan if "video" in y and y.get("gizlilik") == "public" and eksik(y, acik)]
     ist = analiz.istatistikler(yt, [y["video"] for y in bekleyen])
     uygun = [y for y in bekleyen if y["video"] in ist and ist[y["video"]]["gizlilik"] == "public"
              and not ist[y["video"]]["engel"]]
@@ -37,32 +44,37 @@ if __name__ == "__main__":
     p.add_argument("--liste", action="store_true")
     a = p.parse_args()
 
+    acik = ["instagram"] + (["facebook"] if facebook.acik() else [])
     yt = yukle.youtube()
-    uygun, atlanan, ist = sira(yt)
-    print(f"Instagram'a gidecek {len(uygun)} video; atlanan (silinmiş/gizli/engelli): {atlanan or 'yok'}")
+    uygun, atlanan, ist = sira(yt, acik)
+    print(f"Açık platformlar: {acik}; gidecek {len(uygun)} video; atlanan (silinmiş/gizli/engelli): {atlanan or 'yok'}")
     for y in uygun:
-        print(f"  {ist[y['video']]['izlenme']:>7,}  {y['id']}")
+        print(f"  {ist[y['video']]['izlenme']:>7,}  {y['id']}  → {', '.join(eksik(y, acik))}")
     if a.liste:
         raise SystemExit
 
     ayetler = {k["id"]: k for k in oku(KOK / "ayetler.json", [])}
+    hata_var = False
     for y in uygun[:a.adet]:
         mp4, bilgi = shorts.video_uret(ayetler[y["id"]])
         if bilgi["sure_sn"] > EN_UZUN_SN:
             print(f"Atlandı (uzun): {y['id']}")
             continue
-        try:
-            mid, link = instagram.yukle(mp4, bilgi)
-            sonuc = {"id": mid, "link": link, "gecmis": True}
-            print(f"Instagram'da paylaşıldı: {y['id']} {link or mid}")
-        except Exception as hata:
-            sonuc = {"hata": str(hata)[:300], "gecmis": True}
-            print(f"Instagram hatası ({y['id']}): {hata}")
-        # Her paylaşımdan sonra yaz; dosyayı yeniden okuyup yalnızca bu kaydı güncelle.
+        sonuclar = {}
+        for platform in eksik(y, acik):
+            try:
+                mid, link = PLATFORMLAR[platform](mp4, bilgi)
+                sonuclar[platform] = {"id": mid, "link": link, "gecmis": True}
+                print(f"{platform}: paylaşıldı {y['id']} {link or mid}")
+            except Exception as hata:
+                sonuclar[platform] = {"hata": str(hata)[:300], "gecmis": True}
+                hata_var = True
+                print(f"{platform} hatası ({y['id']}): {hata}")
+        # Her videodan sonra yaz; dosyayı yeniden okuyup yalnızca bu kaydı güncelle.
         kayitlar = oku(YAYINLANANLAR, [])
         for k in kayitlar:
             if k.get("video") == y["video"]:
-                k["instagram"] = sonuc
+                k.update(sonuclar)
         YAYINLANANLAR.write_text(json.dumps(kayitlar, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        if "hata" in sonuc:
+        if hata_var:
             break
