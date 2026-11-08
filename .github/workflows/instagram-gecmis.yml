@@ -2,6 +2,10 @@ name: Instagram Geçmiş
 
 # Daha önce YouTube'a yüklenmiş videoları (en çok izlenen önce) Instagram'a Reels olarak paylaşır.
 on:
+  schedule:
+    # Her akşam 2 eski video, aralıklı (TR ~20:40 ve ~22:40). Gidecek video kalmayınca hiçbir şey yapmaz.
+    - cron: "41 17 * * *"
+    - cron: "41 19 * * *"
   workflow_dispatch:
     inputs:
       adet:
