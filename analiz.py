@@ -54,6 +54,40 @@ def rapor(yt):
     return satirlar
 
 
+def kanal(yt):
+    s = yt.channels().list(part="statistics", mine=True).execute()["items"][0]["statistics"]
+    return {"abone": int(s.get("subscriberCount", 0)), "izlenme": int(s.get("viewCount", 0)),
+            "video": int(s.get("videoCount", 0))}
+
+
+def instagram_durum():
+    """Takipçi ve son Reels beğeni/yorum sayıları (izlenme için ayrı izin gerekiyor, yok)."""
+    import instagram
+    t = instagram.erisim()
+    hesap = instagram._get(f"/{t['ig_id']}", access_token=t["token"], fields="followers_count,media_count")
+    medya = instagram._get(f"/{t['ig_id']}/media", access_token=t["token"], limit=50,
+                           fields="caption,like_count,comments_count,permalink")["data"]
+    return {"takipci": hesap.get("followers_count", 0), "gonderi": hesap.get("media_count", 0),
+            "begeni": sum(m.get("like_count", 0) for m in medya),
+            "yorum": sum(m.get("comments_count", 0) for m in medya),
+            "enler": sorted(medya, key=lambda m: -m.get("like_count", 0))[:5]}
+
+
+def hesaplar_metni(k, ig):
+    cizgi = ["## Hesaplar\n"]
+    if k:
+        cizgi.append(f"- **YouTube:** {k['abone']:,} abone · {k['izlenme']:,} toplam izlenme · {k['video']} video")
+    if isinstance(ig, dict):
+        cizgi.append(f"- **Instagram:** {ig['takipci']:,} takipçi · {ig['gonderi']} gönderi · "
+                     f"son gönderilerde {ig['begeni']:,} beğeni, {ig['yorum']} yorum")
+        for m in ig["enler"]:
+            ad = (m.get("caption") or "").split("\n")[0][:60]
+            cizgi.append(f"  - {m.get('like_count', 0)} beğeni · [{ad}]({m.get('permalink')})")
+    elif ig:
+        cizgi.append(f"- **Instagram:** okunamadı ({ig})")
+    return "\n".join(cizgi) + "\n\n"
+
+
 def ozet(satirlar):
     canli = [s for s in satirlar if not s["yok"]]
     cizgi = []
@@ -91,8 +125,15 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--json")
     a = p.parse_args()
-    satirlar = rapor(yukle.youtube())
-    metin = ozet(satirlar)
+    yt = yukle.youtube()
+    satirlar = rapor(yt)
+    ig = None
+    if os.environ.get("INSTAGRAM_APP_SECRET"):
+        try:
+            ig = instagram_durum()
+        except Exception as hata:
+            ig = str(hata)[:200]
+    metin = hesaplar_metni(kanal(yt), ig) + ozet(satirlar)
     print(metin)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:

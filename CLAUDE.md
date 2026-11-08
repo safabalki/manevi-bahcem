@@ -100,5 +100,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   pages_show_list, pages_read_engagement, business_management`) → "Instagram Bağla" (deneme kapalı).
 - 2026-11-08 analiz (44 video, 14.7K izlenme, 1.657 beğeni, 15 yorum): en iyi İhlas (1.6K), Nas, Bakara 152/186,
   Duha, Mü'min 60 → bilinen sureler ve dua ayetleri. Zayıf: tevekkül, şükür, aile. Akşam dilimi en iyi. Yorum çok az.
-  Kullanıcı sonraki seri olarak **Namaz Sureleri**'ni seçti (2026-11-08).
+  Kullanıcı sonraki seri olarak **Namaz Sureleri**'ni seçti ve 10 sureyi onayladı (2026-11-08): Fil, Kureyş, Mâûn,
+  Kâfirûn, Tekâsür, Hümeze, Tebbet, İnşirah (tamamı), Kâria, Âdiyât. Kuyruk sırası: namaz sureleri önde (bekleyen
+  Kevser/Kadr/Nasr dahil), her 2 surede bir diğer ayet; zayıf temalar sonda. `gunluk.py` ayetler.json sırasıyla seçer.
+  Analiz her pazar Actions'ta çalışır (+ YouTube abone, Instagram takipçi).
 - [ ] Sonra: Günün Hadisi serisi

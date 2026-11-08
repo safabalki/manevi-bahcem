@@ -2,6 +2,8 @@ name: Analiz
 
 # YouTube izlenme raporu: çalıştırmanın "Summary" sayfasında tablo olarak görünür.
 on:
+  schedule:
+    - cron: "23 18 * * 0"   # her pazar TR 21:23
   workflow_dispatch:
 
 permissions:
@@ -24,4 +26,6 @@ jobs:
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+          INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
         run: python analiz.py
