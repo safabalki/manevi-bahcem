@@ -470,44 +470,14 @@
     "arkaplan": 311442
   },
   {
-    "id": "fussilet-34",
-    "sure": 41,
-    "bas": 34,
-    "son": 34,
-    "baslik": "Kötülüğü en güzel şekilde sav",
-    "kanca": "Sana kötülük edene nasıl davranmalı?",
-    "tema": "ahlak",
-    "arkaplan": 88560
-  },
-  {
-    "id": "enam-162-163",
-    "sure": 6,
-    "bas": 162,
-    "son": 163,
-    "baslik": "Namazım, ibadetim, hayatım ve ölümüm Allah içindir",
-    "kanca": "Hayatını kime adadın?",
+    "id": "kafirun",
+    "sure": 109,
+    "bas": 1,
+    "son": 6,
+    "baslik": "Kâfirûn Suresi: Sizin dininiz size, benim dinim bana",
+    "kanca": "Namazda en çok okunan surelerden",
     "tema": "iman",
-    "arkaplan": 111177
-  },
-  {
-    "id": "zariyat-56",
-    "sure": 51,
-    "bas": 56,
-    "son": 56,
-    "baslik": "Ancak bana kulluk etsinler diye yarattım",
-    "kanca": "Neden yaratıldık?",
-    "tema": "tefekkür",
-    "arkaplan": 227318
-  },
-  {
-    "id": "fecr-27-30",
-    "sure": 89,
-    "bas": 27,
-    "son": 30,
-    "baslik": "Ey huzura ermiş nefis!",
-    "kanca": "Herkesin duymak istediği davet",
-    "tema": "ahiret",
-    "arkaplan": 242945
+    "arkaplan": 190332
   },
   {
     "id": "kevser",
@@ -520,46 +490,6 @@
     "arkaplan": 40704
   },
   {
-    "id": "kadir",
-    "sure": 97,
-    "bas": 1,
-    "son": 5,
-    "baslik": "Kadir Suresi",
-    "kanca": "Bin aydan hayırlı gece",
-    "tema": "ibadet",
-    "arkaplan": 273961
-  },
-  {
-    "id": "nasr",
-    "sure": 110,
-    "bas": 1,
-    "son": 3,
-    "baslik": "Nasr Suresi",
-    "kanca": "Zafer geldiğinde ne yapmalı?",
-    "tema": "şükür",
-    "arkaplan": 21175
-  },
-  {
-    "id": "tin-4-6",
-    "sure": 95,
-    "bas": 4,
-    "son": 6,
-    "baslik": "Biz insanı en güzel biçimde yarattık",
-    "kanca": "Kendine değer ver",
-    "tema": "tefekkür",
-    "arkaplan": 321986
-  },
-  {
-    "id": "kehf-46",
-    "sure": 18,
-    "bas": 46,
-    "son": 46,
-    "baslik": "Kalıcı olan salih amellerdir",
-    "kanca": "Mal, evlat ve geriye kalan",
-    "tema": "ahiret",
-    "arkaplan": 137879
-  },
-  {
     "id": "taha-114",
     "sure": 20,
     "bas": 114,
@@ -568,6 +498,26 @@
     "kanca": "Öğrenciler için dua",
     "tema": "dua",
     "arkaplan": 92994
+  },
+  {
+    "id": "fil",
+    "sure": 105,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Fil Suresi: Kâbe'nin Rabbi",
+    "kanca": "Fil ordusuna ne olduğunu hatırla",
+    "tema": "koruma",
+    "arkaplan": 382582
+  },
+  {
+    "id": "kureys",
+    "sure": 106,
+    "bas": 1,
+    "son": 4,
+    "baslik": "Kureyş Suresi: Doyuran ve güven veren Rab",
+    "kanca": "Sofrandaki rızık, evindeki huzur kimden?",
+    "tema": "şükür",
+    "arkaplan": 218714
   },
   {
     "id": "araf-56",
@@ -580,54 +530,24 @@
     "arkaplan": 382583
   },
   {
-    "id": "hud-114",
-    "sure": 11,
-    "bas": 114,
-    "son": 114,
-    "baslik": "İyilikler kötülükleri giderir",
-    "kanca": "Bir hata mı yaptın?",
-    "tema": "tövbe",
-    "arkaplan": 246856
+    "id": "insirah",
+    "sure": 94,
+    "bas": 1,
+    "son": 8,
+    "baslik": "İnşirah Suresi (tamamı)",
+    "kanca": "Göğsün daraldığında bu sureyi dinle",
+    "tema": "umut",
+    "arkaplan": 153821
   },
   {
-    "id": "nisa-110",
-    "sure": 4,
-    "bas": 110,
-    "son": 110,
-    "baslik": "Bağışlanma dileyen, Allah'ı bağışlayıcı bulur",
-    "kanca": "Tövbe için geç değil",
-    "tema": "tövbe",
-    "arkaplan": 358693
-  },
-  {
-    "id": "ala-14-17",
-    "sure": 87,
-    "bas": 14,
-    "son": 17,
-    "baslik": "Ahiret daha hayırlı ve daha kalıcıdır",
-    "kanca": "Dünyaya çok mu daldın?",
-    "tema": "ahiret",
-    "arkaplan": 23881
-  },
-  {
-    "id": "aliimran-190-191",
-    "sure": 3,
-    "bas": 190,
-    "son": 191,
-    "baslik": "Göklerin ve yerin yaratılışında ibretler var",
-    "kanca": "Gökyüzüne en son ne zaman baktın?",
-    "tema": "tefekkür",
-    "arkaplan": 61837
-  },
-  {
-    "id": "tegabun-11",
-    "sure": 64,
-    "bas": 11,
-    "son": 11,
-    "baslik": "Allah'ın izni olmadan hiçbir musibet gelmez",
-    "kanca": "Başına gelen her şeyde",
-    "tema": "tevekkül",
-    "arkaplan": 59291
+    "id": "kadir",
+    "sure": 97,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Kadir Suresi",
+    "kanca": "Bin aydan hayırlı gece",
+    "tema": "ibadet",
+    "arkaplan": 273961
   },
   {
     "id": "nisa-28",
@@ -640,14 +560,24 @@
     "arkaplan": 1917
   },
   {
-    "id": "hicr-97-99",
-    "sure": 15,
-    "bas": 97,
-    "son": 99,
-    "baslik": "Rabbini hamd ile tesbih et",
-    "kanca": "Söylenenler canını sıkıyorsa",
-    "tema": "sabır",
-    "arkaplan": 136185
+    "id": "maun",
+    "sure": 107,
+    "bas": 1,
+    "son": 7,
+    "baslik": "Mâûn Suresi: Dini yalanlayan kimdir?",
+    "kanca": "Yetime ve yardıma dair bir uyarı",
+    "tema": "ahlak",
+    "arkaplan": 57647
+  },
+  {
+    "id": "nasr",
+    "sure": 110,
+    "bas": 1,
+    "son": 3,
+    "baslik": "Nasr Suresi",
+    "kanca": "Zafer geldiğinde ne yapmalı?",
+    "tema": "şükür",
+    "arkaplan": 21175
   },
   {
     "id": "taha-46",
@@ -658,5 +588,175 @@
     "kanca": "Korkuyorsan",
     "tema": "umut",
     "arkaplan": 317873
+  },
+  {
+    "id": "tekasur",
+    "sure": 102,
+    "bas": 1,
+    "son": 8,
+    "baslik": "Tekâsür Suresi: Çokluk yarışı sizi oyaladı",
+    "kanca": "Daha fazlası için koşarken neyi unutuyoruz?",
+    "tema": "ahiret",
+    "arkaplan": 240320
+  },
+  {
+    "id": "humeze",
+    "sure": 104,
+    "bas": 1,
+    "son": 9,
+    "baslik": "Hümeze Suresi: Arkadan çekiştirene uyarı",
+    "kanca": "Dilimizi koruyalım",
+    "tema": "ahlak",
+    "arkaplan": 146586
+  },
+  {
+    "id": "hud-114",
+    "sure": 11,
+    "bas": 114,
+    "son": 114,
+    "baslik": "İyilikler kötülükleri giderir",
+    "kanca": "Bir hata mı yaptın?",
+    "tema": "tövbe",
+    "arkaplan": 246856
+  },
+  {
+    "id": "tebbet",
+    "sure": 111,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Tebbet Suresi",
+    "kanca": "Namaz surelerini birlikte dinleyelim",
+    "tema": "iman",
+    "arkaplan": 95188
+  },
+  {
+    "id": "karia",
+    "sure": 101,
+    "bas": 1,
+    "son": 11,
+    "baslik": "Kâria Suresi: Kapıyı çalan",
+    "kanca": "Amellerin tartılacağı gün",
+    "tema": "ahiret",
+    "arkaplan": 311442
+  },
+  {
+    "id": "nisa-110",
+    "sure": 4,
+    "bas": 110,
+    "son": 110,
+    "baslik": "Bağışlanma dileyen, Allah'ı bağışlayıcı bulur",
+    "kanca": "Tövbe için geç değil",
+    "tema": "tövbe",
+    "arkaplan": 358693
+  },
+  {
+    "id": "adiyat",
+    "sure": 100,
+    "bas": 1,
+    "son": 11,
+    "baslik": "Âdiyât Suresi: Koşan atlara yemin olsun",
+    "kanca": "İnsan Rabbine karşı nankördür",
+    "tema": "ahiret",
+    "arkaplan": 242945
+  },
+  {
+    "id": "aliimran-190-191",
+    "sure": 3,
+    "bas": 190,
+    "son": 191,
+    "baslik": "Göklerin ve yerin yaratılışında ibretler var",
+    "kanca": "Gökyüzüne en son ne zaman baktın?",
+    "tema": "tefekkür",
+    "arkaplan": 61837
+  },
+  {
+    "id": "zariyat-56",
+    "sure": 51,
+    "bas": 56,
+    "son": 56,
+    "baslik": "Ancak bana kulluk etsinler diye yarattım",
+    "kanca": "Neden yaratıldık?",
+    "tema": "tefekkür",
+    "arkaplan": 227318
+  },
+  {
+    "id": "enam-162-163",
+    "sure": 6,
+    "bas": 162,
+    "son": 163,
+    "baslik": "Namazım, ibadetim, hayatım ve ölümüm Allah içindir",
+    "kanca": "Hayatını kime adadın?",
+    "tema": "iman",
+    "arkaplan": 111177
+  },
+  {
+    "id": "fussilet-34",
+    "sure": 41,
+    "bas": 34,
+    "son": 34,
+    "baslik": "Kötülüğü en güzel şekilde sav",
+    "kanca": "Sana kötülük edene nasıl davranmalı?",
+    "tema": "ahlak",
+    "arkaplan": 88560
+  },
+  {
+    "id": "kehf-46",
+    "sure": 18,
+    "bas": 46,
+    "son": 46,
+    "baslik": "Kalıcı olan salih amellerdir",
+    "kanca": "Mal, evlat ve geriye kalan",
+    "tema": "ahiret",
+    "arkaplan": 137879
+  },
+  {
+    "id": "tin-4-6",
+    "sure": 95,
+    "bas": 4,
+    "son": 6,
+    "baslik": "Biz insanı en güzel biçimde yarattık",
+    "kanca": "Kendine değer ver",
+    "tema": "tefekkür",
+    "arkaplan": 321986
+  },
+  {
+    "id": "fecr-27-30",
+    "sure": 89,
+    "bas": 27,
+    "son": 30,
+    "baslik": "Ey huzura ermiş nefis!",
+    "kanca": "Herkesin duymak istediği davet",
+    "tema": "ahiret",
+    "arkaplan": 242945
+  },
+  {
+    "id": "ala-14-17",
+    "sure": 87,
+    "bas": 14,
+    "son": 17,
+    "baslik": "Ahiret daha hayırlı ve daha kalıcıdır",
+    "kanca": "Dünyaya çok mu daldın?",
+    "tema": "ahiret",
+    "arkaplan": 23881
+  },
+  {
+    "id": "hicr-97-99",
+    "sure": 15,
+    "bas": 97,
+    "son": 99,
+    "baslik": "Rabbini hamd ile tesbih et",
+    "kanca": "Söylenenler canını sıkıyorsa",
+    "tema": "sabır",
+    "arkaplan": 136185
+  },
+  {
+    "id": "tegabun-11",
+    "sure": 64,
+    "bas": 11,
+    "son": 11,
+    "baslik": "Allah'ın izni olmadan hiçbir musibet gelmez",
+    "kanca": "Başına gelen her şeyde",
+    "tema": "tevekkül",
+    "arkaplan": 59291
   }
 ]
