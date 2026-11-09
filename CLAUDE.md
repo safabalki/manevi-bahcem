@@ -44,7 +44,7 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `.github/workflows/instagram-bagla.yml` | Elle: Graph API Explorer'daki kısa ömürlü token'la hesabı bağlar, isterse deneme Reels'i paylaşır |
 | `facebook.py` | Facebook Sayfası "Manevi Bahçem"e Reels (video_reels API); instagram.py'nin Sayfa token'ını kullanır, bağlarken `pages_manage_posts` verildiyse token'da `facebook: true` olur ve `gunluk.py` paylaşır |
 | `analiz.py` | YouTube izlenme raporu (tema/dilim ortalamaları, silinmiş videolar); "Analiz" workflow'u Summary'ye yazar |
-| `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır; "Instagram-Facebook Geçmiş" her akşam 2 video (TR ~20:40, ~22:40) |
+| `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır; "Instagram-Facebook Geçmiş" saatlik çalışır, `gecmis_sira.py` akşam TR 20-23'te günde 2 videoya izin verir (günde iki kez çalışan cron'u GitHub hiç tetiklemedi) |
 | `marka/` | Facebook kapak (1640x624, `templates/fb-kapak.html`) ve profil resmi |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
@@ -108,8 +108,16 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Analiz her pazar Actions'ta çalışır (+ YouTube abone, Instagram takipçi).
   **Başlangıç (2026-11-08 22:54 TR):** YouTube 114 abone, kanal 14.460 izlenme, 45 video; Instagram @manevibahcem.tr
   2 takipçi, 1 gönderi. Haftalık değerlendirme: Claude zamanlanmış görevi her pazartesi 11:13 TR (analizi okur,
-  yayınlanmamış kuyruğun sırasını düzenler, CLAUDE.md'ye not düşer, onay gerektirenleri önerir).
+  yayınlanmamış kuyruğun sırasını düzenler, CLAUDE.md'ye not düşer, onay gerektirenleri önerir). Görev, depo erişimi
+  olan ilk sohbete bağlı (session_01SexfwdCP1zGFvnXN9vs9ka); kendi başına açılan oturumlarda depo/GitHub yoktu.
 - [x] Facebook Reels bağlandı 2026-11-08 (`pages_manage_posts`; log "Facebook Reels: açık"). Instagram'ın "Profiller
   arası paylaşım" ayarı yalnızca kişisel profili (Safa Balkı) hedefliyor → kullanılmaz. Eski videolar her akşam
   Instagram'la birlikte Facebook'a da gider. Sayfa görselleri `marka/`.
+- **2026-11-09 analiz (ilk günden sonra):** YouTube 114 → **130 abone** (+16), kanal 14.460 → 15.558 izlenme
+  (+1.098), 47 video, medyan 269. Instagram 2 → 4 takipçi, 3 Reels 63 beğeni. Namaz sureleri tuttu: **Kevser 716
+  izlenme / 12 saat** (akşam), Zilzal 609 / 1 gün; Kâfirûn (sabah) 137 / 14 saat. Dilim: akşam ort. 409, sabah 281,
+  öğle 247. Yorum hâlâ yok (15). Karar: kuyruk sırası korunuyor (namaz sureleri önde). Düzeltilenler: geçmiş paylaşımı
+  hiç çalışmamıştı (cron tetiklenmedi) → saatlik; Facebook durum sorgusu ilk dakikalarda "does not exist" verebiliyor →
+  hata sayılmıyor (Kevser kaydı yayında olarak düzeltildi). Öneri (onay bekliyor): öğle yayınını 13:00'ten akşama
+  yakın bir saate (ör. 16:00 ya da 21:00) almak.
 - [ ] Sonra: Günün Hadisi serisi

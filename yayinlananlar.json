@@ -539,7 +539,9 @@
       "link": "https://www.instagram.com/reel/Dfh4V3Lilrh/"
     },
     "facebook": {
-      "hata": "Instagram fb durum: Unsupported get request. Object with ID '1818970742648612' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (kod 100/33)"
+      "id": "1818970742648612",
+      "link": "https://www.facebook.com/reel/1818970742648612",
+      "not": "durum sorgusu okunamadı; yayın adımı başarılıydı"
     }
   }
 ]

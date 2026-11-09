@@ -11,6 +11,7 @@ Kullanım:
 """
 import argparse
 import json
+from datetime import datetime, timedelta, timezone
 
 import analiz
 import facebook
@@ -64,7 +65,8 @@ if __name__ == "__main__":
         for platform in eksik(y, acik):
             try:
                 mid, link = PLATFORMLAR[platform](mp4, bilgi)
-                sonuclar[platform] = {"id": mid, "link": link, "gecmis": True}
+                sonuclar[platform] = {"id": mid, "link": link, "gecmis": True,
+                                      "tarih": datetime.now(timezone(timedelta(hours=3))).date().isoformat()}
                 print(f"{platform}: paylaşıldı {y['id']} {link or mid}")
             except Exception as hata:
                 sonuclar[platform] = {"hata": str(hata)[:300], "gecmis": True}
