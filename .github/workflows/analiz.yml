@@ -1,9 +1,7 @@
 name: Analiz
 
-# YouTube izlenme raporu: çalıştırmanın "Summary" sayfasında tablo olarak görünür.
+# Elle: YouTube izlenme raporu (Summary sayfasında). Haftalık otomatik rapor gunluk.yml → rapor/analiz.md.
 on:
-  schedule:
-    - cron: "23 18 * * 0"   # her pazar TR 21:23
   workflow_dispatch:
 
 permissions:

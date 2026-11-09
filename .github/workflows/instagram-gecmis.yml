@@ -1,11 +1,7 @@
 name: Instagram-Facebook Geçmiş
 
-# Daha önce YouTube'a yüklenmiş videoları (en çok izlenen önce) Instagram'a Reels olarak paylaşır.
+# Elle: eski videoları Instagram/Facebook'a paylaşır. Otomatik akşam paylaşımı gunluk.yml'deki ek-isler işinde.
 on:
-  schedule:
-    # Her saat kontrol; gecmis_sira.py akşam (TR 20-23) bugün 2'den az eski video gittiyse 1 video paylaştırır.
-    # (Günde iki kez çalışan zamanlamayı GitHub hiç tetiklemedi; saatlik olan güvenilir çalışıyor.)
-    - cron: "47 * * * *"
   workflow_dispatch:
     inputs:
       adet:
