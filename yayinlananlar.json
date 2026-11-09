@@ -523,5 +523,23 @@
       "id": "1123541240651765",
       "link": "https://www.facebook.com/reel/1123541240651765"
     }
+  },
+  {
+    "id": "kevser",
+    "video": "Rnx64HL1YHc",
+    "baslik": "Kevser Suresi | Kevser 1-3",
+    "gizlilik": "public",
+    "tarih": "2026-11-09T17:34:37+00:00",
+    "tiktok": {
+      "publish_id": "v_inbox_file~v2.7706226401168230421",
+      "gizlilik": "TASLAK"
+    },
+    "instagram": {
+      "id": "17907336453350905",
+      "link": "https://www.instagram.com/reel/Dfh4V3Lilrh/"
+    },
+    "facebook": {
+      "hata": "Instagram fb durum: Unsupported get request. Object with ID '1818970742648612' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (kod 100/33)"
+    }
   }
 ]
