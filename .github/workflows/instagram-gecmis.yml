@@ -3,9 +3,9 @@ name: Instagram-Facebook Geçmiş
 # Daha önce YouTube'a yüklenmiş videoları (en çok izlenen önce) Instagram'a Reels olarak paylaşır.
 on:
   schedule:
-    # Her akşam 2 eski video, aralıklı (TR ~20:40 ve ~22:40). Gidecek video kalmayınca hiçbir şey yapmaz.
-    - cron: "41 17 * * *"
-    - cron: "41 19 * * *"
+    # Her saat kontrol; gecmis_sira.py akşam (TR 20-23) bugün 2'den az eski video gittiyse 1 video paylaştırır.
+    # (Günde iki kez çalışan zamanlamayı GitHub hiç tetiklemedi; saatlik olan güvenilir çalışıyor.)
+    - cron: "47 * * * *"
   workflow_dispatch:
     inputs:
       adet:
@@ -25,12 +25,22 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - name: Sıra kontrolü
+        id: sira
+        env:
+          OLAY: ${{ github.event_name }}
+        run: |
+          if [ "$OLAY" = "schedule" ]; then echo "calis=$(python3 gecmis_sira.py)" >> "$GITHUB_OUTPUT"
+          else echo "calis=1" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-python@v5
+        if: steps.sira.outputs.calis == '1'
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
+        if: steps.sira.outputs.calis == '1'
       - uses: actions/cache@v4
+        if: steps.sira.outputs.calis == '1'
         with:
           path: |
             cache/api
@@ -39,6 +49,7 @@ jobs:
           key: indirilenler-${{ github.run_id }}
           restore-keys: indirilenler-
       - name: Paylaş
+        if: steps.sira.outputs.calis == '1'
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
@@ -51,7 +62,7 @@ jobs:
         run: |
           if [ "$ADET" = "0" ]; then python instagram_gecmis.py --liste; else python instagram_gecmis.py --adet "$ADET"; fi
       - name: Kaydet
-        if: always()
+        if: always() && steps.sira.outputs.calis == '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"

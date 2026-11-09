@@ -43,14 +43,20 @@ def yukle(mp4, bilgi):
     _cevap(requests.post(f"{GRAPH}/{sayfa}/video_reels", timeout=60, data={
         "upload_phase": "finish", "video_id": vid, "video_state": "PUBLISHED",
         "description": aciklama(bilgi), "access_token": token}), "fb yayın")
-    for _ in range(60):
-        durum = _cevap(requests.get(f"{GRAPH}/{vid}", timeout=60,
-                                    params={"fields": "status", "access_token": token}), "fb durum")["status"]
+    # "finish" başarılıysa Reels yayına alınmıştır. Durum sorgusu yalnızca işleme hatasını yakalamak için;
+    # video nesnesi ilk dakikalarda okunamayabiliyor (2026-11-09 Kevser: "does not exist"), bu hata sayılmaz.
+    for _ in range(30):
+        try:
+            durum = _cevap(requests.get(f"{GRAPH}/{vid}", timeout=60,
+                                        params={"fields": "status", "access_token": token}), "fb durum")["status"]
+        except RuntimeError:
+            time.sleep(10)
+            continue
+        if durum.get("video_status") == "error" or durum.get("processing_phase", {}).get("status") == "error":
+            raise RuntimeError(f"Facebook videoyu işleyemedi: {durum}")
         if durum.get("video_status") in ("ready", "published") or \
                 durum.get("publishing_phase", {}).get("status") == "complete":
             break
-        if durum.get("video_status") == "error" or durum.get("processing_phase", {}).get("status") == "error":
-            raise RuntimeError(f"Facebook videoyu işleyemedi: {durum}")
         time.sleep(10)
     return vid, f"https://www.facebook.com/reel/{vid}"
 
