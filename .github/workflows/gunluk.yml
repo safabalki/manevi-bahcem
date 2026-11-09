@@ -97,3 +97,76 @@ jobs:
           name: videolar
           path: out/
           retention-days: 7
+
+  # Eski videoları Instagram/Facebook'a doldurma ve haftalık analiz de burada: GitHub ayrı workflow'lardaki yeni
+  # zamanlamaları hiç tetiklemedi, bu saatlik workflow ise güvenilir çalışıyor. Yükleme işi bitince sırayla çalışır.
+  ek-isler:
+    needs: uret-yukle
+    if: always() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Sıra kontrolü
+        id: sira
+        run: |
+          git pull -q origin main
+          echo "gecmis=$(python3 gecmis_sira.py)" >> "$GITHUB_OUTPUT"
+          echo "analiz=$(python3 analiz_sira.py)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-python@v5
+        if: steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+        if: steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1'
+
+      - uses: actions/cache@v4
+        if: steps.sira.outputs.gecmis == '1'
+        with:
+          path: |
+            cache/api
+            cache/ses
+            cache/pixabay
+          key: indirilenler-${{ github.run_id }}-ek
+          restore-keys: indirilenler-
+
+      - name: Eski video (Instagram/Facebook)
+        if: steps.sira.outputs.gecmis == '1'
+        continue-on-error: true
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+          INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
+          TARAYICI: /usr/bin/google-chrome
+        run: python instagram_gecmis.py --adet 1
+
+      - name: Haftalık analiz
+        if: steps.sira.outputs.analiz == '1'
+        continue-on-error: true
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+          INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
+        run: python analiz.py --kaydet
+
+      - name: Kaydet
+        if: always() && (steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add yayinlananlar.json rapor 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -m "Geçmiş/analiz: $(date -u +%F)"
+          git pull --rebase -q origin main && git push

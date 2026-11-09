@@ -44,7 +44,8 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `.github/workflows/instagram-bagla.yml` | Elle: Graph API Explorer'daki kısa ömürlü token'la hesabı bağlar, isterse deneme Reels'i paylaşır |
 | `facebook.py` | Facebook Sayfası "Manevi Bahçem"e Reels (video_reels API); instagram.py'nin Sayfa token'ını kullanır, bağlarken `pages_manage_posts` verildiyse token'da `facebook: true` olur ve `gunluk.py` paylaşır |
 | `analiz.py` | YouTube izlenme raporu (tema/dilim ortalamaları, silinmiş videolar); "Analiz" workflow'u Summary'ye yazar |
-| `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır; "Instagram-Facebook Geçmiş" saatlik çalışır, `gecmis_sira.py` akşam TR 20-23'te günde 2 videoya izin verir (günde iki kez çalışan cron'u GitHub hiç tetiklemedi) |
+| `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır. Otomatik: `gunluk.yml` → `ek-isler` işi, `gecmis_sira.py` akşam TR 20-23'te günde 2 video. **GitHub ayrı workflow'lardaki yeni cron'ları hiç tetiklemedi** (iki kez/gün ve saatlik denendi) → zamanlanmış her şey gunluk.yml içinde. "Instagram-Facebook Geçmiş" yalnızca elle |
+| `rapor/` | Haftalık analiz (`analiz.py --kaydet`): `rapor/analiz.md` (son) + `rapor/<tarih>.md`; `ek-isler` pazar TR 21:00 sonrası yazar (`analiz_sira.py`). Zamanlanmış Claude görevi buradan okur |
 | `marka/` | Facebook kapak (1640x624, `templates/fb-kapak.html`) ve profil resmi |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |

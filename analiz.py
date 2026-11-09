@@ -124,6 +124,7 @@ if __name__ == "__main__":
     import yukle
     p = argparse.ArgumentParser()
     p.add_argument("--json")
+    p.add_argument("--kaydet", action="store_true", help="rapor/analiz.md ve rapor/<tarih>.md olarak yaz")
     a = p.parse_args()
     yt = yukle.youtube()
     satirlar = rapor(yt)
@@ -138,5 +139,12 @@ if __name__ == "__main__":
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write(metin)
+    if a.kaydet:
+        klasor = KOK / "rapor"
+        klasor.mkdir(exist_ok=True)
+        tarih = datetime.now(TR).strftime("%Y-%m-%d")
+        metin = f"# Analiz {tarih}\n\n" + metin
+        (klasor / "analiz.md").write_text(metin, encoding="utf-8")
+        (klasor / f"{tarih}.md").write_text(metin, encoding="utf-8")
     if a.json:
         Path(a.json).write_text(json.dumps(satirlar, ensure_ascii=False, indent=2), encoding="utf-8")
