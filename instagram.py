@@ -106,7 +106,7 @@ def yukle(mp4, bilgi):
         _cevap(requests.post(f"{RUPLOAD}/{kap}", data=f, timeout=600, headers={
             **yetki, "offset": "0", "file_size": str(boyut), "Content-Type": "application/octet-stream"}), "yükleme")
     # Meta videoyu işler; FINISHED olmadan yayınlanamaz.
-    for _ in range(60):
+    for _ in range(120):   # 20 dk (bazı videolar 10 dakikayı aşıyor)
         durum = _cevap(requests.get(f"{GRAPH}/{kap}", headers=yetki, timeout=60,
                                     params={"fields": "status_code,status"}), "durum")
         if durum.get("status_code") == "FINISHED":
@@ -115,7 +115,7 @@ def yukle(mp4, bilgi):
             raise RuntimeError(f"Instagram videoyu işleyemedi: {durum.get('status')}")
         time.sleep(10)
     else:
-        raise RuntimeError("Instagram videoyu 10 dakikada işlemedi")
+        raise RuntimeError("Instagram videoyu 20 dakikada işlemedi")
     mid = _cevap(requests.post(f"{GRAPH}/{t['ig_id']}/media_publish", headers=yetki, timeout=60,
                                data={"creation_id": kap}), "yayın")["id"]
     try:
