@@ -121,4 +121,9 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   hiç çalışmamıştı (cron tetiklenmedi) → saatlik; Facebook durum sorgusu ilk dakikalarda "does not exist" verebiliyor →
   hata sayılmıyor (Kevser kaydı yayında olarak düzeltildi). Öneri (onay bekliyor): öğle yayınını 13:00'ten akşama
   yakın bir saate (ör. 16:00 ya da 21:00) almak.
+- **2026-11-15:** Kullanıcı "Bilinen sure başları/sonları" serisinden **16 pasajı onayladı** (Yâsîn 1-5, 82-83, Rahmân 1-4,
+  Bakara 285, Fetih 1-3, Sâffât 180-182, Gâşiye 17-20, Nebe 1-5, Haşr 21, Haşr 22, Ahzab 70-71, İsra 80-81, Şems 1-10,
+  Hadîd 1-3, Hucurât 10, Kehf 1-2; Alafasy süreleri api.quran.com segmentlerinden ölçüldü, hepsi < 45 sn). Başlıklar
+  Elmalılı meal ifadelerinden. Kuyruk: 2 yeni pasaj, 1 eski. Sonraki: Günün Hadisi (HadeethEnc, yalnızca "Sahih",
+  derece + kaynak videoda; ses = telifsiz doğa sesi, müzik yok — kullanıcı onayı; örnek video bekleniyor).
 - [ ] Sonra: Günün Hadisi serisi
