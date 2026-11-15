@@ -5,6 +5,8 @@ on:
     # Her saat kontrol; sira.py günde 3 videoyu (TR 07, 13, 19) tamamlar. GitHub cron'u geciktirse ya da
     # atlasa bile eksik video bir sonraki saatte yüklenir, fazlası yüklenmez.
     - cron: "17 * * * *"
+    # GitHub saatlik cron'u fiilen günde 4-5 kez çalıştırıyor; yayın saatlerinin hemen öncesine ek tetikler.
+    - cron: "41 3,4,9,10,15,16,17,18,19 * * *"
   workflow_dispatch:
     inputs:
       adet:
@@ -118,16 +120,16 @@ jobs:
           echo "analiz=$(python3 analiz_sira.py)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v5
-        if: steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1'
+        if: steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1'
         with:
           python-version: "3.12"
           cache: pip
 
       - run: pip install -r requirements.txt
-        if: steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1'
+        if: steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1'
 
       - uses: actions/cache@v4
-        if: steps.sira.outputs.gecmis == '1'
+        if: steps.sira.outputs.gecmis != '0'
         with:
           path: |
             cache/api
@@ -137,7 +139,7 @@ jobs:
           restore-keys: indirilenler-
 
       - name: Eski video (Instagram/Facebook)
-        if: steps.sira.outputs.gecmis == '1'
+        if: steps.sira.outputs.gecmis != '0'
         continue-on-error: true
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
@@ -147,7 +149,8 @@ jobs:
           INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
           INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
           TARAYICI: /usr/bin/google-chrome
-        run: python instagram_gecmis.py --adet 1
+          ADET: ${{ steps.sira.outputs.gecmis }}
+        run: python instagram_gecmis.py --adet "$ADET"
 
       - name: Haftalık analiz
         if: steps.sira.outputs.analiz == '1'
@@ -162,11 +165,14 @@ jobs:
         run: python analiz.py --kaydet
 
       - name: Kaydet
-        if: always() && (steps.sira.outputs.gecmis == '1' || steps.sira.outputs.analiz == '1')
+        if: always() && (steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add yayinlananlar.json rapor 2>/dev/null || true
+          # rapor/ henüz yoksa "git add ... rapor" komutun tamamını düşürüyordu → paylaşım kaydedilmiyor,
+          # aynı eski video her akşam yeniden gidiyordu (İhlas, 10-14 Kasım). Ayrı ayrı ekle.
+          git add yayinlananlar.json
+          if [ -d rapor ]; then git add rapor; fi
           git diff --cached --quiet && exit 0
           git commit -m "Geçmiş/analiz: $(date -u +%F)"
           git pull --rebase -q origin main && git push
