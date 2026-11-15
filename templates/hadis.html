@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Amiri Quran"; src: url("/*FONTS*/AmiriQuran-Regular.ttf"); }
+  @font-face { font-family: "Montserrat"; src: url("/*FONTS*/Montserrat.ttf"); font-weight: 100 900; }
+  @font-face { font-family: "Playfair"; src: url("/*FONTS*/PlayfairDisplay.ttf"); font-weight: 400 900; }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+  /* Shorts arayüzü üstte ~220px, altta ~480px, sağda ~150px kaplar; içerik bu güvenli alanda kalır. */
+  .alan {
+    position: absolute; left: 90px; right: 150px; top: 330px; bottom: 540px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ic { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 34px; width: 100%; }
+  .ust {
+    font: 600 30px "Montserrat"; letter-spacing: .22em; text-transform: uppercase; color: var(--altin);
+  }
+  .arapca {
+    font-family: "Amiri Quran"; direction: rtl; color: #fff; line-height: 1.85;
+    text-shadow: 0 4px 24px rgba(0,0,0,.65);
+  }
+  .ayrac { width: 180px; height: 3px; background: linear-gradient(90deg, transparent, var(--altin), transparent); }
+  .ravi { font: 500 30px/1.45 "Montserrat"; color: rgba(255,255,255,.82); text-shadow: 0 2px 12px rgba(0,0,0,.7); }
+  .metin {
+    font: 600 50px/1.38 "Playfair"; color: #fff; text-shadow: 0 4px 22px rgba(0,0,0,.7);
+  }
+  .kaynak {
+    font: 600 27px/1.5 "Montserrat"; color: var(--altin);
+    background: rgba(0,0,0,.38); border: 1.5px solid rgba(255,255,255,.22); border-radius: 16px; padding: 12px 24px;
+  }
+  .kaynak small { display: block; font-weight: 500; font-size: 23px; color: rgba(255,255,255,.75); }
+  .kanal { font: 600 24px "Montserrat"; letter-spacing: .3em; color: rgba(255,255,255,.55); }
+</style>
+</head>
+<body>
+<div class="alan"><div class="ic">
+  <div class="ust">Günün Hadisi</div>
+  <div class="arapca" id="ar"></div>
+  <div class="ayrac"></div>
+  <div class="ravi" id="ravi"></div>
+  <div class="metin" id="metin"></div>
+  <div class="kaynak"><span id="derece"></span><small id="kaynak"></small></div>
+  <div class="kanal" id="kanal"></div>
+</div></div>
+<script>
+  const D = /*DATA*/;
+  document.documentElement.style.setProperty('--altin', D.altin);
+  const ar = document.getElementById('ar');
+  ar.textContent = D.arapca;
+  ar.style.fontSize = (D.arapca.length > 160 ? 40 : D.arapca.length > 90 ? 48 : 56) + 'px';
+  document.getElementById('ravi').textContent = D.ravi;
+  const m = document.getElementById('metin');
+  m.textContent = D.metin;
+  m.style.fontSize = (D.metin.length > 220 ? 38 : D.metin.length > 140 ? 44 : 50) + 'px';
+  document.getElementById('derece').textContent = D.derece;
+  document.getElementById('kaynak').textContent = D.kaynak;
+  document.getElementById('kanal').textContent = D.kanal;
+</script>
+</body>
+</html>
