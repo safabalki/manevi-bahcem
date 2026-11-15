@@ -661,7 +661,8 @@
       "gizlilik": "TASLAK"
     },
     "instagram": {
-      "hata": "Instagram videoyu 10 dakikada işlemedi"
+      "hata": "Instagram videoyu 20 dakikada işlemedi",
+      "gecmis": true
     },
     "facebook": {
       "id": "1120882754184727",
