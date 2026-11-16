@@ -126,4 +126,13 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Hadîd 1-3, Hucurât 10, Kehf 1-2; Alafasy süreleri api.quran.com segmentlerinden ölçüldü, hepsi < 45 sn). Başlıklar
   Elmalılı meal ifadelerinden. Kuyruk: 2 yeni pasaj, 1 eski. Sonraki: Günün Hadisi (HadeethEnc, yalnızca "Sahih",
   derece + kaynak videoda; ses = telifsiz doğa sesi, müzik yok — kullanıcı onayı; örnek video bekleniyor).
+- **2026-11-16 haftalık analiz:** YouTube 130 → **158 abone** (+28), kanal 15.558 → **21.332** izlenme (+5.8 bin),
+  59 video, 2.393 beğeni, 20 yorum. Instagram 4 → **9 takipçi**, 14 gönderi (Yâsîn 1-5 128 beğeni). Bilinen sureler
+  açık ara önde: Kevser 1.034, Kadir 1.029, Nasr 706, **Yâsîn 1-5 467 / 14 saat**. Zayıf: tevekkül, aile; **Fil 10
+  izlenme** (anormal, kullanıcıdan Studio kontrolü istendi). Akşam dilimi yine en iyi (ort. 418). Karar: kuyruk sırası
+  korunuyor (bilinen pasajlar önde, tevekkül/aile sonda). Sorunlar: GitHub saatlik cron günde 4-5 çalışıyor (16 Kasım
+  sabah videosu çıkmadı, elle tetiklendi); pazar raporu 21:00 eşiğini kaçırdı → pencere pazar 18:00 + pazartesi;
+  Instagram'da Kadir/İnşirah/Nasr işlenemiyor (zaman aşımı) → 2 denemeden sonra atlanıyor, sebep loglanıyor.
+  Yâsîn 2-3 mealindeki parantezsiz "Ey Muhammed!" (kaynak baskıda öyle) için izleyici yorumu geldi; kullanıcıya
+  cevap ve "açıklamaya meal notu" önerisi sunuldu (onay bekliyor).
 - [ ] Sonra: Günün Hadisi serisi
