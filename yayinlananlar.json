@@ -662,7 +662,8 @@
     },
     "instagram": {
       "hata": "Instagram videoyu 20 dakikada işlemedi",
-      "gecmis": true
+      "gecmis": true,
+      "deneme": 2
     },
     "facebook": {
       "id": "1120882754184727",

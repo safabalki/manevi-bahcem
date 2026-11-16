@@ -115,7 +115,8 @@ def yukle(mp4, bilgi):
             raise RuntimeError(f"Instagram videoyu işleyemedi: {durum.get('status')}")
         time.sleep(10)
     else:
-        raise RuntimeError("Instagram videoyu 20 dakikada işlemedi")
+        raise RuntimeError(f"Instagram videoyu 20 dakikada işlemedi (son durum: {durum.get('status_code')} / "
+                           f"{durum.get('status')})")
     mid = _cevap(requests.post(f"{GRAPH}/{t['ig_id']}/media_publish", headers=yetki, timeout=60,
                                data={"creation_id": kap}), "yayın")["id"]
     try:
