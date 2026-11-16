@@ -23,9 +23,13 @@ from gunluk import EN_UZUN_SN, YAYINLANANLAR, oku, KOK
 PLATFORMLAR = {"instagram": instagram.yukle, "facebook": facebook.yukle}
 
 
+DENEME_SINIRI = 2   # bu kadar başarısız denemeden sonra o platformda atlanır (her akşamı tıkamasın)
+
+
 def eksik(kayit, acik):
-    """Bu kayıt hangi platformlara henüz (başarıyla) gitmedi?"""
-    return [p for p in acik if p not in kayit or "hata" in kayit[p]]
+    """Bu kayıt hangi platformlara henüz (başarıyla) gitmedi? Sınırı aşan hatalılar atlanır."""
+    return [p for p in acik if p not in kayit
+            or ("hata" in kayit[p] and kayit[p].get("deneme", 1) < DENEME_SINIRI)]
 
 
 def sira(yt, acik):
@@ -69,7 +73,8 @@ if __name__ == "__main__":
                                       "tarih": datetime.now(timezone(timedelta(hours=3))).date().isoformat()}
                 print(f"{platform}: paylaşıldı {y['id']} {link or mid}")
             except Exception as hata:
-                sonuclar[platform] = {"hata": str(hata)[:300], "gecmis": True}
+                sonuclar[platform] = {"hata": str(hata)[:300], "gecmis": True,
+                                      "deneme": y.get(platform, {}).get("deneme", 1 if "hata" in y.get(platform, {}) else 0) + 1}
                 hata_var = True
                 print(f"{platform} hatası ({y['id']}): {hata}")
         # Her videodan sonra yaz; dosyayı yeniden okuyup yalnızca bu kaydı güncelle.
