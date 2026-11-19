@@ -1,0 +1,57 @@
+name: YouTube Demo
+
+# YouTube API uyumluluk incelemesi için ekran kaydı: bir ayet videosu üretir, videos.insert ile GİZLİ yükler ve
+# yüklenen videonun gizlilik durumunu API'den okuyup gösterir. Yayın kuyruğuna, Instagram/Facebook/TikTok'a dokunmaz.
+on:
+  workflow_dispatch:
+    inputs:
+      ayet:
+        description: "Ayet id"
+        default: "ihlas"
+      gizlilik:
+        description: "Gizlilik"
+        type: choice
+        options: [private, unlisted, public]
+        default: private
+
+permissions:
+  contents: read
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      TARAYICI: /usr/bin/google-chrome
+      AYET: ${{ inputs.ayet || 'ihlas' }}
+      GIZLILIK: ${{ inputs.gizlilik || 'private' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: 1) Video üret (Quran.com API + Elmalılı meal)
+        run: python gunluk.py --id "$AYET" --sadece-uret
+      - name: 2) YouTube'a yükle (videos.insert)
+        id: yukle
+        run: |
+          python yukle.py "out/$AYET.mp4" --gizlilik "$GIZLILIK" | tee yukle.log
+          echo "video=$(grep -o 'shorts/[A-Za-z0-9_-]*' yukle.log | cut -d/ -f2)" >> "$GITHUB_OUTPUT"
+      - name: 3) Sonuç (videos.list ile gizlilik ve işleme durumu)
+        env:
+          VIDEO: ${{ steps.yukle.outputs.video }}
+        run: |
+          python - <<'PY'
+          import os, yukle
+          v = yukle.youtube().videos().list(part="status,snippet", id=os.environ["VIDEO"]).execute()["items"][0]
+          print("Video:", "https://youtube.com/shorts/" + v["id"])
+          print("Başlık:", v["snippet"]["title"])
+          print("İstenen gizlilik:", os.environ["GIZLILIK"], "· YouTube'daki gizlilik:", v["status"]["privacyStatus"])
+          print("Yükleme durumu:", v["status"]["uploadStatus"])
+          PY
