@@ -90,6 +90,18 @@
     "tiktok": {
       "publish_id": "v_inbox_file~v2.7700980592170780724",
       "gizlilik": "TASLAK"
+    },
+    "instagram": {
+      "id": "18126146143934518",
+      "link": "https://www.instagram.com/reel/DgA1fn0igub/",
+      "gecmis": true,
+      "tarih": "2026-11-21"
+    },
+    "facebook": {
+      "id": "1685529286489418",
+      "link": "https://www.facebook.com/reel/1685529286489418",
+      "gecmis": true,
+      "tarih": "2026-11-21"
     }
   },
   {
@@ -849,7 +861,10 @@
       "gizlilik": "TASLAK"
     },
     "instagram": {
-      "hata": "Instagram videoyu 20 dakikada işlemedi (son durum: IN_PROGRESS / In Progress: Media is still being processed.)"
+      "id": "17914079430589457",
+      "link": "https://www.instagram.com/reel/DgA1X1ECmkV/",
+      "gecmis": true,
+      "tarih": "2026-11-21"
     },
     "facebook": {
       "id": "1184289567610445",
