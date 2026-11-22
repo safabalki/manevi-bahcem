@@ -180,6 +180,18 @@
     "tiktok": {
       "publish_id": "v_inbox_file~v2.7701759926058043400",
       "gizlilik": "TASLAK"
+    },
+    "instagram": {
+      "id": "18042024326850055",
+      "link": "https://www.instagram.com/reel/DgDHxJ3DPt2/",
+      "gecmis": true,
+      "tarih": "2026-11-22"
+    },
+    "facebook": {
+      "id": "1147002481155967",
+      "link": "https://www.facebook.com/reel/1147002481155967",
+      "gecmis": true,
+      "tarih": "2026-11-22"
     }
   },
   {
@@ -527,6 +539,12 @@
     "instagram": {
       "id": "17921943741526874",
       "link": "https://www.instagram.com/reel/Dffiu0xgSsc/"
+    },
+    "facebook": {
+      "id": "974248895451002",
+      "link": "https://www.facebook.com/reel/974248895451002",
+      "gecmis": true,
+      "tarih": "2026-11-22"
     }
   },
   {
