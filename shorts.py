@@ -55,6 +55,20 @@ TEMALAR = [
 ]
 
 
+# Elmalılı mealinin kullandığımız baskısı bazı ayetlerde mütercimin açıklamasını ("Ey Muhammed!") parantezsiz veriyor
+# (Yâsîn 2, Zümer 10). Meal metnine dokunmuyoruz; böyle bir ayette açıklamaya bu not eklenir (kullanıcı kararı 2026-11-23).
+MEAL_NOTU = ("ℹ️ Not: \"Ey Muhammed\" gibi hitap ifadeleri mütercimin açıklamasıdır, Arapça metinde yer almaz; "
+             "kullandığımız meal baskısında parantezsiz verilmiştir.")
+
+
+def parantezsiz_hitap(ayetler):
+    for a in ayetler:
+        disari = re.sub(r"\([^)]*\)", "", a["meal"])
+        if re.search(r"\bEy Muhammed\b|\bMuhammed'(e|i|in)\b", disari):
+            return True
+    return False
+
+
 def arapca_rakam(n):
     return str(n).translate(str.maketrans("0123456789", "٠١٢٣٤٥٦٧٨٩"))
 
@@ -266,6 +280,7 @@ def video_uret(kayit):
         f"🎙️ Kıraat: {KARI[1]}",
         f"📝 Meal: {MEAL[1]}",
         *(["🎞️ Görüntü: Pixabay"] if kayit.get("arkaplan") else []),
+        *([MEAL_NOTU] if parantezsiz_hitap(ayetler) else []),
         "",
         "Her gün bir ayet için abone olun 🤲",
         "",
