@@ -82,7 +82,10 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
     Klipler temaya göre, en az kullanılan önce olacak şekilde dağıtıldı (yayınlanmış ayetin klibi değişmez). MB-R1 tamam.
 - [x] GitHub Actions çalışıyor (secret'lar: `YOUTUBE_REFRESH_TOKEN/CLIENT_ID/CLIENT_SECRET`, Web istemcisi + OAuth
   Playground). İlk otomatik yükleme 2026-10-23 (İnşirah 5-8). API kotası 10.000/gün, yükleme 1.600 → en çok 6 video/gün. Claude bulut oturumunun ağı api.quran.com'u engelliyor — videolar burada değil Actions'ta üretilir.
-- [ ] YouTube API audit başvurusu (videolar herkese açık olabilsin)
+- [x] YouTube API uyumluluk incelemesi **tamamlandı** (2026-11-23 civarı e-posta: "completed your review and don't
+  require any further actions"). Kullanıcı ekran kaydını "YouTube Demo" workflow'uyla aldı. YouTube ileride yeniden
+  inceleyebilir; aynı workflow kullanılır. Kurallar: yalnızca kendi kanalı, başkasının verisi yok, gizlilik politikası
+  (safabalki.github.io/gizlilik.html) yayında kalmalı.
 - [~] TikTok (@manevibahcem): geliştirici uygulaması açıldı, secret'lar `TIKTOK_CLIENT_KEY/SECRET` girildi. Site:
   `kosullar.html`, `tiktok.html` (Client Key girilir → TikTok izni → kod). `gunluk.py` YouTube'dan sonra TikTok'a da
   yükler (token varsa; hata YouTube'u durdurmaz). Sandbox bağlandı 2026-10-24; denetimsiz uygulama herkese açık
