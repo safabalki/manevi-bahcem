@@ -148,4 +148,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   ("Ey Muhammed") geçen videoların açıklamasına otomatik not düşülür (`shorts.py` → `MEAL_NOTU`). YouTube API
   uyumluluk e-postası kullanıcı tarafından gönderildi (cevap bekleniyor; demo: "YouTube Demo" workflow'u).
   Bilinen pasajlardan 15-20 yeni aday istendi; farklı içerik fikirleri raporu `rapor/icerik-fikirleri.md`.
+- **2026-11-23:** Kullanıcı bilinen pasajlardan **20 yeni adayı onayladı** (Alak 1-5, A'lâ 1-5, Haşr 23, Haşr 24,
+  Neml 62, Rûm 21, Ra'd 11, İsra 82, Mü'minûn 1-3, Şuarâ 78-82, Kasas 77, Ankebût 45, Mü'min 44, Necm 39-41, Yûnus 62,
+  İbrahim 24-25, Âl-i İmrân 26, Âl-i İmrân 200, Tevbe 128, Kehf 10; süreler 16-43 sn, mealde parantezsiz hitap yok).
+  Kuyruk: 2 yeni, 1 eski dönüşümlü; zayıf temalılar (Rûm 21 aile, Mü'min 44 tevekkül) en sonda. Kuyrukta 36 ayet.
 - [ ] Sonra: Günün Hadisi serisi

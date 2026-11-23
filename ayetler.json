@@ -760,6 +760,26 @@
     "arkaplan": 350458
   },
   {
+    "id": "alak-1-5",
+    "sure": 96,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Yaratan Rabbinin adıyla oku!",
+    "kanca": "İlk inen ayetler",
+    "tema": "iman",
+    "arkaplan": 190332
+  },
+  {
+    "id": "ala-1-5",
+    "sure": 87,
+    "bas": 1,
+    "son": 5,
+    "baslik": "Rabbinin yüce adını tesbih et",
+    "kanca": "Namazlarda okunan sure",
+    "tema": "zikir",
+    "arkaplan": 203872
+  },
+  {
     "id": "isra-80-81",
     "sure": 17,
     "bas": 80,
@@ -768,6 +788,26 @@
     "kanca": "Bir dua ve bir müjde",
     "tema": "dua",
     "arkaplan": 204307
+  },
+  {
+    "id": "hasr-23",
+    "sure": 59,
+    "bas": 23,
+    "son": 23,
+    "baslik": "O, öyle bir Allah'tır ki O'ndan başka tanrı yoktur",
+    "kanca": "Haşr'in son ayetleri (2)",
+    "tema": "iman",
+    "arkaplan": 95188
+  },
+  {
+    "id": "hasr-24",
+    "sure": 59,
+    "bas": 24,
+    "son": 24,
+    "baslik": "En güzel isimler O'nundur",
+    "kanca": "Haşr'in son ayetleri (3)",
+    "tema": "iman",
+    "arkaplan": 25780
   },
   {
     "id": "adiyat",
@@ -780,6 +820,26 @@
     "arkaplan": 242945
   },
   {
+    "id": "neml-62",
+    "sure": 27,
+    "bas": 62,
+    "son": 62,
+    "baslik": "Bunalmışa karşılık veren kimdir?",
+    "kanca": "Darda kaldığında",
+    "tema": "dua",
+    "arkaplan": 73976
+  },
+  {
+    "id": "rad-11",
+    "sure": 13,
+    "bas": 11,
+    "son": 11,
+    "baslik": "Allah bir kavmin durumunu değiştirmez…",
+    "kanca": "Değişim önce kendimizden",
+    "tema": "tefekkür",
+    "arkaplan": 61837
+  },
+  {
     "id": "sems-1-10",
     "sure": 91,
     "bas": 1,
@@ -788,6 +848,26 @@
     "kanca": "Nefsini arındıran kurtuldu",
     "tema": "tefekkür",
     "arkaplan": 321986
+  },
+  {
+    "id": "isra-82",
+    "sure": 17,
+    "bas": 82,
+    "son": 82,
+    "baslik": "Kur'an'dan şifa ve rahmet olan ayetler",
+    "kanca": "Kur'an şifadır",
+    "tema": "iman",
+    "arkaplan": 116167
+  },
+  {
+    "id": "muminun-1-3",
+    "sure": 23,
+    "bas": 1,
+    "son": 3,
+    "baslik": "Gerçekten müminler kurtuluşa ermiştir",
+    "kanca": "Kurtuluşa erenler kimler?",
+    "tema": "ibadet",
+    "arkaplan": 47052
   },
   {
     "id": "hadid-1-3",
@@ -800,6 +880,26 @@
     "arkaplan": 111177
   },
   {
+    "id": "suara-78-82",
+    "sure": 26,
+    "bas": 78,
+    "son": 82,
+    "baslik": "Hastalandığım zaman bana O şifa verir",
+    "kanca": "Hz. İbrahim'in sözleri",
+    "tema": "dua",
+    "arkaplan": 328740
+  },
+  {
+    "id": "kasas-77",
+    "sure": 28,
+    "bas": 77,
+    "son": 77,
+    "baslik": "Dünyadan da nasibini unutma",
+    "kanca": "Dünya ve ahiret dengesi",
+    "tema": "ahlak",
+    "arkaplan": 164285
+  },
+  {
     "id": "aliimran-190-191",
     "sure": 3,
     "bas": 190,
@@ -808,6 +908,26 @@
     "kanca": "Gökyüzüne en son ne zaman baktın?",
     "tema": "tefekkür",
     "arkaplan": 61837
+  },
+  {
+    "id": "ankebut-45",
+    "sure": 29,
+    "bas": 45,
+    "son": 45,
+    "baslik": "Namaz hayasızlıktan ve kötülükten alıkoyar",
+    "kanca": "Namazın gücü",
+    "tema": "ibadet",
+    "arkaplan": 34260
+  },
+  {
+    "id": "necm-39-41",
+    "sure": 53,
+    "bas": 39,
+    "son": 41,
+    "baslik": "İnsana çalışmasından başka bir şey yoktur",
+    "kanca": "Emeğin karşılığı",
+    "tema": "ahlak",
+    "arkaplan": 205422
   },
   {
     "id": "hucurat-10",
@@ -820,6 +940,26 @@
     "arkaplan": 38344
   },
   {
+    "id": "yunus-62",
+    "sure": 10,
+    "bas": 62,
+    "son": 62,
+    "baslik": "Allah'ın dostlarına korku yoktur",
+    "kanca": "Allah dostları",
+    "tema": "umut",
+    "arkaplan": 7127
+  },
+  {
+    "id": "ibrahim-24-25",
+    "sure": 14,
+    "bas": 24,
+    "son": 25,
+    "baslik": "Güzel söz, kökü sabit güzel bir ağaç gibidir",
+    "kanca": "Sözün bereketi",
+    "tema": "ahlak",
+    "arkaplan": 88560
+  },
+  {
     "id": "kehf-1-2",
     "sure": 18,
     "bas": 1,
@@ -830,6 +970,26 @@
     "arkaplan": 382583
   },
   {
+    "id": "aliimran-26",
+    "sure": 3,
+    "bas": 26,
+    "son": 26,
+    "baslik": "Ey mülkün sahibi Allah'ım!",
+    "kanca": "Her şey O'nun elinde",
+    "tema": "iman",
+    "arkaplan": 52170
+  },
+  {
+    "id": "aliimran-200",
+    "sure": 3,
+    "bas": 200,
+    "son": 200,
+    "baslik": "Sabredin, sebat gösterin",
+    "kanca": "Âl-i İmrân'ın son ayeti",
+    "tema": "sabır",
+    "arkaplan": 26085
+  },
+  {
     "id": "zariyat-56",
     "sure": 51,
     "bas": 56,
@@ -838,6 +998,26 @@
     "kanca": "Neden yaratıldık?",
     "tema": "tefekkür",
     "arkaplan": 227318
+  },
+  {
+    "id": "tevbe-128",
+    "sure": 9,
+    "bas": 128,
+    "son": 128,
+    "baslik": "Size içinizden öyle bir peygamber geldi ki…",
+    "kanca": "Peygamberimizi anlatan ayet",
+    "tema": "iman",
+    "arkaplan": 382582
+  },
+  {
+    "id": "kehf-10",
+    "sure": 18,
+    "bas": 10,
+    "son": 10,
+    "baslik": "Rabbimiz! Bize katından bir rahmet ver",
+    "kanca": "Ashâb-ı Kehf'in duası",
+    "tema": "dua",
+    "arkaplan": 148593
   },
   {
     "id": "enam-162-163",
@@ -918,5 +1098,25 @@
     "kanca": "Başına gelen her şeyde",
     "tema": "tevekkül",
     "arkaplan": 59291
+  },
+  {
+    "id": "rum-21",
+    "sure": 30,
+    "bas": 21,
+    "son": 21,
+    "baslik": "Aranıza sevgi ve merhamet koydu",
+    "kanca": "Eşler hakkında bir ayet",
+    "tema": "aile",
+    "arkaplan": 22634
+  },
+  {
+    "id": "mumin-44",
+    "sure": 40,
+    "bas": 44,
+    "son": 44,
+    "baslik": "Ben işimi Allah'a havale ediyorum",
+    "kanca": "İçin daraldığında",
+    "tema": "tevekkül",
+    "arkaplan": 284568
   }
 ]
