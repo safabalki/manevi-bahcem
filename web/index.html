@@ -63,6 +63,15 @@
   .liste .bilgi { color: var(--soluk); font-size: 13px; white-space: nowrap; }
   .iki { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 760px) { .iki { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+  @media (max-width: 560px) {
+    .ozet { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .kart { padding: 13px 14px; border-radius: 14px; }
+    .kart .sayi { font-size: 26px; margin: 6px 0 2px; }
+    .kart .alt { font-size: 12px; line-height: 1.4; }
+    .kart .ad { font-size: 14px; }
+    .surec { margin: 16px 0 18px; padding: 12px 14px; gap: 4px 18px; font-size: 14px; }
+    .surec b { font-size: 17px; }
+  }
   .tema { display: grid; grid-template-columns: 110px 1fr 70px; gap: 10px; align-items: center; font-size: 14px; margin: 8px 0; }
   .tema .bar { height: 10px; border-radius: 6px; background: rgba(231,201,131,.15); overflow: hidden; }
   .tema .bar span { display: block; height: 100%; background: linear-gradient(90deg, #c99a45, var(--altin)); }
