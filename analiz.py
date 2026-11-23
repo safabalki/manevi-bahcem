@@ -73,7 +73,53 @@ def instagram_durum():
             "enler": sorted(medya, key=lambda m: -m.get("like_count", 0))[:5]}
 
 
-def hesaplar_metni(k, ig):
+def facebook_durum():
+    """Sayfa takipçisi ve son Reels'lerin beğeni/yorum sayıları (izlenme için read_insights izni yok)."""
+    import instagram
+    t = instagram.erisim()
+    sayfa = instagram._get(f"/{t['sayfa_id']}", access_token=t["token"], fields="followers_count,fan_count,name")
+    sonuc = {"takipci": sayfa.get("followers_count", sayfa.get("fan_count", 0)), "reels": None}
+    try:
+        reels = instagram._get(f"/{t['sayfa_id']}/video_reels", access_token=t["token"], limit=50,
+                               fields="description,likes.summary(true).limit(0),comments.summary(true).limit(0)")["data"]
+        sonuc["reels"] = {
+            "adet": len(reels),
+            "begeni": sum(r.get("likes", {}).get("summary", {}).get("total_count", 0) for r in reels),
+            "yorum": sum(r.get("comments", {}).get("summary", {}).get("total_count", 0) for r in reels),
+            "enler": sorted(reels, key=lambda r: -r.get("likes", {}).get("summary", {}).get("total_count", 0))[:3],
+        }
+    except Exception as hata:
+        sonuc["reels_hata"] = str(hata)[:150]
+    return sonuc
+
+
+def surec_metni(simdi=None):
+    """yayinlananlar.json'dan: ne zaman başladık, kaç gün geçti, platform başına kaç video gitti."""
+    kayitlar = json.loads((KOK / "yayinlananlar.json").read_text(encoding="utf-8"))
+    videolar = [k for k in kayitlar if "video" in k]
+    if not videolar:
+        return ""
+    simdi = simdi or datetime.now(TR)
+    ilk = min(datetime.fromisoformat(k["tarih"]) for k in videolar).astimezone(TR)
+    gun = max((simdi - ilk).days, 1)
+    basarili = lambda p: sum(1 for k in kayitlar if p in k and "hata" not in k[p])
+    hatali = lambda p: sum(1 for k in kayitlar if "hata" in k.get(p, {}))
+    satir = [
+        "## Süreç\n",
+        f"- **Başlangıç:** {ilk:%d.%m.%Y} (ilk YouTube yüklemesi) · **{gun} gün** geçti",
+        f"- **YouTube:** {len(videolar)} video yüklendi (günde ort. {len(videolar) / gun:.1f}); "
+        f"1 dakika sınırı yüzünden atlanan: {sum(1 for k in kayitlar if 'atlandi' in k)}",
+        f"- **Instagram:** {basarili('instagram')} Reels (8 Kasım'da bağlandı, eskiler akşamları dolduruluyor)"
+        f" · hata: {hatali('instagram')}",
+        f"- **Facebook:** {basarili('facebook')} Reels (8 Kasım'da bağlandı) · hata: {hatali('facebook')}",
+        f"- **TikTok:** {basarili('tiktok')} video taslak olarak gönderildi (paylaşımı kullanıcı uygulamadan yapıyor) · "
+        f"hata: {hatali('tiktok')}. TikTok izlenme verisi yok: uygulamanın yalnızca yükleme izni var "
+        "(istatistik için user.info.stats / video.list izni ve TikTok onayı gerekir).",
+    ]
+    return "\n".join(satir) + "\n\n"
+
+
+def hesaplar_metni(k, ig, fb=None):
     cizgi = ["## Hesaplar\n"]
     if k:
         cizgi.append(f"- **YouTube:** {k['abone']:,} abone · {k['izlenme']:,} toplam izlenme · {k['video']} video")
@@ -85,6 +131,16 @@ def hesaplar_metni(k, ig):
             cizgi.append(f"  - {m.get('like_count', 0)} beğeni · [{ad}]({m.get('permalink')})")
     elif ig:
         cizgi.append(f"- **Instagram:** okunamadı ({ig})")
+    if isinstance(fb, dict):
+        r = fb.get("reels")
+        ek = (f" · son {r['adet']} Reels'te {r['begeni']:,} beğeni, {r['yorum']} yorum" if r
+              else f" · Reels okunamadı ({fb.get('reels_hata')})")
+        cizgi.append(f"- **Facebook:** {fb['takipci']:,} takipçi{ek}")
+        for m in (r or {}).get("enler", []):
+            ad = (m.get("description") or "").split("\n")[0][:60]
+            cizgi.append(f"  - {m.get('likes', {}).get('summary', {}).get('total_count', 0)} beğeni · {ad}")
+    elif fb:
+        cizgi.append(f"- **Facebook:** okunamadı ({fb})")
     return "\n".join(cizgi) + "\n\n"
 
 
@@ -134,7 +190,15 @@ if __name__ == "__main__":
             ig = instagram_durum()
         except Exception as hata:
             ig = str(hata)[:200]
-    metin = hesaplar_metni(kanal(yt), ig) + ozet(satirlar)
+    fb = None
+    if os.environ.get("INSTAGRAM_APP_SECRET"):
+        try:
+            fb = facebook_durum()
+        except Exception as hata:
+            fb = str(hata)[:200]
+    metin = surec_metni() + hesaplar_metni(kanal(yt), ig, fb) + ozet(satirlar)
+    metin += ("\n## Farklı içerik türleri\n\nSeri fikirleri, kaynakları ve riskleri: `rapor/icerik-fikirleri.md` "
+              "(haftalık değerlendirmede güncellenir).\n")
     print(metin)
     if os.environ.get("GITHUB_STEP_SUMMARY"):
         with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:

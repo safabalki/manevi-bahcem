@@ -43,9 +43,10 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `instagram.py` | Instagram Reels (Graph API, Facebook Login yolu → dosya rupload.facebook.com'a yüklenir): `--bagla KISA_TOKEN`, `--bilgi`, `out/x.mp4`; süresiz Sayfa token'ı şifreli `instagram-token.enc` (anahtar = SHA256(`INSTAGRAM_APP_SECRET`)) |
 | `.github/workflows/instagram-bagla.yml` | Elle: Graph API Explorer'daki kısa ömürlü token'la hesabı bağlar, isterse deneme Reels'i paylaşır |
 | `facebook.py` | Facebook Sayfası "Manevi Bahçem"e Reels (video_reels API); instagram.py'nin Sayfa token'ını kullanır, bağlarken `pages_manage_posts` verildiyse token'da `facebook: true` olur ve `gunluk.py` paylaşır |
-| `analiz.py` | YouTube izlenme raporu (tema/dilim ortalamaları, silinmiş videolar); "Analiz" workflow'u Summary'ye yazar |
+| `analiz.py` | Rapor: süreç (başlangıç, geçen gün, platform başına video sayısı), YouTube/Instagram/Facebook hesap istatistikleri, tema/dilim ortalamaları; TikTok'ta istatistik izni yok (yalnızca taslak sayısı). "Analiz" workflow'u Summary'ye yazar |
 | `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır. Otomatik: `gunluk.yml` → `ek-isler` işi, `gecmis_sira.py` akşam TR 20-23'te günde 2 video. **GitHub ayrı workflow'lardaki yeni cron'ları hiç tetiklemedi** (iki kez/gün ve saatlik denendi) → zamanlanmış her şey gunluk.yml içinde. "Instagram-Facebook Geçmiş" yalnızca elle |
 | `rapor/` | Haftalık analiz (`analiz.py --kaydet`): `rapor/analiz.md` (son) + `rapor/<tarih>.md`; `ek-isler` pazar TR 21:00 sonrası yazar (`analiz_sira.py`). Zamanlanmış Claude görevi buradan okur |
+| `rapor/icerik-fikirleri.md` | Farklı içerik türleri (seri fikirleri, kaynak, risk); haftalık değerlendirmede güncellenir |
 | `marka/` | Facebook kapak (1640x624, `templates/fb-kapak.html`) ve profil resmi |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
@@ -143,4 +144,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   cron). Akşam geçmiş paylaşımı artık çalışıyor (Bakara 152, Nas, Zilzal, Bakara 285 gitti). Instagram'da bazı
   videolar 20 dk sonra hâlâ "Media is still being processed" (Yâsîn 82-83, Hümeze). Karar: kuyruk sırası korunuyor.
   Kuyrukta 16 ayet (~8 gün) → yeni seri onayı yakında gerekli.
+- **2026-11-23 kullanıcı kararları:** Analize Facebook, TikTok ve süreç bilgisi eklendi. Mealde parantezsiz hitap
+  ("Ey Muhammed") geçen videoların açıklamasına otomatik not düşülür (`shorts.py` → `MEAL_NOTU`). YouTube API
+  uyumluluk e-postası kullanıcı tarafından gönderildi (cevap bekleniyor; demo: "YouTube Demo" workflow'u).
+  Bilinen pasajlardan 15-20 yeni aday istendi; farklı içerik fikirleri raporu `rapor/icerik-fikirleri.md`.
 - [ ] Sonra: Günün Hadisi serisi
