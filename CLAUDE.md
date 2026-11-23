@@ -47,6 +47,8 @@ seçme ayetlerden dikey Shorts üretip yükleyen sistem. Kullanıcının hedefi:
 | `instagram_gecmis.py` | Instagram/Facebook'a gitmemiş eski videoları en çok izlenen önce paylaşır. Otomatik: `gunluk.yml` → `ek-isler` işi, `gecmis_sira.py` akşam TR 20-23'te günde 2 video. **GitHub ayrı workflow'lardaki yeni cron'ları hiç tetiklemedi** (iki kez/gün ve saatlik denendi) → zamanlanmış her şey gunluk.yml içinde. "Instagram-Facebook Geçmiş" yalnızca elle |
 | `rapor/` | Haftalık analiz (`analiz.py --kaydet`): `rapor/analiz.md` (son) + `rapor/<tarih>.md`; `ek-isler` pazar TR 21:00 sonrası yazar (`analiz_sira.py`). Zamanlanmış Claude görevi buradan okur |
 | `rapor/icerik-fikirleri.md` | Farklı içerik türleri (seri fikirleri, kaynak, risk); haftalık değerlendirmede güncellenir |
+| `web/` | İstatistik sitesi kaynağı (**https://manevibahcem.safabalki.com.tr**, cPanel hesabı `ofosof`, Ofosoft MCP ile yüklenir): `index.html` (veri.json + gecmis.json'u okur), `yukle.php` (PHP 5.6; GitHub Actions OIDC belgesini doğrular, yalnızca bu depo/main yazabilir; paylaşılan şifre yok), `.htaccess`, `logo.webp` |
+| `site_veri.py` | Siteye herkese açık özet (takipçi/izlenme, en çok izlenenler, son videolar, temalar) üretip OIDC ile gönderir; `gunluk.yml` → `ek-isler` her çalışmada, "Site Güncelle" elle |
 | `marka/` | Facebook kapak (1640x624, `templates/fb-kapak.html`) ve profil resmi |
 | `pixabay.py` | `python pixabay.py "sorgu" [adet]` → `cache/pixabay-adaylar.json`'a aday ekler; `indir()` klibi önbelleğe alır |
 | `marka.py` | Logo (800x800) ve kapak (2560x1440) → `out/marka/` |
@@ -155,4 +157,8 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Neml 62, Rûm 21, Ra'd 11, İsra 82, Mü'minûn 1-3, Şuarâ 78-82, Kasas 77, Ankebût 45, Mü'min 44, Necm 39-41, Yûnus 62,
   İbrahim 24-25, Âl-i İmrân 26, Âl-i İmrân 200, Tevbe 128, Kehf 10; süreler 16-43 sn, mealde parantezsiz hitap yok).
   Kuyruk: 2 yeni, 1 eski dönüşümlü; zayıf temalılar (Rûm 21 aile, Mü'min 44 tevekkül) en sonda. Kuyrukta 36 ayet.
+- **2026-11-23:** Kullanıcı istatistik sitesi istedi (tüm platformların takipçi/izlenme sayıları tek yerde). Geçici adres
+  **manevibahcem.safabalki.com.tr** (alt alan açıldı, AutoSSL başlatıldı). İleride **manevibahcem.com** alınıp dini
+  alışkanlık takibi yapılan bir web/mobil uygulamaya ("manevi bahçe büyütme") dönüşecek. GitHub secret eklemeye
+  izin verilmediği için kimlik doğrulama OIDC ile yapıldı.
 - [ ] Sonra: Günün Hadisi serisi
