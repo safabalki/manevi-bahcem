@@ -135,4 +135,12 @@ yüklenenleri Studio'dan herkese açık yapabildi → Actions artık `public` y�
   Instagram'da Kadir/İnşirah/Nasr işlenemiyor (zaman aşımı) → 2 denemeden sonra atlanıyor, sebep loglanıyor.
   Yâsîn 2-3 mealindeki parantezsiz "Ey Muhammed!" (kaynak baskıda öyle) için izleyici yorumu geldi; kullanıcıya
   cevap ve "açıklamaya meal notu" önerisi sunuldu (onay bekliyor).
+- **2026-11-23 haftalık analiz** (rapor/2026-11-22.md): YouTube 158 → **196 abone** (+38), kanal 21.332 → **27.928**
+  izlenme (+6.6 bin), 74 video, 3.268 beğeni, 27 yorum. Instagram 9 → **27 takipçi**, 29 gönderi, 1.476 beğeni.
+  Bilinen pasajlar serisi tuttu: Tebbet 1.014 (3 gün), Rahmân 1-4 996, Fetih 1-3 954, Bakara 285 939, Sâffât 888,
+  Nebe 878. Dilim: **öğle artık en iyi** (ort. 490; akşam 437, sabah 327) → öğle saatini değiştirme önerisi geri
+  alındı. Zayıf: tevekkül, aile; Fil (11) ve **Hud 114 (16)** anormal düşük. Günde hâlâ çoğunlukla 2 video (GitHub
+  cron). Akşam geçmiş paylaşımı artık çalışıyor (Bakara 152, Nas, Zilzal, Bakara 285 gitti). Instagram'da bazı
+  videolar 20 dk sonra hâlâ "Media is still being processed" (Yâsîn 82-83, Hümeze). Karar: kuyruk sırası korunuyor.
+  Kuyrukta 16 ayet (~8 gün) → yeni seri onayı yakında gerekli.
 - [ ] Sonra: Günün Hadisi serisi
