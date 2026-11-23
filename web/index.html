@@ -6,6 +6,13 @@
 <title>Manevi Bahçem · İstatistikler</title>
 <meta name="description" content="Manevi Bahçem: her gün Kur'an-ı Kerim'den seçilmiş ayetler. YouTube, Instagram, Facebook ve TikTok istatistikleri.">
 <link rel="icon" href="logo.webp">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b3a30">
+<link rel="apple-touch-icon" href="ikon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Manevi Bahçem">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -61,6 +68,13 @@
   .tema .bar span { display: block; height: 100%; background: linear-gradient(90deg, #c99a45, var(--altin)); }
   footer { margin-top: 44px; color: var(--soluk); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--cizgi); padding-top: 18px; }
   .hata { color: #ffb4a8; }
+  .kur { display: none; margin-left: auto; background: var(--altin); color: #06231d; border: 0; border-radius: 999px;
+         padding: 10px 16px; font: 700 14px "Montserrat"; cursor: pointer; }
+  .ipucu { display: none; margin: 14px 0 0; padding: 12px 16px; border-radius: 14px; background: rgba(231,201,131,.12);
+           border: 1px solid rgba(231,201,131,.35); font-size: 14px; line-height: 1.5; }
+  .yenile { color: var(--altin); background: none; border: 1px solid rgba(231,201,131,.4); border-radius: 999px;
+            padding: 6px 14px; font: 600 13px "Montserrat"; cursor: pointer; margin-left: 8px; }
+  header { flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -71,7 +85,9 @@
       <h1>Manevi Bahçem</h1>
       <div class="slogan">Her gün bir ayet · bir dua · bir nefes huzur</div>
     </div>
+    <button class="kur" id="kur">📲 Uygulamayı yükle</button>
   </header>
+  <div class="ipucu" id="ios">iPhone'a yüklemek için: Safari'de alttaki <b>Paylaş</b> (□↑) düğmesine bas → <b>Ana Ekrana Ekle</b>.</div>
 
   <div class="surec" id="surec">Yükleniyor…</div>
   <div class="ozet" id="ozet"></div>
@@ -91,10 +107,21 @@
   <footer>
     Kur'an metni ve kelime zamanlamaları: Quran.com · Kıraat: Mishary Raşid Alafasy · Meal: Elmalılı Hamdi Yazır.<br>
     İzlenme ve takipçi sayıları platformların resmî API'lerinden otomatik alınır. TikTok sayıları henüz paylaşılmıyor.<br>
-    <span id="guncelleme"></span>
+    <span id="guncelleme"></span> <button class="yenile" onclick="location.reload()">Yenile</button>
   </footer>
 </div>
 <script>
+// PWA: service worker ve "Uygulamayı yükle" düğmesi (Android/Chrome), iPhone'da ana ekrana ekleme ipucu
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+let kurulum = null;
+const uygulamada = matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault(); kurulum = e; document.getElementById("kur").style.display = "inline-block";
+});
+document.getElementById("kur").addEventListener("click", () => {
+  if (!kurulum) return; kurulum.prompt(); kurulum.userChoice.then(() => { document.getElementById("kur").style.display = "none"; });
+});
+if (!uygulamada && /iphone|ipad/i.test(navigator.userAgent)) document.getElementById("ios").style.display = "block";
 const R = n => (n == null ? "—" : Number(n).toLocaleString("tr-TR"));
 const PL = {
   youtube:   { ad: "YouTube",   renk: "var(--yt)", takip: "abone" },
