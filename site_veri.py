@@ -65,7 +65,9 @@ def uret():
                       "izlenme": s["izlenme"], "begeni": s["begeni"], "tema": s["tema"]}
     son = sorted(videolar, key=lambda x: x["tarih"], reverse=True)[:8]
     ist = {s["video"]: s for s in satirlar}
+    import kitle
     return {
+        "kitle": kitle.topla(),
         "guncelleme": simdi.isoformat(timespec="minutes"),
         "baslangic": ilk.date().isoformat(),
         "gun": (simdi - ilk).days,

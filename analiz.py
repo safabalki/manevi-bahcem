@@ -196,7 +196,8 @@ if __name__ == "__main__":
             fb = facebook_durum()
         except Exception as hata:
             fb = str(hata)[:200]
-    metin = surec_metni() + hesaplar_metni(kanal(yt), ig, fb) + ozet(satirlar)
+    import kitle
+    metin = surec_metni() + hesaplar_metni(kanal(yt), ig, fb) + kitle.metin(kitle.topla()) + ozet(satirlar)
     metin += ("\n## Farklı içerik türleri\n\nSeri fikirleri, kaynakları ve riskleri: `rapor/icerik-fikirleri.md` "
               "(haftalık değerlendirmede güncellenir).\n")
     print(metin)

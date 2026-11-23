@@ -62,6 +62,9 @@
   .liste a:hover { color: var(--altin); }
   .liste .bilgi { color: var(--soluk); font-size: 13px; white-space: nowrap; }
   .iki { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .kb { display: block; color: var(--altin); font-size: 15px; margin-bottom: 4px; }
+  .kn { color: var(--soluk); font-size: 13px; line-height: 1.5; margin: 8px 0 0; }
+  #kitle h3 { font-size: 13px; color: var(--soluk); font-weight: 600; margin: 14px 0 4px; letter-spacing: .3px; }
   @media (max-width: 760px) { .iki { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
   @media (max-width: 560px) {
     .ozet { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -112,6 +115,9 @@
 
   <h2>Konulara göre ortalama izlenme</h2>
   <div class="grafik" id="temalar"></div>
+
+  <h2>Kitle</h2>
+  <div class="iki" id="kitle"></div>
 
   <footer>
     Kur'an metni ve kelime zamanlamaları: Quran.com · Kıraat: Mishary Raşid Alafasy · Meal: Elmalılı Hamdi Yazır.<br>
@@ -193,9 +199,40 @@ Promise.all([
   const enY = Math.max(1, ...v.temalar.map(t => t.ortalama));
   el("temalar").innerHTML = v.temalar.map(t => `<div class="tema"><span>${kacis(t.tema)}</span>` +
     `<div class="bar"><span style="width:${(t.ortalama / enY * 100).toFixed(1)}%"></span></div><span>${R(t.ortalama)}</span></div>`).join("");
+  kitleCiz(v.kitle || {});
   ciz(gecmis);
   el("guncelleme").textContent = "Son güncelleme: " + new Date(v.guncelleme).toLocaleString("tr-TR");
 }).catch(() => { el("surec").innerHTML = '<span class="hata">Veriler henüz yüklenmedi. İlk güncelleme birkaç saat içinde gelir.</span>'; });
+function kitleCiz(k) {
+  let ulkeAd = c => c;
+  try { const d = new Intl.DisplayNames(["tr"], { type: "region" }); ulkeAd = c => d.of(c) || c; } catch (e) {}
+  const bloklar = (baslik, liste, deger, etiket) => {
+    if (!liste || !liste.length) return "";
+    const en = Math.max(1, ...liste.map(deger));
+    return `<h3>${baslik}</h3>` + liste.map(r => `<div class="tema"><span>${kacis(String(r.etiket))}</span>` +
+      `<div class="bar"><span style="width:${(deger(r) / en * 100).toFixed(1)}%"></span></div><span>${etiket(r)}</span></div>`).join("");
+  };
+  const yuzde = r => "%" + r.yuzde.toLocaleString("tr-TR");
+  const y = k.youtube || {}, i = k.instagram;
+  let sol = '<div class="grafik"><b class="kb">YouTube izleyicileri</b>';
+  if (y.hata || !y.yas) sol += '<p class="kn">Yaş, cinsiyet ve şehir verisi için YouTube Analytics izni bekleniyor.</p>';
+  else {
+    sol += bloklar("Yaş", y.yas.map(r => ({ ...r, etiket: r.ad })), r => r.yuzde, yuzde);
+    sol += bloklar("Cinsiyet", y.cinsiyet.map(r => ({ ...r, etiket: r.ad })), r => r.yuzde, yuzde);
+    sol += bloklar("Ülke (izlenme)", y.ulke.map(r => ({ ...r, etiket: ulkeAd(r.kod) })), r => r.izlenme, r => R(r.izlenme));
+    sol += bloklar("Şehir (izlenme)", (y.sehir || []).map(r => ({ ...r, etiket: r.ad })), r => r.izlenme, r => R(r.izlenme));
+  }
+  sol += "</div>";
+  let sag = '<div class="grafik"><b class="kb">Instagram takipçileri</b>';
+  if (!i || i.hata) sag += '<p class="kn">Instagram takipçi dağılımını yalnızca 100 takipçiyi geçen hesaplar için veriyor; o zaman burada görünecek.</p>';
+  else {
+    sag += bloklar("Yaş", i.age.map(r => ({ ...r, etiket: r.ad })), r => r.sayi, r => R(r.sayi));
+    sag += bloklar("Cinsiyet", i.gender.map(r => ({ ...r, etiket: r.ad })), r => r.sayi, r => R(r.sayi));
+    sag += bloklar("Şehir", i.city.map(r => ({ ...r, etiket: r.ad })), r => r.sayi, r => R(r.sayi));
+  }
+  sag += '<p class="kn">Facebook bu dağılımı artık paylaşmıyor.</p></div>';
+  el("kitle").innerHTML = sol + sag;
+}
 </script>
 </body>
 </html>
