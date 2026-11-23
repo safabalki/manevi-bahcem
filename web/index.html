@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manevi Bahçem · İstatistikler</title>
+<meta name="description" content="Manevi Bahçem: her gün Kur'an-ı Kerim'den seçilmiş ayetler. YouTube, Instagram, Facebook ve TikTok istatistikleri.">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --zemin: #06231d; --zemin2: #0b3a30; --kart: rgba(255,255,255,.05); --cizgi: rgba(255,255,255,.10);
+    --yazi: #eef3ef; --soluk: rgba(238,243,239,.65); --altin: #e7c983;
+    --yt: #ff4e45; --ig: #e1306c; --fb: #4c8bf5; --tt: #25f4ee;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Montserrat", system-ui, sans-serif; color: var(--yazi);
+    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(231,201,131,.12), transparent 70%),
+                linear-gradient(170deg, var(--zemin2), var(--zemin) 60%);
+    min-height: 100vh;
+  }
+  .kap { max-width: 1040px; margin: 0 auto; padding: 32px 16px 56px; }
+  header { display: flex; align-items: center; gap: 18px; margin-bottom: 8px; }
+  header img { width: 64px; height: 64px; border-radius: 50%; box-shadow: 0 6px 24px rgba(0,0,0,.4); }
+  h1 { font: 700 34px/1.1 "Playfair Display", serif; color: var(--altin); margin: 0; }
+  .slogan { color: var(--soluk); font-size: 15px; margin-top: 6px; }
+  .surec { margin: 22px 0 26px; padding: 16px 20px; border: 1px solid var(--cizgi); border-radius: 16px;
+           background: var(--kart); display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px; }
+  .surec b { color: var(--altin); font-size: 20px; }
+  .ozet { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .kart { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 18px; padding: 18px 20px;
+          text-decoration: none; color: inherit; display: block; transition: transform .15s, border-color .15s; }
+  a.kart:hover { transform: translateY(-2px); border-color: rgba(231,201,131,.45); }
+  .kart .ad { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 15px; }
+  .kart .ad i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .kart .sayi { font: 700 34px/1.1 "Montserrat"; margin: 10px 0 4px; }
+  .kart .alt { color: var(--soluk); font-size: 13.5px; line-height: 1.5; }
+  .toplam { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+            border-color: rgba(231,201,131,.35); }
+  .toplam .sayi { color: var(--altin); margin: 0; }
+  h2 { font: 700 22px "Playfair Display", serif; color: var(--altin); margin: 38px 0 14px; }
+  .grafik { background: var(--kart); border: 1px solid var(--cizgi); border-radius: 18px; padding: 16px; }
+  .grafik svg { width: 100%; height: 240px; display: block; }
+  .lejant { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--soluk); margin-top: 8px; }
+  .lejant i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+  .liste { list-style: none; margin: 0; padding: 0; border: 1px solid var(--cizgi); border-radius: 18px; overflow: hidden; }
+  .liste li { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-top: 1px solid var(--cizgi);
+              background: var(--kart); }
+  .liste li:first-child { border-top: 0; }
+  .liste .no { width: 26px; color: var(--altin); font-weight: 700; text-align: right; flex: none; }
+  .liste a { color: var(--yazi); text-decoration: none; flex: 1; min-width: 0; }
+  .liste a:hover { color: var(--altin); }
+  .liste .bilgi { color: var(--soluk); font-size: 13px; white-space: nowrap; }
+  .iki { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 760px) { .iki { grid-template-columns: 1fr; } h1 { font-size: 28px; } }
+  .tema { display: grid; grid-template-columns: 110px 1fr 70px; gap: 10px; align-items: center; font-size: 14px; margin: 8px 0; }
+  .tema .bar { height: 10px; border-radius: 6px; background: rgba(231,201,131,.15); overflow: hidden; }
+  .tema .bar span { display: block; height: 100%; background: linear-gradient(90deg, #c99a45, var(--altin)); }
+  footer { margin-top: 44px; color: var(--soluk); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--cizgi); padding-top: 18px; }
+  .hata { color: #ffb4a8; }
+</style>
+</head>
+<body>
+<div class="kap">
+  <header>
+    <img src="logo.webp" alt="Manevi Bahçem">
+    <div>
+      <h1>Manevi Bahçem</h1>
+      <div class="slogan">Her gün bir ayet · bir dua · bir nefes huzur</div>
+    </div>
+  </header>
+
+  <div class="surec" id="surec">Yükleniyor…</div>
+  <div class="ozet" id="ozet"></div>
+
+  <h2>Büyüme</h2>
+  <div class="grafik"><svg id="grafik" viewBox="0 0 1000 240" preserveAspectRatio="none"></svg>
+    <div class="lejant" id="lejant"></div></div>
+
+  <div class="iki">
+    <div><h2>En çok izlenenler</h2><ol class="liste" id="enler"></ol></div>
+    <div><h2>Son videolar</h2><ul class="liste" id="sonlar"></ul></div>
+  </div>
+
+  <h2>Konulara göre ortalama izlenme</h2>
+  <div class="grafik" id="temalar"></div>
+
+  <footer>
+    Kur'an metni ve kelime zamanlamaları: Quran.com · Kıraat: Mishary Raşid Alafasy · Meal: Elmalılı Hamdi Yazır.<br>
+    İzlenme ve takipçi sayıları platformların resmî API'lerinden otomatik alınır. TikTok sayıları henüz paylaşılmıyor.<br>
+    <span id="guncelleme"></span>
+  </footer>
+</div>
+<script>
+const R = n => (n == null ? "—" : Number(n).toLocaleString("tr-TR"));
+const PL = {
+  youtube:   { ad: "YouTube",   renk: "var(--yt)", takip: "abone" },
+  instagram: { ad: "Instagram", renk: "var(--ig)", takip: "takipçi" },
+  facebook:  { ad: "Facebook",  renk: "var(--fb)", takip: "takipçi" },
+  tiktok:    { ad: "TikTok",    renk: "var(--tt)", takip: "" },
+};
+const el = id => document.getElementById(id);
+const kacis = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function ciz(gecmis) {
+  const svg = el("grafik"), seriler = ["youtube", "instagram", "facebook"];
+  if (gecmis.length < 2) {
+    svg.innerHTML = '<text x="500" y="125" text-anchor="middle" fill="rgba(238,243,239,.6)" font-size="22">Grafik birkaç gün veri birikince görünecek</text>';
+    return;
+  }
+  const max = Math.max(1, ...gecmis.flatMap(g => seriler.map(s => g[s] || 0)));
+  const x = i => 40 + i * (920 / (gecmis.length - 1)), y = v => 220 - (v / max) * 190;
+  let h = "";
+  for (let k = 0; k <= 4; k++) {
+    const yy = 220 - k * 47.5;
+    h += `<line x1="40" x2="960" y1="${yy}" y2="${yy}" stroke="rgba(255,255,255,.08)"/>` +
+         `<text x="34" y="${yy + 4}" text-anchor="end" fill="rgba(238,243,239,.5)" font-size="12">${R(Math.round(max * k / 4))}</text>`;
+  }
+  seriler.forEach(s => {
+    const n = gecmis.map((g, i) => g[s] == null ? null : [x(i), y(g[s])]).filter(Boolean);
+    if (n.length > 1) h += `<polyline fill="none" stroke="${PL[s].renk}" stroke-width="3" points="${n.map(p => p.join(",")).join(" ")}"/>`;
+  });
+  h += `<text x="40" y="238" fill="rgba(238,243,239,.5)" font-size="12">${gecmis[0].tarih}</text>` +
+       `<text x="960" y="238" text-anchor="end" fill="rgba(238,243,239,.5)" font-size="12">${gecmis[gecmis.length - 1].tarih}</text>`;
+  svg.innerHTML = h;
+  el("lejant").innerHTML = seriler.map(s => `<span><i style="background:${PL[s].renk}"></i>${PL[s].ad}</span>`).join("");
+}
+
+Promise.all([
+  fetch("veri.json?" + Date.now()).then(r => r.json()),
+  fetch("gecmis.json?" + Date.now()).then(r => r.ok ? r.json() : []).catch(() => []),
+]).then(([v, gecmis]) => {
+  const bas = new Date(v.baslangic + "T00:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
+  const p = v.platformlar, toplam = ["youtube", "instagram", "facebook"].reduce((t, k) => t + ((p[k] || {}).takipci || 0), 0);
+  const videoSay = Object.values(p).reduce((t, x) => t + (x.video || 0), 0);
+  el("surec").innerHTML = `<span>Başlangıç: <b>${bas}</b></span><span><b>${R(v.gun)}</b> gündür yayında</span>` +
+    `<span>Tüm platformlarda <b>${R(videoSay)}</b> paylaşım</span>`;
+  let h = `<div class="kart toplam"><span class="sayi">${R(toplam)}</span><span class="alt">toplam takipçi (YouTube + Instagram + Facebook)</span></div>`;
+  for (const k of ["youtube", "instagram", "facebook", "tiktok"]) {
+    const x = p[k]; if (!x) continue;
+    const alt = k === "youtube" ? `${R(x.izlenme)} izlenme · ${R(x.video)} video`
+      : k === "tiktok" ? "Paylaşılan video (istatistik yakında)"
+      : `${x.begeni != null ? R(x.begeni) + " beğeni · " : ""}${R(x.video)} Reels`;
+    const sayi = k === "tiktok" ? x.video : x.takipci;
+    h += `<a class="kart" href="${x.url}" target="_blank" rel="noopener"><div class="ad"><i style="background:${PL[k].renk}"></i>${PL[k].ad}</div>` +
+         `<div class="sayi">${R(sayi)}</div><div class="alt">${PL[k].takip ? PL[k].takip + " · " : ""}${alt}</div></a>`;
+  }
+  el("ozet").innerHTML = h;
+  const satir = (s, i) => `<li><span class="no">${i + 1}</span><a href="${s.url}" target="_blank" rel="noopener">${kacis(s.baslik)}</a>` +
+                          `<span class="bilgi">${R(s.izlenme)} izlenme</span></li>`;
+  el("enler").innerHTML = v.enler.map(satir).join("");
+  el("sonlar").innerHTML = v.sonlar.map((s, i) => `<li><span class="no">${s.tarih.slice(8, 10)}.${s.tarih.slice(5, 7)}</span>` +
+    `<a href="${s.url}" target="_blank" rel="noopener">${kacis(s.baslik)}</a><span class="bilgi">${R(s.izlenme)}</span></li>`).join("");
+  const enY = Math.max(1, ...v.temalar.map(t => t.ortalama));
+  el("temalar").innerHTML = v.temalar.map(t => `<div class="tema"><span>${kacis(t.tema)}</span>` +
+    `<div class="bar"><span style="width:${(t.ortalama / enY * 100).toFixed(1)}%"></span></div><span>${R(t.ortalama)}</span></div>`).join("");
+  ciz(gecmis);
+  el("guncelleme").textContent = "Son güncelleme: " + new Date(v.guncelleme).toLocaleString("tr-TR");
+}).catch(() => { el("surec").innerHTML = '<span class="hata">Veriler henüz yüklenmedi. İlk güncelleme birkaç saat içinde gelir.</span>'; });
+</script>
+</body>
+</html>

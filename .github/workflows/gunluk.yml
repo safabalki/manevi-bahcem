@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: write   # yayinlananlar.json'u depoya geri yazmak için
+  id-token: write   # istatistik sitesine (manevibahcem.safabalki.com.tr) OIDC ile veri göndermek için
 
 concurrency:
   group: gunluk
@@ -120,13 +121,11 @@ jobs:
           echo "analiz=$(python3 analiz_sira.py)" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-python@v5
-        if: steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1'
         with:
           python-version: "3.12"
           cache: pip
 
       - run: pip install -r requirements.txt
-        if: steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1'
 
       - uses: actions/cache@v4
         if: steps.sira.outputs.gecmis != '0'
@@ -163,6 +162,17 @@ jobs:
           INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
           INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
         run: python analiz.py --kaydet
+
+      - name: İstatistik sitesini güncelle
+        continue-on-error: true
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          INSTAGRAM_APP_ID: ${{ secrets.INSTAGRAM_APP_ID }}
+          INSTAGRAM_APP_SECRET: ${{ secrets.INSTAGRAM_APP_SECRET }}
+        run: python site_veri.py
 
       - name: Kaydet
         if: always() && (steps.sira.outputs.gecmis != '0' || steps.sira.outputs.analiz == '1')

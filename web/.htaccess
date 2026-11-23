@@ -1,0 +1,9 @@
+# Gizli dosyalar (.jwks.json gibi) dışarıdan okunmasın
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+# Veri dosyaları önbelleğe takılmasın
+<FilesMatch "\.(json)$">
+  Header set Cache-Control "no-cache, max-age=0"
+</FilesMatch>
+DirectoryIndex index.html
