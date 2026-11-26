@@ -47,6 +47,18 @@
     "tiktok": {
       "publish_id": "v_inbox_file~v2.7700529757150185492",
       "gizlilik": "TASLAK"
+    },
+    "instagram": {
+      "id": "18114334283237742",
+      "link": "https://www.instagram.com/reel/DgN0m8ThHhN/",
+      "gecmis": true,
+      "tarih": "2026-11-26"
+    },
+    "facebook": {
+      "id": "1677754107148843",
+      "link": "https://www.facebook.com/reel/1677754107148843",
+      "gecmis": true,
+      "tarih": "2026-11-26"
     }
   },
   {
@@ -749,7 +761,10 @@
       "gizlilik": "TASLAK"
     },
     "instagram": {
-      "hata": "Instagram videoyu 10 dakikada işlemedi"
+      "id": "18017672678987265",
+      "link": "https://www.instagram.com/reel/DgN021Uhotk/",
+      "gecmis": true,
+      "tarih": "2026-11-26"
     },
     "facebook": {
       "id": "1683254443377604",
