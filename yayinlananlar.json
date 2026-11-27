@@ -70,6 +70,18 @@
     "tiktok": {
       "publish_id": "v_inbox_file~v2.7700610691363751942",
       "gizlilik": "TASLAK"
+    },
+    "instagram": {
+      "id": "18172522075465783",
+      "link": "https://www.instagram.com/reel/DgQgN7Tv37e/",
+      "gecmis": true,
+      "tarih": "2026-11-27"
+    },
+    "facebook": {
+      "id": "2688339374947424",
+      "link": "https://www.facebook.com/reel/2688339374947424",
+      "gecmis": true,
+      "tarih": "2026-11-27"
     }
   },
   {
@@ -80,6 +92,18 @@
     "tarih": "2026-10-25T19:06:17+00:00",
     "tiktok": {
       "hata": "TikTok /post/publish/video/init/: {'code': 'invalid_params', 'message': 'The chunk size is invalid', 'log_id': '202610260306189AA5D9F5DB559C5E891C'}"
+    },
+    "instagram": {
+      "id": "18122661175785524",
+      "link": "https://www.instagram.com/reel/DgQf_ZYTx6b/",
+      "gecmis": true,
+      "tarih": "2026-11-27"
+    },
+    "facebook": {
+      "id": "2063794407657926",
+      "link": "https://www.facebook.com/reel/2063794407657926",
+      "gecmis": true,
+      "tarih": "2026-11-27"
     }
   },
   {
