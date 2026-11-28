@@ -881,7 +881,9 @@
       "gizlilik": "TASLAK"
     },
     "instagram": {
-      "hata": "Instagram videoyu 20 dakikada işlemedi (son durum: IN_PROGRESS / In Progress: Media is still being processed.)"
+      "hata": "Instagram videoyu 20 dakikada işlemedi (son durum: IN_PROGRESS / In Progress: Media is still being processed.)",
+      "gecmis": true,
+      "deneme": 2
     },
     "facebook": {
       "id": "1496886849210742",
